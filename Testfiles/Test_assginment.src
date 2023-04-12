@@ -1,0 +1,10 @@
+function bubbleSort(arr: integer[], size: integer) => void 
+{
+  localvar i    : integer;
+  localvar j    : integer;
+  j = 0;
+  localvar n    : integer;
+  n = size;
+  arr[0] = 64;
+}
+

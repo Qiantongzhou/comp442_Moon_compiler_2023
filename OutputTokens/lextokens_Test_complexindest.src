@@ -1,0 +1,51 @@
+This is all the Lexical Tokens
+
+
+id:
+
+bubbleSort       location: 0 20
+arr       location: 0 24
+size       location: 0 41
+id       location: 2 5
+id       location: 2 8
+id       location: 2 11
+id       location: 2 14
+id       location: 3 5
+id       location: 3 11
+id       location: 3 16
+
+
+integers:
+
+1       location: 3 7
+
+
+floats:
+
+
+
+Operators:
+
+=>       location: 0 53
+
+
+Punctuation:
+
+:       location: 0 25
+,       location: 0 35
+:       location: 0 42
+.       location: 2 5
+.       location: 2 8
+.       location: 2 11
+;       location: 2 14
+.       location: 3 8
+.       location: 3 13
+;       location: 3 18
+
+
+ReservedWords:
+
+function       location: 0 9
+integer       location: 0 33
+integer       location: 0 50
+void       location: 0 59

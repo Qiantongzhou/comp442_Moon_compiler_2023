@@ -1,0 +1,3 @@
+This is all the lexerrors
+Lexeme: localvar	Code: localVar	Line: 3	Column: 11 syntax error, expected: Memberdecl
+Lexeme: ;	Code: Semicolon	Line: 6	Column: 2 syntax error, expected: ClassDeclOrFuncDef

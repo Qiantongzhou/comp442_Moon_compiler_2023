@@ -1,0 +1,166 @@
+Top-down syntax generation:
+<Start> =>
+function ?<< current: function expected: <identifier> >>
+function main ?<< current: main expected: ( >>
+function main ( ?<< current: ( expected: ) >>
+function main ( ) ?<< current: ) expected: arrow >>
+function main ( ) => ?<< current: => expected: void >>
+function main ( ) => void ?<< current: void expected: { >>
+function main ( ) => void { ?<< current: { expected: localVar >>
+function main ( ) => void { localvar ?<< current: localvar expected: <identifier> >>
+function main ( ) => void { localvar f1 ?<< current: f1 expected: : >>
+function main ( ) => void { localvar f1 : ?<< current: : expected: <identifier> >>
+function main ( ) => void { localvar f1 : LINEAR ?<< current: LINEAR expected: ( >>
+function main ( ) => void { localvar f1 : LINEAR ( ?<< current: ( expected: intLit >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 ?<< current: 2 expected: , >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , ?<< current: , expected: floatLit >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ?<< current: 3.5 expected: ) >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ?<< current: ) expected: ; >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; ?<< current: ; expected: localVar >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar ?<< current: localvar expected: <identifier> >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 ?<< current: f2 expected: : >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : ?<< current: : expected: <identifier> >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ?<< current: QUADRATIC expected: ( >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( ?<< current: ( expected: - >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - ?<< current: - expected: floatLit >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 ?<< current: 2.0 expected: , >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , ?<< current: , expected: floatLit >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 ?<< current: 1.0 expected: , >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , ?<< current: , expected: floatLit >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ?<< current: 0.0 expected: ) >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ?<< current: ) expected: ; >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; ?<< current: ; expected: localVar >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar ?<< current: localvar expected: <identifier> >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter ?<< current: counter expected: : >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : ?<< current: : expected: integer >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ?<< current: integer expected: ; >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; ?<< current: ; expected: <identifier> >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter ?<< current: counter expected: = >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = ?<< current: = expected: intLit >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ?<< current: 1 expected: ; >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; ?<< current: ; expected: while >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ?<< current: while expected: ( >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( ?<< current: ( expected: <identifier> >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter ?<< current: counter expected: leq >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= ?<< current: <= expected: intLit >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ?<< current: 10 expected: ) >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) ?<< current: ) expected: { >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { ?<< current: { expected: write >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ?<< current: write expected: ( >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( ?<< current: ( expected: <identifier> >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ?<< current: counter expected: ) >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ?<< current: ) expected: ; >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; ?<< current: ; expected: write >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ?<< current: write expected: ( >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( ?<< current: ( expected: <identifier> >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 ?<< current: f1 expected: . >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . ?<< current: . expected: <identifier> >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . evaluate ?<< current: evaluate expected: ( >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . evaluate ( ?<< current: ( expected: <identifier> >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . evaluate ( counter ?<< current: counter expected: ) >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . evaluate ( counter ) ?<< current: ) expected: ) >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . evaluate ( counter ) ) ?<< current: ) expected: ; >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . evaluate ( counter ) ) ; ?<< current: ; expected: write >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . evaluate ( counter ) ) ; write ?<< current: write expected: ( >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . evaluate ( counter ) ) ; write ( ?<< current: ( expected: <identifier> >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . evaluate ( counter ) ) ; write ( f2 ?<< current: f2 expected: . >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . evaluate ( counter ) ) ; write ( f2 . ?<< current: . expected: <identifier> >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . evaluate ( counter ) ) ; write ( f2 . evaluate ?<< current: evaluate expected: ( >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . evaluate ( counter ) ) ; write ( f2 . evaluate ( ?<< current: ( expected: <identifier> >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . evaluate ( counter ) ) ; write ( f2 . evaluate ( counter ?<< current: counter expected: ) >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . evaluate ( counter ) ) ; write ( f2 . evaluate ( counter ) ?<< current: ) expected: ) >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . evaluate ( counter ) ) ; write ( f2 . evaluate ( counter ) ) ?<< current: ) expected: ; >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . evaluate ( counter ) ) ; write ( f2 . evaluate ( counter ) ) ; ?<< current: ; expected: } >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . evaluate ( counter ) ) ; write ( f2 . evaluate ( counter ) ) ; } ?<< current: } expected: ; >>
+function main ( ) => void { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; counter = 1 ; while ( counter <= 10 ) { write ( counter ) ; write ( f1 . evaluate ( counter ) ) ; write ( f2 . evaluate ( counter ) ) ; } ; ?<< current: ; expected: } >>
+
+
+Sytax Tokens:
+Lexeme: function	Code: function	Line: 0	Column: 9
+Lexeme: main	Code: Id	Line: 0	Column: 14
+Lexeme: (	Code: LeftParenthesis	Line: 0	Column: 14
+Lexeme: )	Code: RightParenthesis	Line: 0	Column: 15
+Lexeme: =>	Code: arrow	Line: 0	Column: 18
+Lexeme: void	Code: Void	Line: 0	Column: 24
+Lexeme: {	Code: LeftBracket	Line: 1	Column: 1
+Lexeme: localvar	Code: localVar	Line: 2	Column: 11
+Lexeme: f1	Code: Id	Line: 2	Column: 14
+Lexeme: :	Code: Colon	Line: 2	Column: 15
+Lexeme: LINEAR	Code: Id	Line: 2	Column: 22
+Lexeme: (	Code: LeftParenthesis	Line: 2	Column: 22
+Lexeme: 2	Code: intLit	Line: 2	Column: 24
+Lexeme: ,	Code: Comma	Line: 2	Column: 24
+Lexeme: 3.5	Code: floatLit	Line: 2	Column: 29
+Lexeme: )	Code: RightParenthesis	Line: 2	Column: 29
+Lexeme: ;	Code: Semicolon	Line: 2	Column: 30
+Lexeme: localvar	Code: localVar	Line: 3	Column: 11
+Lexeme: f2	Code: Id	Line: 3	Column: 14
+Lexeme: :	Code: Colon	Line: 3	Column: 15
+Lexeme: QUADRATIC	Code: Id	Line: 3	Column: 25
+Lexeme: (	Code: LeftParenthesis	Line: 3	Column: 25
+Lexeme: -	Code: Minus	Line: 3	Column: 26
+Lexeme: 2.0	Code: floatLit	Line: 3	Column: 30
+Lexeme: ,	Code: Comma	Line: 3	Column: 30
+Lexeme: 1.0	Code: floatLit	Line: 3	Column: 35
+Lexeme: ,	Code: Comma	Line: 3	Column: 35
+Lexeme: 0.0	Code: floatLit	Line: 3	Column: 40
+Lexeme: )	Code: RightParenthesis	Line: 3	Column: 40
+Lexeme: ;	Code: Semicolon	Line: 3	Column: 41
+Lexeme: localvar	Code: localVar	Line: 4	Column: 11
+Lexeme: counter	Code: Id	Line: 4	Column: 19
+Lexeme: :	Code: Colon	Line: 4	Column: 20
+Lexeme: integer	Code: Integer	Line: 4	Column: 28
+Lexeme: ;	Code: Semicolon	Line: 4	Column: 28
+Lexeme: counter	Code: Id	Line: 6	Column: 10
+Lexeme: =	Code: Equal	Line: 6	Column: 11
+Lexeme: 1	Code: intLit	Line: 6	Column: 13
+Lexeme: ;	Code: Semicolon	Line: 6	Column: 13
+Lexeme: while	Code: While	Line: 8	Column: 8
+Lexeme: (	Code: LeftParenthesis	Line: 8	Column: 8
+Lexeme: counter	Code: Id	Line: 8	Column: 16
+Lexeme: <=	Code: leq	Line: 8	Column: 18
+Lexeme: 10	Code: intLit	Line: 8	Column: 22
+Lexeme: )	Code: RightParenthesis	Line: 8	Column: 22
+Lexeme: {	Code: LeftBracket	Line: 9	Column: 3
+Lexeme: write	Code: Write	Line: 10	Column: 10
+Lexeme: (	Code: LeftParenthesis	Line: 10	Column: 10
+Lexeme: counter	Code: Id	Line: 10	Column: 18
+Lexeme: )	Code: RightParenthesis	Line: 10	Column: 18
+Lexeme: ;	Code: Semicolon	Line: 10	Column: 19
+Lexeme: write	Code: Write	Line: 11	Column: 10
+Lexeme: (	Code: LeftParenthesis	Line: 11	Column: 10
+Lexeme: f1	Code: Id	Line: 11	Column: 13
+Lexeme: .	Code: dot	Line: 11	Column: 13
+Lexeme: evaluate	Code: Id	Line: 11	Column: 22
+Lexeme: (	Code: LeftParenthesis	Line: 11	Column: 22
+Lexeme: counter	Code: Id	Line: 11	Column: 30
+Lexeme: )	Code: RightParenthesis	Line: 11	Column: 30
+Lexeme: )	Code: RightParenthesis	Line: 11	Column: 31
+Lexeme: ;	Code: Semicolon	Line: 11	Column: 32
+Lexeme: write	Code: Write	Line: 12	Column: 10
+Lexeme: (	Code: LeftParenthesis	Line: 12	Column: 10
+Lexeme: f2	Code: Id	Line: 12	Column: 13
+Lexeme: .	Code: dot	Line: 12	Column: 13
+Lexeme: evaluate	Code: Id	Line: 12	Column: 22
+Lexeme: (	Code: LeftParenthesis	Line: 12	Column: 22
+Lexeme: counter	Code: Id	Line: 12	Column: 30
+Lexeme: )	Code: RightParenthesis	Line: 12	Column: 30
+Lexeme: )	Code: RightParenthesis	Line: 12	Column: 31
+Lexeme: ;	Code: Semicolon	Line: 12	Column: 32
+Lexeme: }	Code: RightBracket	Line: 13	Column: 3
+Lexeme: ;	Code: Semicolon	Line: 13	Column: 4
+
+
+Complete Dervation tree, Code structure:
+Start => 
+function <identifier> ( ) arrow void { 
+localVar <identifier> : <identifier> ( intLit , floatLit ) ; 
+localVar <identifier> : <identifier> ( - floatLit , floatLit , floatLit ) ; 
+localVar <identifier> : integer ; 
+<identifier> = intLit ; 
+while ( <identifier> leq intLit ) { 
+write ( <identifier> ) ; 
+write ( <identifier> . <identifier> ( <identifier> ) ) ; 
+write ( <identifier> . <identifier> ( <identifier> ) ) ; 
+} 
+; 

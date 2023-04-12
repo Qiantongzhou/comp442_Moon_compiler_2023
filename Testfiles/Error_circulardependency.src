@@ -1,0 +1,12 @@
+class LINEAR isa QUADRATIC {
+  private attribute a: float;
+  private attribute b: float;
+ 
+};
+
+class QUADRATIC isa LINEAR {
+  private attribute a: float;
+  private attribute b: float;
+  private attribute c: float;
+
+};

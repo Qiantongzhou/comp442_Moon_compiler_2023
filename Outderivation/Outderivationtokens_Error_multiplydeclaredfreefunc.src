@@ -1,0 +1,108 @@
+Top-down syntax generation:
+<Start> =>
+function ?<< current: function expected: <identifier> >>
+function multiple ?<< current: multiple expected: ( >>
+function multiple ( ?<< current: ( expected: ) >>
+function multiple ( ) ?<< current: ) expected: arrow >>
+function multiple ( ) => ?<< current: => expected: void >>
+function multiple ( ) => void ?<< current: void expected: { >>
+function multiple ( ) => void { ?<< current: { expected: localVar >>
+function multiple ( ) => void { localvar ?<< current: localvar expected: <identifier> >>
+function multiple ( ) => void { localvar n ?<< current: n expected: : >>
+function multiple ( ) => void { localvar n : ?<< current: : expected: integer >>
+function multiple ( ) => void { localvar n : integer ?<< current: integer expected: ; >>
+function multiple ( ) => void { localvar n : integer ; ?<< current: ; expected: localVar >>
+function multiple ( ) => void { localvar n : integer ; localvar ?<< current: localvar expected: <identifier> >>
+function multiple ( ) => void { localvar n : integer ; localvar i ?<< current: i expected: : >>
+function multiple ( ) => void { localvar n : integer ; localvar i : ?<< current: : expected: integer >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ?<< current: integer expected: ; >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; ?<< current: ; expected: localVar >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar ?<< current: localvar expected: <identifier> >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j ?<< current: j expected: : >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : ?<< current: : expected: integer >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ?<< current: integer expected: ; >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; ?<< current: ; expected: localVar >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar ?<< current: localvar expected: <identifier> >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp ?<< current: temp expected: : >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : ?<< current: : expected: integer >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ?<< current: integer expected: ; >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; ?<< current: ; expected: } >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; } ?<< current: } expected: function >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; } function ?<< current: function expected: <identifier> >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; } function multiple ?<< current: multiple expected: ( >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; } function multiple ( ?<< current: ( expected: ) >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; } function multiple ( ) ?<< current: ) expected: arrow >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; } function multiple ( ) => ?<< current: => expected: void >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; } function multiple ( ) => void ?<< current: void expected: { >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; } function multiple ( ) => void { ?<< current: { expected: localVar >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; } function multiple ( ) => void { localvar ?<< current: localvar expected: <identifier> >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; } function multiple ( ) => void { localvar n ?<< current: n expected: : >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; } function multiple ( ) => void { localvar n : ?<< current: : expected: integer >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; } function multiple ( ) => void { localvar n : integer ?<< current: integer expected: ; >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; } function multiple ( ) => void { localvar n : integer ; ?<< current: ; expected: localVar >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; } function multiple ( ) => void { localvar n : integer ; localvar ?<< current: localvar expected: <identifier> >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; } function multiple ( ) => void { localvar n : integer ; localvar i ?<< current: i expected: : >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; } function multiple ( ) => void { localvar n : integer ; localvar i : ?<< current: : expected: integer >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; } function multiple ( ) => void { localvar n : integer ; localvar i : integer ?<< current: integer expected: ; >>
+function multiple ( ) => void { localvar n : integer ; localvar i : integer ; localvar j : integer ; localvar temp : integer ; } function multiple ( ) => void { localvar n : integer ; localvar i : integer ; ?<< current: ; expected: } >>
+
+
+Sytax Tokens:
+Lexeme: function	Code: function	Line: 1	Column: 9
+Lexeme: multiple	Code: Id	Line: 1	Column: 18
+Lexeme: (	Code: LeftParenthesis	Line: 1	Column: 18
+Lexeme: )	Code: RightParenthesis	Line: 1	Column: 19
+Lexeme: =>	Code: arrow	Line: 1	Column: 22
+Lexeme: void	Code: Void	Line: 1	Column: 28
+Lexeme: {	Code: LeftBracket	Line: 2	Column: 1
+Lexeme: localvar	Code: localVar	Line: 3	Column: 11
+Lexeme: n	Code: Id	Line: 3	Column: 13
+Lexeme: :	Code: Colon	Line: 3	Column: 18
+Lexeme: integer	Code: Integer	Line: 3	Column: 26
+Lexeme: ;	Code: Semicolon	Line: 3	Column: 26
+Lexeme: localvar	Code: localVar	Line: 4	Column: 11
+Lexeme: i	Code: Id	Line: 4	Column: 13
+Lexeme: :	Code: Colon	Line: 4	Column: 18
+Lexeme: integer	Code: Integer	Line: 4	Column: 26
+Lexeme: ;	Code: Semicolon	Line: 4	Column: 26
+Lexeme: localvar	Code: localVar	Line: 5	Column: 11
+Lexeme: j	Code: Id	Line: 5	Column: 13
+Lexeme: :	Code: Colon	Line: 5	Column: 18
+Lexeme: integer	Code: Integer	Line: 5	Column: 26
+Lexeme: ;	Code: Semicolon	Line: 5	Column: 26
+Lexeme: localvar	Code: localVar	Line: 6	Column: 11
+Lexeme: temp	Code: Id	Line: 6	Column: 16
+Lexeme: :	Code: Colon	Line: 6	Column: 18
+Lexeme: integer	Code: Integer	Line: 6	Column: 26
+Lexeme: ;	Code: Semicolon	Line: 6	Column: 26
+Lexeme: }	Code: RightBracket	Line: 8	Column: 1
+Lexeme: function	Code: function	Line: 11	Column: 9
+Lexeme: multiple	Code: Id	Line: 11	Column: 18
+Lexeme: (	Code: LeftParenthesis	Line: 11	Column: 18
+Lexeme: )	Code: RightParenthesis	Line: 11	Column: 19
+Lexeme: =>	Code: arrow	Line: 11	Column: 22
+Lexeme: void	Code: Void	Line: 11	Column: 28
+Lexeme: {	Code: LeftBracket	Line: 12	Column: 1
+Lexeme: localvar	Code: localVar	Line: 13	Column: 11
+Lexeme: n	Code: Id	Line: 13	Column: 13
+Lexeme: :	Code: Colon	Line: 13	Column: 14
+Lexeme: integer	Code: Integer	Line: 13	Column: 22
+Lexeme: ;	Code: Semicolon	Line: 13	Column: 22
+Lexeme: localvar	Code: localVar	Line: 14	Column: 11
+Lexeme: i	Code: Id	Line: 14	Column: 13
+Lexeme: :	Code: Colon	Line: 14	Column: 14
+Lexeme: integer	Code: Integer	Line: 14	Column: 22
+Lexeme: ;	Code: Semicolon	Line: 14	Column: 22
+
+
+Complete Dervation tree, Code structure:
+Start => 
+function <identifier> ( ) arrow void { 
+localVar <identifier> : integer ; 
+localVar <identifier> : integer ; 
+localVar <identifier> : integer ; 
+localVar <identifier> : integer ; 
+} 
+function <identifier> ( ) arrow void { 
+localVar <identifier> : integer ; 
+localVar <identifier> : integer ; 

@@ -1,0 +1,99 @@
+{
+  "classtables": [],
+  "functiontables": [
+    {
+      "functionparams": [
+        {
+          "name": "<identifier>",
+          "type": "integer",
+          "isarray": true,
+          "isfunction": false,
+          "isclass": false,
+          "symbol": "arr",
+          "scope": 0,
+          "modifier": 1
+        },
+        {
+          "name": "<identifier>",
+          "type": "integer",
+          "isarray": false,
+          "isfunction": false,
+          "isclass": false,
+          "symbol": "size",
+          "scope": 0,
+          "modifier": 1
+        }
+      ],
+      "returntype": {
+        "name": "returntype",
+        "type": "void",
+        "isarray": false,
+        "isfunction": false,
+        "isclass": false,
+        "symbol": "void",
+        "scope": 0,
+        "modifier": 1
+      },
+      "symboltable": {
+        "symbols": [
+          {
+            "name": "localvar",
+            "type": "integer",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "n",
+            "scope": 1,
+            "modifier": 1
+          },
+          {
+            "name": "localvar",
+            "type": "integer",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "i",
+            "scope": 1,
+            "modifier": 1
+          }
+        ]
+      },
+      "currentScope": 0,
+      "name": "printarray"
+    },
+    {
+      "functionparams": [],
+      "returntype": {
+        "name": "returntype",
+        "type": "void",
+        "isarray": false,
+        "isfunction": false,
+        "isclass": false,
+        "symbol": "void",
+        "scope": 0,
+        "modifier": 1
+      },
+      "symboltable": {
+        "symbols": [
+          {
+            "name": "localvar",
+            "type": "integer",
+            "isarray": true,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "arr",
+            "scope": 1,
+            "dimensions": 1,
+            "sizes": [],
+            "modifier": 1
+          }
+        ]
+      },
+      "currentScope": 0,
+      "name": "main"
+    }
+  ],
+  "symboltable": null,
+  "currentScope": 0,
+  "name": "global"
+}

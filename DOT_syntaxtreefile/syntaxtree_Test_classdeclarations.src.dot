@@ -1,0 +1,141 @@
+digraph AST {
+node10523083 [label=""]
+node10523083 -> node27598891
+node27598891 [label=""]
+node27598891 -> node47063428
+node47063428 [label="class"]
+node27598891 -> node20917673
+node20917673 [label="QUADRATIC"]
+node27598891 -> node54041329
+node54041329 [label=""]
+node54041329 -> node16609919
+node16609919 [label="isa"]
+node54041329 -> node15271547
+node15271547 [label="POLYNOMIAL"]
+node27598891 -> node3226198
+node3226198 [label="{"]
+node27598891 -> node29035785
+node29035785 [label=""]
+node29035785 -> node59995477
+node59995477 [label="private"]
+node29035785 -> node3088388
+node3088388 [label=""]
+node3088388 -> node27795493
+node27795493 [label="attribute"]
+node3088388 -> node48832851
+node48832851 [label="a"]
+node3088388 -> node36842478
+node36842478 [label=":"]
+node3088388 -> node63146847
+node63146847 [label="float"]
+node3088388 -> node31450711
+node31450711 [label=";"]
+node27598891 -> node14620943
+node14620943 [label=""]
+node14620943 -> node64479624
+node64479624 [label="private"]
+node14620943 -> node43445707
+node43445707 [label=""]
+node43445707 -> node55467050
+node55467050 [label="attribute"]
+node43445707 -> node29441404
+node29441404 [label="b"]
+node43445707 -> node63646052
+node63646052 [label=":"]
+node43445707 -> node35943562
+node35943562 [label="float"]
+node43445707 -> node55056607
+node55056607 [label=";"]
+node27598891 -> node25747420
+node25747420 [label=""]
+node25747420 -> node30400195
+node30400195 [label="private"]
+node25747420 -> node5166299
+node5166299 [label=""]
+node5166299 -> node46496694
+node46496694 [label="attribute"]
+node5166299 -> node15817070
+node15817070 [label="c"]
+node5166299 -> node8135907
+node8135907 [label=":"]
+node5166299 -> node6114302
+node6114302 [label="float"]
+node5166299 -> node55028720
+node55028720 [label=";"]
+node27598891 -> node25496434
+node25496434 [label=""]
+node25496434 -> node28141317
+node28141317 [label="public"]
+node25496434 -> node51945267
+node51945267 [label=""]
+node51945267 -> node64854219
+node64854219 [label="constructor"]
+node51945267 -> node46817064
+node46817064 [label=":"]
+node51945267 -> node18700393
+node18700393 [label="("]
+node51945267 -> node34085817
+node34085817 [label="A"]
+node51945267 -> node38336904
+node38336904 [label=":"]
+node51945267 -> node9487824
+node9487824 [label="float"]
+node51945267 -> node18281552
+node18281552 [label=""]
+node18281552 -> node30316242
+node30316242 [label=","]
+node18281552 -> node4410728
+node4410728 [label="B"]
+node18281552 -> node39696553
+node39696553 [label=":"]
+node18281552 -> node21724664
+node21724664 [label="float"]
+node51945267 -> node61304253
+node61304253 [label=""]
+node61304253 -> node14867369
+node14867369 [label=","]
+node61304253 -> node66697461
+node66697461 [label="C"]
+node61304253 -> node63406242
+node63406242 [label=":"]
+node61304253 -> node33785274
+node33785274 [label="float"]
+node51945267 -> node35632012
+node35632012 [label=")"]
+node25496434 -> node52252659
+node52252659 [label=";"]
+node27598891 -> node511887
+node511887 [label=""]
+node511887 -> node4606985
+node4606985 [label="public"]
+node511887 -> node41462866
+node41462866 [label=""]
+node41462866 -> node37621475
+node37621475 [label="function"]
+node41462866 -> node3048957
+node3048957 [label="evaluate"]
+node41462866 -> node27440617
+node27440617 [label=":"]
+node41462866 -> node45638969
+node45638969 [label="("]
+node41462866 -> node8097541
+node8097541 [label=""]
+node8097541 -> node5769005
+node5769005 [label="x"]
+node8097541 -> node51921052
+node51921052 [label=":"]
+node8097541 -> node64636290
+node64636290 [label="float"]
+node41462866 -> node44855704
+node44855704 [label=")"]
+node41462866 -> node1048160
+node1048160 [label="=>"]
+node41462866 -> node9433441
+node9433441 [label="float"]
+node511887 -> node17792110
+node17792110 [label=";"]
+node27598891 -> node25911262
+node25911262 [label="}"]
+node27598891 -> node31874772
+node31874772 [label=";"]
+}

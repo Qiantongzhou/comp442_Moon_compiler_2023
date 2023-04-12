@@ -1,0 +1,16 @@
+
+function main() => void
+{
+  localvar x: integer[7][7];
+  localvar y: integer[6];
+  localvar z: integer[5];
+  x[1][1]=2;
+  y[5]=3;
+  z[2]=x[1][1]+y[5];
+  write(z[2]);
+  
+  
+}
+
+
+ 

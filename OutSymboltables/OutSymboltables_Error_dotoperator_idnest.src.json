@@ -1,0 +1,208 @@
+{
+  "classtables": [
+    {
+      "parent": null,
+      "functiontables": [
+        {
+          "functionparams": [
+            {
+              "name": "<identifier>",
+              "type": "float",
+              "isarray": false,
+              "isfunction": false,
+              "isclass": false,
+              "symbol": "A",
+              "scope": 0,
+              "modifier": 1
+            },
+            {
+              "name": "<identifier>",
+              "type": "float",
+              "isarray": false,
+              "isfunction": false,
+              "isclass": false,
+              "symbol": "B",
+              "scope": 0,
+              "modifier": 1
+            }
+          ],
+          "returntype": {
+            "name": "",
+            "type": "",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "",
+            "scope": 0,
+            "modifier": 0
+          },
+          "symboltable": {
+            "symbols": []
+          },
+          "currentScope": 0,
+          "name": "constructor"
+        }
+      ],
+      "symboltable": {
+        "symbols": [
+          {
+            "name": "attribute",
+            "type": "float",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "a",
+            "scope": 0,
+            "modifier": 1
+          },
+          {
+            "name": "attribute",
+            "type": "float",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "b",
+            "scope": 0,
+            "modifier": 1
+          }
+        ]
+      },
+      "currentScope": 0,
+      "name": "LINEAR"
+    },
+    {
+      "parent": null,
+      "functiontables": [
+        {
+          "functionparams": [
+            {
+              "name": "<identifier>",
+              "type": "float",
+              "isarray": false,
+              "isfunction": false,
+              "isclass": false,
+              "symbol": "A",
+              "scope": 0,
+              "modifier": 1
+            },
+            {
+              "name": "<identifier>",
+              "type": "float",
+              "isarray": false,
+              "isfunction": false,
+              "isclass": false,
+              "symbol": "B",
+              "scope": 0,
+              "modifier": 1
+            },
+            {
+              "name": "<identifier>",
+              "type": "float",
+              "isarray": false,
+              "isfunction": false,
+              "isclass": false,
+              "symbol": "C",
+              "scope": 0,
+              "modifier": 1
+            }
+          ],
+          "returntype": {
+            "name": "",
+            "type": "",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "",
+            "scope": 0,
+            "modifier": 0
+          },
+          "symboltable": {
+            "symbols": []
+          },
+          "currentScope": 0,
+          "name": "constructor"
+        }
+      ],
+      "symboltable": {
+        "symbols": [
+          {
+            "name": "attribute",
+            "type": "float",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "a",
+            "scope": 0,
+            "modifier": 1
+          },
+          {
+            "name": "attribute",
+            "type": "float",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "b",
+            "scope": 0,
+            "modifier": 1
+          },
+          {
+            "name": "attribute",
+            "type": "float",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "c",
+            "scope": 0,
+            "modifier": 1
+          }
+        ]
+      },
+      "currentScope": 0,
+      "name": "QUADRATIC"
+    }
+  ],
+  "functiontables": [
+    {
+      "functionparams": [],
+      "returntype": {
+        "name": "returntype",
+        "type": "void",
+        "isarray": false,
+        "isfunction": false,
+        "isclass": false,
+        "symbol": "void",
+        "scope": 0,
+        "modifier": 1
+      },
+      "symboltable": {
+        "symbols": [
+          {
+            "name": "localvar",
+            "type": "QUADRATIC",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "f1",
+            "scope": 1,
+            "modifier": 1
+          },
+          {
+            "name": "localvar",
+            "type": "string",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "k",
+            "scope": 1,
+            "modifier": 1
+          }
+        ]
+      },
+      "currentScope": 0,
+      "name": "main"
+    }
+  ],
+  "symboltable": null,
+  "currentScope": 0,
+  "name": "global"
+}

@@ -1,0 +1,7 @@
+class QUADRATIC isa POLYNOMIAL {
+  private attribute a: float;
+  private attribute b: float;
+  private attribute c: float;
+  public constructor: (A: float, B: float, C: float);
+  public function evaluate: (x: float) => float;
+};

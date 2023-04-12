@@ -1,0 +1,17 @@
+
+function multiple() => void 
+{
+  localvar n    : integer;
+  localvar i    : integer;
+  localvar j    : integer;
+  localvar temp : integer; 
+  
+}
+   
+
+function multiple() => void 
+{
+  localvar n: integer;
+  localvar i: integer; 
+  
+} 

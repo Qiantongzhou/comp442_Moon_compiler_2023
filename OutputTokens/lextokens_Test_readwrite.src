@@ -1,0 +1,75 @@
+This is all the Lexical Tokens
+
+
+id:
+
+main       location: 0 14
+f1       location: 2 14
+LINEAR       location: 2 22
+f2       location: 3 14
+QUADRATIC       location: 3 25
+counter       location: 4 19
+counter       location: 6 10
+counter       location: 8 16
+counter       location: 10 18
+evaluate       location: 11 22
+counter       location: 11 30
+evaluate       location: 12 22
+counter       location: 12 30
+
+
+integers:
+
+2       location: 2 24
+1       location: 6 13
+10       location: 8 22
+
+
+floats:
+
+3.5       location: 2 29
+2.0       location: 3 30
+1.0       location: 3 35
+0.0       location: 3 40
+
+
+Operators:
+
+=>       location: 0 18
+-       location: 3 26
+=       location: 6 11
+<=       location: 8 18
+
+
+Punctuation:
+
+:       location: 2 15
+,       location: 2 24
+;       location: 2 30
+:       location: 3 15
+,       location: 3 30
+,       location: 3 35
+;       location: 3 41
+:       location: 4 20
+;       location: 4 28
+;       location: 6 13
+;       location: 10 19
+.       location: 11 13
+;       location: 11 32
+.       location: 12 13
+;       location: 12 32
+;       location: 13 4
+
+
+ReservedWords:
+
+function       location: 0 9
+void       location: 0 24
+localvar       location: 2 11
+localvar       location: 3 11
+localvar       location: 4 11
+integer       location: 4 28
+while       location: 8 8
+write       location: 10 10
+write       location: 11 10
+write       location: 12 10

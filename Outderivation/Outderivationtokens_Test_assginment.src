@@ -1,0 +1,108 @@
+Top-down syntax generation:
+<Start> =>
+function ?<< current: function expected: <identifier> >>
+function bubbleSort ?<< current: bubbleSort expected: ( >>
+function bubbleSort ( ?<< current: ( expected: <identifier> >>
+function bubbleSort ( arr ?<< current: arr expected: : >>
+function bubbleSort ( arr : ?<< current: : expected: integer >>
+function bubbleSort ( arr : integer ?<< current: integer expected: [ >>
+function bubbleSort ( arr : integer [ ?<< current: [ expected: ] >>
+function bubbleSort ( arr : integer [ ] ?<< current: ] expected: , >>
+function bubbleSort ( arr : integer [ ] , ?<< current: , expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size ?<< current: size expected: : >>
+function bubbleSort ( arr : integer [ ] , size : ?<< current: : expected: integer >>
+function bubbleSort ( arr : integer [ ] , size : integer ?<< current: integer expected: ) >>
+function bubbleSort ( arr : integer [ ] , size : integer ) ?<< current: ) expected: arrow >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => ?<< current: => expected: void >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void ?<< current: void expected: { >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { ?<< current: { expected: localVar >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar ?<< current: localvar expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i ?<< current: i expected: : >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : ?<< current: : expected: integer >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ?<< current: integer expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; ?<< current: ; expected: localVar >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar ?<< current: localvar expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j ?<< current: j expected: : >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : ?<< current: : expected: integer >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ?<< current: integer expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; ?<< current: ; expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j ?<< current: j expected: = >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = ?<< current: = expected: intLit >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = 0 ?<< current: 0 expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = 0 ; ?<< current: ; expected: localVar >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = 0 ; localvar ?<< current: localvar expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = 0 ; localvar n ?<< current: n expected: : >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = 0 ; localvar n : ?<< current: : expected: integer >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = 0 ; localvar n : integer ?<< current: integer expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = 0 ; localvar n : integer ; ?<< current: ; expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = 0 ; localvar n : integer ; n ?<< current: n expected: = >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = 0 ; localvar n : integer ; n = ?<< current: = expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = 0 ; localvar n : integer ; n = size ?<< current: size expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = 0 ; localvar n : integer ; n = size ; ?<< current: ; expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = 0 ; localvar n : integer ; n = size ; arr ?<< current: arr expected: [ >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = 0 ; localvar n : integer ; n = size ; arr [ ?<< current: [ expected: intLit >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = 0 ; localvar n : integer ; n = size ; arr [ 0 ?<< current: 0 expected: ] >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = 0 ; localvar n : integer ; n = size ; arr [ 0 ] ?<< current: ] expected: = >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = 0 ; localvar n : integer ; n = size ; arr [ 0 ] = ?<< current: = expected: intLit >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = 0 ; localvar n : integer ; n = size ; arr [ 0 ] = 64 ?<< current: 64 expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { localvar i : integer ; localvar j : integer ; j = 0 ; localvar n : integer ; n = size ; arr [ 0 ] = 64 ; ?<< current: ; expected: } >>
+
+
+Sytax Tokens:
+Lexeme: function	Code: function	Line: 0	Column: 9
+Lexeme: bubbleSort	Code: Id	Line: 0	Column: 20
+Lexeme: (	Code: LeftParenthesis	Line: 0	Column: 20
+Lexeme: arr	Code: Id	Line: 0	Column: 24
+Lexeme: :	Code: Colon	Line: 0	Column: 25
+Lexeme: integer	Code: Integer	Line: 0	Column: 33
+Lexeme: [	Code: zhongkuoL	Line: 0	Column: 33
+Lexeme: ]	Code: zhongkuoR	Line: 0	Column: 34
+Lexeme: ,	Code: Comma	Line: 0	Column: 35
+Lexeme: size	Code: Id	Line: 0	Column: 41
+Lexeme: :	Code: Colon	Line: 0	Column: 42
+Lexeme: integer	Code: Integer	Line: 0	Column: 50
+Lexeme: )	Code: RightParenthesis	Line: 0	Column: 50
+Lexeme: =>	Code: arrow	Line: 0	Column: 53
+Lexeme: void	Code: Void	Line: 0	Column: 59
+Lexeme: {	Code: LeftBracket	Line: 1	Column: 1
+Lexeme: localvar	Code: localVar	Line: 2	Column: 11
+Lexeme: i	Code: Id	Line: 2	Column: 13
+Lexeme: :	Code: Colon	Line: 2	Column: 18
+Lexeme: integer	Code: Integer	Line: 2	Column: 26
+Lexeme: ;	Code: Semicolon	Line: 2	Column: 26
+Lexeme: localvar	Code: localVar	Line: 3	Column: 11
+Lexeme: j	Code: Id	Line: 3	Column: 13
+Lexeme: :	Code: Colon	Line: 3	Column: 18
+Lexeme: integer	Code: Integer	Line: 3	Column: 26
+Lexeme: ;	Code: Semicolon	Line: 3	Column: 26
+Lexeme: j	Code: Id	Line: 4	Column: 4
+Lexeme: =	Code: Equal	Line: 4	Column: 6
+Lexeme: 0	Code: intLit	Line: 4	Column: 8
+Lexeme: ;	Code: Semicolon	Line: 4	Column: 8
+Lexeme: localvar	Code: localVar	Line: 5	Column: 11
+Lexeme: n	Code: Id	Line: 5	Column: 13
+Lexeme: :	Code: Colon	Line: 5	Column: 18
+Lexeme: integer	Code: Integer	Line: 5	Column: 26
+Lexeme: ;	Code: Semicolon	Line: 5	Column: 26
+Lexeme: n	Code: Id	Line: 6	Column: 4
+Lexeme: =	Code: Equal	Line: 6	Column: 6
+Lexeme: size	Code: Id	Line: 6	Column: 11
+Lexeme: ;	Code: Semicolon	Line: 6	Column: 11
+Lexeme: arr	Code: Id	Line: 7	Column: 6
+Lexeme: [	Code: zhongkuoL	Line: 7	Column: 6
+Lexeme: 0	Code: intLit	Line: 7	Column: 8
+Lexeme: ]	Code: zhongkuoR	Line: 7	Column: 8
+Lexeme: =	Code: Equal	Line: 7	Column: 11
+Lexeme: 64	Code: intLit	Line: 7	Column: 14
+Lexeme: ;	Code: Semicolon	Line: 7	Column: 14
+
+
+Complete Dervation tree, Code structure:
+Start => 
+function <identifier> ( <identifier> : integer [ ] , <identifier> : integer ) arrow void { 
+localVar <identifier> : integer ; 
+localVar <identifier> : integer ; 
+<identifier> = intLit ; 
+localVar <identifier> : integer ; 
+<identifier> = <identifier> ; 
+<identifier> [ intLit ] = intLit ; 

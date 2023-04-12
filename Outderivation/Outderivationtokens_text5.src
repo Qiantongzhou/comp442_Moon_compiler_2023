@@ -1,0 +1,175 @@
+Top-down syntax generation:
+<Start> =>
+function ?<< current: function expected: <identifier> >>
+function bubbleSort ?<< current: bubbleSort expected: ( >>
+function bubbleSort ( ?<< current: ( expected: <identifier> >>
+function bubbleSort ( arr ?<< current: arr expected: : >>
+function bubbleSort ( arr : ?<< current: : expected: integer >>
+function bubbleSort ( arr : integer ?<< current: integer expected: [ >>
+function bubbleSort ( arr : integer [ ?<< current: [ expected: ] >>
+function bubbleSort ( arr : integer [ ] ?<< current: ] expected: , >>
+function bubbleSort ( arr : integer [ ] , ?<< current: , expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size ?<< current: size expected: : >>
+function bubbleSort ( arr : integer [ ] , size : ?<< current: : expected: integer >>
+function bubbleSort ( arr : integer [ ] , size : integer ?<< current: integer expected: ) >>
+function bubbleSort ( arr : integer [ ] , size : integer ) ?<< current: ) expected: arrow >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => ?<< current: => expected: void >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void ?<< current: void expected: { >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { ?<< current: { expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id ?<< current: id expected: . >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . ?<< current: . expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id ?<< current: id expected: . >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . ?<< current: . expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id ?<< current: id expected: . >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . ?<< current: . expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ?<< current: id expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; ?<< current: ; expected: } >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } ?<< current: } expected: class >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class ?<< current: class expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC ?<< current: QUADRATIC expected: isa >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa ?<< current: isa expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL ?<< current: POLYNOMIAL expected: { >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { ?<< current: { expected: private >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private ?<< current: private expected: attribute >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute ?<< current: attribute expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a ?<< current: a expected: : >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : ?<< current: : expected: float >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ?<< current: float expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; ?<< current: ; expected: private >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private ?<< current: private expected: attribute >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute ?<< current: attribute expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b ?<< current: b expected: : >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : ?<< current: : expected: float >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ?<< current: float expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; ?<< current: ; expected: private >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private ?<< current: private expected: attribute >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute ?<< current: attribute expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c ?<< current: c expected: : >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : ?<< current: : expected: float >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ?<< current: float expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; ?<< current: ; expected: public >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public ?<< current: public expected: constructor >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor ?<< current: constructor expected: : >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ?<< current: : expected: ( >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( ?<< current: ( expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A ?<< current: A expected: : >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : ?<< current: : expected: float >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float ?<< current: float expected: , >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , ?<< current: , expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B ?<< current: B expected: : >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : ?<< current: : expected: float >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float ?<< current: float expected: , >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , ?<< current: , expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C ?<< current: C expected: : >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : ?<< current: : expected: float >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ?<< current: float expected: ) >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ?<< current: ) expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; ?<< current: ; expected: public >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public ?<< current: public expected: function >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function ?<< current: function expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate ?<< current: evaluate expected: : >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ?<< current: : expected: ( >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ( ?<< current: ( expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ( x ?<< current: x expected: : >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ( x : ?<< current: : expected: float >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ( x : float ?<< current: float expected: ) >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ( x : float ) ?<< current: ) expected: arrow >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ( x : float ) => ?<< current: => expected: float >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ( x : float ) => float ?<< current: float expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ( x : float ) => float ; ?<< current: ; expected: } >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { id . id . id . id ; } class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ( x : float ) => float ; } ?<< current: } expected: ; >>
+
+
+Sytax Tokens:
+Lexeme: function	Code: function	Line: 0	Column: 9
+Lexeme: bubbleSort	Code: Id	Line: 0	Column: 20
+Lexeme: (	Code: LeftParenthesis	Line: 0	Column: 20
+Lexeme: arr	Code: Id	Line: 0	Column: 24
+Lexeme: :	Code: Colon	Line: 0	Column: 25
+Lexeme: integer	Code: Integer	Line: 0	Column: 33
+Lexeme: [	Code: zhongkuoL	Line: 0	Column: 33
+Lexeme: ]	Code: zhongkuoR	Line: 0	Column: 34
+Lexeme: ,	Code: Comma	Line: 0	Column: 35
+Lexeme: size	Code: Id	Line: 0	Column: 41
+Lexeme: :	Code: Colon	Line: 0	Column: 42
+Lexeme: integer	Code: Integer	Line: 0	Column: 50
+Lexeme: )	Code: RightParenthesis	Line: 0	Column: 50
+Lexeme: =>	Code: arrow	Line: 0	Column: 53
+Lexeme: void	Code: Void	Line: 0	Column: 59
+Lexeme: {	Code: LeftBracket	Line: 1	Column: 1
+Lexeme: id	Code: Id	Line: 2	Column: 5
+Lexeme: .	Code: dot	Line: 2	Column: 5
+Lexeme: id	Code: Id	Line: 2	Column: 8
+Lexeme: .	Code: dot	Line: 2	Column: 8
+Lexeme: id	Code: Id	Line: 2	Column: 11
+Lexeme: .	Code: dot	Line: 2	Column: 11
+Lexeme: id	Code: Id	Line: 2	Column: 14
+Lexeme: ;	Code: Semicolon	Line: 2	Column: 14
+Lexeme: }	Code: RightBracket	Line: 5	Column: 1
+Lexeme: class	Code: Class	Line: 7	Column: 6
+Lexeme: QUADRATIC	Code: Id	Line: 7	Column: 16
+Lexeme: isa	Code: isa	Line: 7	Column: 20
+Lexeme: POLYNOMIAL	Code: Id	Line: 7	Column: 31
+Lexeme: {	Code: LeftBracket	Line: 7	Column: 32
+Lexeme: private	Code: Private	Line: 8	Column: 10
+Lexeme: attribute	Code: attribute	Line: 8	Column: 20
+Lexeme: a	Code: Id	Line: 8	Column: 22
+Lexeme: :	Code: Colon	Line: 8	Column: 23
+Lexeme: float	Code: Float	Line: 8	Column: 29
+Lexeme: ;	Code: Semicolon	Line: 8	Column: 29
+Lexeme: private	Code: Private	Line: 9	Column: 10
+Lexeme: attribute	Code: attribute	Line: 9	Column: 20
+Lexeme: b	Code: Id	Line: 9	Column: 22
+Lexeme: :	Code: Colon	Line: 9	Column: 23
+Lexeme: float	Code: Float	Line: 9	Column: 29
+Lexeme: ;	Code: Semicolon	Line: 9	Column: 29
+Lexeme: private	Code: Private	Line: 10	Column: 10
+Lexeme: attribute	Code: attribute	Line: 10	Column: 20
+Lexeme: c	Code: Id	Line: 10	Column: 22
+Lexeme: :	Code: Colon	Line: 10	Column: 23
+Lexeme: float	Code: Float	Line: 10	Column: 29
+Lexeme: ;	Code: Semicolon	Line: 10	Column: 29
+Lexeme: public	Code: Public	Line: 11	Column: 9
+Lexeme: constructor	Code: constructor	Line: 11	Column: 21
+Lexeme: :	Code: Colon	Line: 11	Column: 22
+Lexeme: (	Code: LeftParenthesis	Line: 11	Column: 23
+Lexeme: A	Code: Id	Line: 11	Column: 25
+Lexeme: :	Code: Colon	Line: 11	Column: 26
+Lexeme: float	Code: Float	Line: 11	Column: 32
+Lexeme: ,	Code: Comma	Line: 11	Column: 32
+Lexeme: B	Code: Id	Line: 11	Column: 35
+Lexeme: :	Code: Colon	Line: 11	Column: 36
+Lexeme: float	Code: Float	Line: 11	Column: 42
+Lexeme: ,	Code: Comma	Line: 11	Column: 42
+Lexeme: C	Code: Id	Line: 11	Column: 45
+Lexeme: :	Code: Colon	Line: 11	Column: 46
+Lexeme: float	Code: Float	Line: 11	Column: 52
+Lexeme: )	Code: RightParenthesis	Line: 11	Column: 52
+Lexeme: ;	Code: Semicolon	Line: 11	Column: 53
+Lexeme: public	Code: Public	Line: 12	Column: 9
+Lexeme: function	Code: function	Line: 12	Column: 18
+Lexeme: evaluate	Code: Id	Line: 12	Column: 27
+Lexeme: :	Code: Colon	Line: 12	Column: 28
+Lexeme: (	Code: LeftParenthesis	Line: 12	Column: 29
+Lexeme: x	Code: Id	Line: 12	Column: 31
+Lexeme: :	Code: Colon	Line: 12	Column: 32
+Lexeme: float	Code: Float	Line: 12	Column: 38
+Lexeme: )	Code: RightParenthesis	Line: 12	Column: 38
+Lexeme: =>	Code: arrow	Line: 12	Column: 41
+Lexeme: float	Code: Float	Line: 12	Column: 48
+Lexeme: ;	Code: Semicolon	Line: 12	Column: 48
+Lexeme: }	Code: RightBracket	Line: 13	Column: 1
+
+
+Complete Dervation tree, Code structure:
+Start => 
+function <identifier> ( <identifier> : integer [ ] , <identifier> : integer ) arrow void { 
+<identifier> . <identifier> . <identifier> . <identifier> ; 
+} 
+class <identifier> isa <identifier> { 
+private attribute <identifier> : float ; 
+private attribute <identifier> : float ; 
+private attribute <identifier> : float ; 
+public constructor : ( <identifier> : float , <identifier> : float , <identifier> : float ) ; 
+public function <identifier> : ( <identifier> : float ) arrow float ; 
+} 

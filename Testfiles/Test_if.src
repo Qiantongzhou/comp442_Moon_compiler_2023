@@ -1,0 +1,14 @@
+function bubbleSort(arr: integer[], size: integer) => void 
+{
+ if (arr[j] > arr[j+1]) 
+        then {
+          // swap temp and arr[i]
+          temp = arr[j];
+          arr[j] = arr[j+1];
+          arr[j+1] = temp;
+        } else ;
+        j = j+1;
+      };
+}
+
+

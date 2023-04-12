@@ -1,0 +1,407 @@
+{
+  "name": "start",
+  "value": "",
+  "left": null,
+  "right": null,
+  "children": [
+    {
+      "name": "functiondecl",
+      "value": "",
+      "left": null,
+      "right": null,
+      "children": [
+        {
+          "name": "function",
+          "value": "function",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "funcHead",
+          "value": "",
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "<identifier>",
+              "value": "LINEAR",
+              "left": null,
+              "right": null,
+              "children": []
+            },
+            {
+              "name": "sr",
+              "value": "::",
+              "left": null,
+              "right": null,
+              "children": []
+            },
+            {
+              "name": "<identifier>",
+              "value": "evaluate",
+              "left": null,
+              "right": null,
+              "children": []
+            },
+            {
+              "name": "funcheadtypeone",
+              "value": "",
+              "left": null,
+              "right": null,
+              "children": [
+                {
+                  "name": "(",
+                  "value": "(",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "<identifier>",
+                  "value": "x",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ":",
+                  "value": ":",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "float",
+                  "value": "float",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ")",
+                  "value": ")",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "arrow",
+                  "value": "=>",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "float",
+                  "value": "float",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "funcBody",
+          "value": "",
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "{",
+              "value": "{",
+              "left": null,
+              "right": null,
+              "children": []
+            },
+            {
+              "name": "LocalVarDecl",
+              "value": "",
+              "left": null,
+              "right": null,
+              "children": [
+                {
+                  "name": "LocalVarDecl",
+                  "value": "",
+                  "left": null,
+                  "right": null,
+                  "children": [
+                    {
+                      "name": "localVar",
+                      "value": "localvar",
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    },
+                    {
+                      "name": "<identifier>",
+                      "value": "result",
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    },
+                    {
+                      "name": ":",
+                      "value": ":",
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    },
+                    {
+                      "name": "float",
+                      "value": "float",
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    },
+                    {
+                      "name": ";",
+                      "value": ";",
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "statement",
+              "value": "",
+              "left": null,
+              "right": null,
+              "children": [
+                {
+                  "name": "AssignOp",
+                  "value": "=",
+                  "left": {
+                    "name": "idnest",
+                    "value": "",
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "<identifier>",
+                        "value": "result",
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  "right": {
+                    "name": "Expr",
+                    "value": "",
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "term",
+                        "value": "",
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "floatLit",
+                            "value": "0.0",
+                            "left": null,
+                            "right": null,
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "statement",
+              "value": "",
+              "left": null,
+              "right": null,
+              "children": [
+                {
+                  "name": "AssignOp",
+                  "value": "=",
+                  "left": {
+                    "name": "idnest",
+                    "value": "",
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "<identifier>",
+                        "value": "result",
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  "right": {
+                    "name": "Expr",
+                    "value": "",
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "term",
+                        "value": "",
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "AddOp",
+                            "value": "+",
+                            "left": {
+                              "name": "MultOp",
+                              "value": "*",
+                              "left": {
+                                "name": "idnest",
+                                "value": "",
+                                "left": null,
+                                "right": null,
+                                "children": [
+                                  {
+                                    "name": "<identifier>",
+                                    "value": "a",
+                                    "left": null,
+                                    "right": null,
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              "right": {
+                                "name": "idnest",
+                                "value": "",
+                                "left": null,
+                                "right": null,
+                                "children": [
+                                  {
+                                    "name": "<identifier>",
+                                    "value": "x",
+                                    "left": null,
+                                    "right": null,
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              "children": []
+                            },
+                            "right": {
+                              "name": "term",
+                              "value": "",
+                              "left": null,
+                              "right": null,
+                              "children": [
+                                {
+                                  "name": "idnest",
+                                  "value": "",
+                                  "left": null,
+                                  "right": null,
+                                  "children": [
+                                    {
+                                      "name": "<identifier>",
+                                      "value": "b",
+                                      "left": null,
+                                      "right": null,
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "statement",
+              "value": "",
+              "left": null,
+              "right": null,
+              "children": [
+                {
+                  "name": "return",
+                  "value": "return",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "(",
+                  "value": "(",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "Expr",
+                  "value": "",
+                  "left": null,
+                  "right": null,
+                  "children": [
+                    {
+                      "name": "term",
+                      "value": "",
+                      "left": null,
+                      "right": null,
+                      "children": [
+                        {
+                          "name": "idnest",
+                          "value": "",
+                          "left": null,
+                          "right": null,
+                          "children": [
+                            {
+                              "name": "<identifier>",
+                              "value": "result",
+                              "left": null,
+                              "right": null,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": ")",
+                  "value": ")",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ";",
+                  "value": ";",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "}",
+              "value": "}",
+              "left": null,
+              "right": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

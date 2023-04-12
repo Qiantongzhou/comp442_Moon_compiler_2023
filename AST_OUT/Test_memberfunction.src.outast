@@ -1,0 +1,93 @@
+digraph AST {
+node52983808 [label=""]
+node52983808 -> node7092232
+node7092232 [label=""]
+node7092232 -> node63830089
+node63830089 [label="class"]
+node7092232 -> node37599894
+node37599894 [label="QUADRATIC"]
+node7092232 -> node2854726
+node2854726 [label=""]
+node2854726 -> node25692540
+node25692540 [label="isa"]
+node2854726 -> node29906272
+node29906272 [label="POLYNOMIAL"]
+node7092232 -> node720995
+node720995 [label="{"]
+node7092232 -> node6488958
+node6488958 [label=""]
+node6488958 -> node58400626
+node58400626 [label="public"]
+node6488958 -> node55843593
+node55843593 [label=""]
+node55843593 -> node32830290
+node32830290 [label="constructor"]
+node55843593 -> node27037160
+node27037160 [label=":"]
+node55843593 -> node42007851
+node42007851 [label="("]
+node55843593 -> node42526340
+node42526340 [label="A"]
+node55843593 -> node47192740
+node47192740 [label=":"]
+node55843593 -> node22081476
+node22081476 [label="float"]
+node55843593 -> node64515557
+node64515557 [label=""]
+node64515557 -> node43769104
+node43769104 [label=","]
+node64515557 -> node58377623
+node58377623 [label="B"]
+node64515557 -> node55636561
+node55636561 [label=":"]
+node64515557 -> node30967009
+node30967009 [label="float"]
+node55843593 -> node10267631
+node10267631 [label=""]
+node10267631 -> node25299820
+node25299820 [label=","]
+node10267631 -> node26371793
+node26371793 [label="C"]
+node10267631 -> node36019552
+node36019552 [label=":"]
+node10267631 -> node55740512
+node55740512 [label="float"]
+node55843593 -> node31902563
+node31902563 [label=")"]
+node55843593 -> node18687619
+node18687619 [label=";"]
+node7092232 -> node33970848
+node33970848 [label=""]
+node33970848 -> node37302179
+node37302179 [label="public"]
+node33970848 -> node175293
+node175293 [label=""]
+node175293 -> node1577639
+node1577639 [label="function"]
+node175293 -> node14198754
+node14198754 [label="evaluate"]
+node175293 -> node60679928
+node60679928 [label=":"]
+node175293 -> node9248440
+node9248440 [label="("]
+node175293 -> node16127101
+node16127101 [label=""]
+node16127101 -> node10926182
+node10926182 [label="x"]
+node16127101 -> node31226782
+node31226782 [label=":"]
+node16127101 -> node12605589
+node12605589 [label="float"]
+node175293 -> node46341445
+node46341445 [label=")"]
+node175293 -> node14419821
+node14419821 [label="=>"]
+node175293 -> node62669527
+node62669527 [label="float"]
+node175293 -> node27154837
+node27154837 [label=";"]
+node7092232 -> node43066942
+node43066942 [label="}"]
+node7092232 -> node52058165
+node52058165 [label=";"]
+}

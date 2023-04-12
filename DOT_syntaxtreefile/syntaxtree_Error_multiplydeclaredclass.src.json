@@ -1,0 +1,384 @@
+{
+  "name": "start",
+  "value": "",
+  "left": null,
+  "right": null,
+  "children": [
+    {
+      "name": "classdecl",
+      "value": "",
+      "left": null,
+      "right": null,
+      "children": [
+        {
+          "name": "class",
+          "value": "class",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "<identifier>",
+          "value": "LINEAR",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "{",
+          "value": "{",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "memberdeclear",
+          "value": "",
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "private",
+              "value": "private",
+              "left": null,
+              "right": null,
+              "children": []
+            },
+            {
+              "name": "memberVarDecl",
+              "value": "",
+              "left": null,
+              "right": null,
+              "children": [
+                {
+                  "name": "attribute",
+                  "value": "attribute",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "<identifier>",
+                  "value": "a",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ":",
+                  "value": ":",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "float",
+                  "value": "float",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ";",
+                  "value": ";",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "memberdeclear",
+          "value": "",
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "private",
+              "value": "private",
+              "left": null,
+              "right": null,
+              "children": []
+            },
+            {
+              "name": "memberVarDecl",
+              "value": "",
+              "left": null,
+              "right": null,
+              "children": [
+                {
+                  "name": "attribute",
+                  "value": "attribute",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "<identifier>",
+                  "value": "b",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ":",
+                  "value": ":",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "float",
+                  "value": "float",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ";",
+                  "value": ";",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "}",
+          "value": "}",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": ";",
+          "value": ";",
+          "left": null,
+          "right": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "classdecl",
+      "value": "",
+      "left": null,
+      "right": null,
+      "children": [
+        {
+          "name": "class",
+          "value": "class",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "<identifier>",
+          "value": "LINEAR",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "{",
+          "value": "{",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "memberdeclear",
+          "value": "",
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "private",
+              "value": "private",
+              "left": null,
+              "right": null,
+              "children": []
+            },
+            {
+              "name": "memberVarDecl",
+              "value": "",
+              "left": null,
+              "right": null,
+              "children": [
+                {
+                  "name": "attribute",
+                  "value": "attribute",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "<identifier>",
+                  "value": "a",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ":",
+                  "value": ":",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "float",
+                  "value": "float",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ";",
+                  "value": ";",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "memberdeclear",
+          "value": "",
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "private",
+              "value": "private",
+              "left": null,
+              "right": null,
+              "children": []
+            },
+            {
+              "name": "memberVarDecl",
+              "value": "",
+              "left": null,
+              "right": null,
+              "children": [
+                {
+                  "name": "attribute",
+                  "value": "attribute",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "<identifier>",
+                  "value": "b",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ":",
+                  "value": ":",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "float",
+                  "value": "float",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ";",
+                  "value": ";",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "memberdeclear",
+          "value": "",
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "private",
+              "value": "private",
+              "left": null,
+              "right": null,
+              "children": []
+            },
+            {
+              "name": "memberVarDecl",
+              "value": "",
+              "left": null,
+              "right": null,
+              "children": [
+                {
+                  "name": "attribute",
+                  "value": "attribute",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "<identifier>",
+                  "value": "c",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ":",
+                  "value": ":",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "float",
+                  "value": "float",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ";",
+                  "value": ";",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "}",
+          "value": "}",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": ";",
+          "value": ";",
+          "left": null,
+          "right": null,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

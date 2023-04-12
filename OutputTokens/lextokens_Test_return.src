@@ -1,0 +1,54 @@
+This is all the Lexical Tokens
+
+
+id:
+
+LINEAR       location: 0 16
+evaluate       location: 0 26
+x       location: 0 28
+result       location: 2 18
+result       location: 3 9
+result       location: 4 9
+a       location: 4 13
+x       location: 4 17
+b       location: 4 21
+result       location: 5 17
+
+
+integers:
+
+
+
+floats:
+
+0.0       location: 3 15
+
+
+Operators:
+
+=>       location: 0 38
+=       location: 3 11
+=       location: 4 11
+*       location: 4 14
++       location: 4 18
+
+
+Punctuation:
+
+::       location: 0 17
+:       location: 0 29
+:       location: 2 19
+;       location: 2 25
+;       location: 3 15
+;       location: 4 21
+;       location: 5 18
+
+
+ReservedWords:
+
+function       location: 0 9
+float       location: 0 35
+float       location: 0 45
+localvar       location: 2 11
+float       location: 2 25
+return       location: 5 9

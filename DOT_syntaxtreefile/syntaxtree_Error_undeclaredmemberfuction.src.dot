@@ -1,0 +1,223 @@
+digraph AST {
+node55530882 [label=""]
+node55530882 -> node30015890
+node30015890 [label=""]
+node30015890 -> node1707556
+node1707556 [label="function"]
+node30015890 -> node15368010
+node15368010 [label=""]
+node15368010 -> node4094363
+node4094363 [label="QUADRATIC"]
+node15368010 -> node36849274
+node36849274 [label="::"]
+node15368010 -> node63208015
+node63208015 [label="evaluate"]
+node15368010 -> node32001227
+node32001227 [label=""]
+node32001227 -> node19575591
+node19575591 [label="("]
+node32001227 -> node41962596
+node41962596 [label="x"]
+node32001227 -> node42119052
+node42119052 [label=":"]
+node32001227 -> node43527150
+node43527150 [label="float"]
+node32001227 -> node56200037
+node56200037 [label=")"]
+node32001227 -> node36038289
+node36038289 [label="=>"]
+node32001227 -> node55909147
+node55909147 [label="float"]
+node30015890 -> node33420276
+node33420276 [label=""]
+node33420276 -> node32347029
+node32347029 [label="{"]
+node33420276 -> node22687807
+node22687807 [label=""]
+node22687807 -> node2863675
+node2863675 [label="localvar"]
+node22687807 -> node25773083
+node25773083 [label="result"]
+node22687807 -> node30631159
+node30631159 [label=":"]
+node22687807 -> node7244975
+node7244975 [label="float"]
+node22687807 -> node65204782
+node65204782 [label=";"]
+node33420276 -> node49972132
+node49972132 [label=""]
+node49972132 -> node47096010
+node47096010 [label="="]
+node47096010 -> node21210914 [label="left"]
+node21210914 [label=""]
+node21210914 -> node56680499
+node56680499 [label="result"]
+node47096010 -> node40362448 [label="right"]
+node40362448 [label=""]
+node40362448 -> node27717712
+node27717712 [label=""]
+node27717712 -> node48132822
+node48132822 [label=""]
+node48132822 -> node30542218
+node30542218 [label="a"]
+node33420276 -> node6444509
+node6444509 [label=""]
+node6444509 -> node58000584
+node58000584 [label="="]
+node58000584 -> node52243212 [label="left"]
+node52243212 [label=""]
+node52243212 -> node426867
+node426867 [label="result"]
+node58000584 -> node3841804 [label="right"]
+node3841804 [label=""]
+node3841804 -> node34576242
+node34576242 [label=""]
+node34576242 -> node42750725
+node42750725 [label="+"]
+node42750725 -> node49212206 [label="left"]
+node49212206 [label="*"]
+node49212206 -> node40256670 [label="left"]
+node40256670 [label=""]
+node40256670 -> node26765710
+node26765710 [label="result"]
+node49212206 -> node39564799 [label="right"]
+node39564799 [label=""]
+node39564799 -> node20538874
+node20538874 [label="x"]
+node42750725 -> node50632145 [label="right"]
+node50632145 [label=""]
+node50632145 -> node53036123
+node53036123 [label=""]
+node53036123 -> node7563067
+node7563067 [label="b"]
+node33420276 -> node958745
+node958745 [label=""]
+node958745 -> node8628710
+node8628710 [label="="]
+node8628710 -> node10549531 [label="left"]
+node10549531 [label=""]
+node10549531 -> node27836922
+node27836922 [label="result"]
+node8628710 -> node49205706 [label="right"]
+node49205706 [label=""]
+node49205706 -> node40198173
+node40198173 [label=""]
+node40198173 -> node26239245
+node26239245 [label="+"]
+node26239245 -> node34826618 [label="left"]
+node34826618 [label="*"]
+node34826618 -> node45004109 [label="left"]
+node45004109 [label=""]
+node45004109 -> node2383799
+node2383799 [label="result"]
+node34826618 -> node21454193 [label="right"]
+node21454193 [label=""]
+node21454193 -> node58870012
+node58870012 [label="x"]
+node26239245 -> node60068066 [label="right"]
+node60068066 [label=""]
+node60068066 -> node3741682
+node3741682 [label=""]
+node3741682 -> node33675143
+node33675143 [label="c"]
+node33420276 -> node34640832
+node34640832 [label=""]
+node34640832 -> node43332040
+node43332040 [label="return"]
+node34640832 -> node54444047
+node54444047 [label="("]
+node34640832 -> node20234383
+node20234383 [label=""]
+node20234383 -> node47891719
+node47891719 [label=""]
+node47891719 -> node28372289
+node28372289 [label=""]
+node28372289 -> node54024015
+node54024015 [label="result"]
+node34640832 -> node16454088
+node16454088 [label=")"]
+node34640832 -> node13869071
+node13869071 [label=";"]
+node33420276 -> node57712780
+node57712780 [label="}"]
+node55530882 -> node49652976
+node49652976 [label=""]
+node49652976 -> node44223604
+node44223604 [label="function"]
+node49652976 -> node62468121
+node62468121 [label=""]
+node62468121 -> node25342185
+node25342185 [label="QUADRATIC"]
+node62468121 -> node26753075
+node26753075 [label="::"]
+node62468121 -> node39451090
+node39451090 [label=""]
+node39451090 -> node19515494
+node19515494 [label="constructor"]
+node39451090 -> node41421720
+node41421720 [label="("]
+node39451090 -> node37251161
+node37251161 [label="A"]
+node39451090 -> node66824994
+node66824994 [label=":"]
+node39451090 -> node64554036
+node64554036 [label="float"]
+node39451090 -> node44115416
+node44115416 [label=""]
+node44115416 -> node61494432
+node61494432 [label=","]
+node44115416 -> node16578980
+node16578980 [label="B"]
+node44115416 -> node14993092
+node14993092 [label=":"]
+node44115416 -> node720107
+node720107 [label="float"]
+node39451090 -> node6480969
+node6480969 [label=""]
+node6480969 -> node58328727
+node58328727 [label=","]
+node6480969 -> node55196503
+node55196503 [label="C"]
+node6480969 -> node27006480
+node27006480 [label=":"]
+node6480969 -> node41731733
+node41731733 [label="float"]
+node39451090 -> node40041277
+node40041277 [label=")"]
+node49652976 -> node24827179
+node24827179 [label=""]
+node24827179 -> node22118023
+node22118023 [label="{"]
+node24827179 -> node64844482
+node64844482 [label="."]
+node24827179 -> node46729429
+node46729429 [label="a"]
+node24827179 -> node17911681
+node17911681 [label="="]
+node24827179 -> node26987408
+node26987408 [label="A"]
+node24827179 -> node41560081
+node41560081 [label=";"]
+node24827179 -> node38496415
+node38496415 [label="."]
+node24827179 -> node10923418
+node10923418 [label="b"]
+node24827179 -> node31201899
+node31201899 [label="="]
+node24827179 -> node12381635
+node12381635 [label="B"]
+node24827179 -> node44325851
+node44325851 [label=";"]
+node24827179 -> node63388340
+node63388340 [label="."]
+node24827179 -> node33624151
+node33624151 [label="c"]
+node24827179 -> node34181910
+node34181910 [label="="]
+node24827179 -> node39201736
+node39201736 [label="C"]
+node24827179 -> node17271312
+node17271312 [label=";"]
+node24827179 -> node21224086
+node21224086 [label="}"]
+}

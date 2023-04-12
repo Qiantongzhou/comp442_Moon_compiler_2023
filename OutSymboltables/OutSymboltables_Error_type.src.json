@@ -1,0 +1,67 @@
+{
+  "classtables": [],
+  "functiontables": [
+    {
+      "functionparams": [],
+      "returntype": {
+        "name": "returntype",
+        "type": "void",
+        "isarray": false,
+        "isfunction": false,
+        "isclass": false,
+        "symbol": "void",
+        "scope": 0,
+        "modifier": 1
+      },
+      "symboltable": {
+        "symbols": [
+          {
+            "name": "localvar",
+            "type": "integer",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "n",
+            "scope": 1,
+            "modifier": 1
+          },
+          {
+            "name": "localvar",
+            "type": "float",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "i",
+            "scope": 1,
+            "modifier": 1
+          },
+          {
+            "name": "localvar",
+            "type": "integer",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "k",
+            "scope": 1,
+            "modifier": 1
+          },
+          {
+            "name": "localvar",
+            "type": "string",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "q",
+            "scope": 1,
+            "modifier": 1
+          }
+        ]
+      },
+      "currentScope": 0,
+      "name": "printarray"
+    }
+  ],
+  "symboltable": null,
+  "currentScope": 0,
+  "name": "global"
+}

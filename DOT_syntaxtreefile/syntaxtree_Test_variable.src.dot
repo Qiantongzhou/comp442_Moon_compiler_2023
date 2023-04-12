@@ -1,0 +1,53 @@
+digraph AST {
+node62509834 [label=""]
+node62509834 -> node25717600
+node25717600 [label=""]
+node25717600 -> node30131813
+node30131813 [label="class"]
+node25717600 -> node2750866
+node2750866 [label="LINEAR"]
+node25717600 -> node24757801
+node24757801 [label=""]
+node24757801 -> node21493617
+node21493617 [label="isa"]
+node24757801 -> node59224828
+node59224828 [label="POLYNOMIAL"]
+node25717600 -> node63261412
+node63261412 [label="{"]
+node25717600 -> node32481801
+node32481801 [label=""]
+node32481801 -> node23900756
+node23900756 [label="private"]
+node32481801 -> node13780214
+node13780214 [label=""]
+node13780214 -> node56913064
+node56913064 [label="attribute"]
+node13780214 -> node42455531
+node42455531 [label="a"]
+node13780214 -> node46555465
+node46555465 [label=":"]
+node13780214 -> node16346001
+node16346001 [label="float"]
+node13780214 -> node12896286
+node12896286 [label=";"]
+node25717600 -> node48957711
+node48957711 [label=""]
+node48957711 -> node37966223
+node37966223 [label="private"]
+node48957711 -> node6151694
+node6151694 [label=""]
+node6151694 -> node55365254
+node55365254 [label="attribute"]
+node6151694 -> node28525238
+node28525238 [label="b"]
+node6151694 -> node55400552
+node55400552 [label=":"]
+node6151694 -> node28842926
+node28842926 [label="float"]
+node6151694 -> node58259743
+node58259743 [label=";"]
+node25717600 -> node54575646
+node54575646 [label="}"]
+node25717600 -> node21418771
+node21418771 [label=";"]
+}

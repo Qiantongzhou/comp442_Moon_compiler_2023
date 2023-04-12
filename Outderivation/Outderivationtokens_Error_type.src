@@ -1,0 +1,84 @@
+Top-down syntax generation:
+<Start> =>
+function ?<< current: function expected: <identifier> >>
+function printarray ?<< current: printarray expected: ( >>
+function printarray ( ?<< current: ( expected: ) >>
+function printarray ( ) ?<< current: ) expected: arrow >>
+function printarray ( ) => ?<< current: => expected: void >>
+function printarray ( ) => void ?<< current: void expected: { >>
+function printarray ( ) => void { ?<< current: { expected: localVar >>
+function printarray ( ) => void { localvar ?<< current: localvar expected: <identifier> >>
+function printarray ( ) => void { localvar n ?<< current: n expected: : >>
+function printarray ( ) => void { localvar n : ?<< current: : expected: integer >>
+function printarray ( ) => void { localvar n : integer ?<< current: integer expected: ; >>
+function printarray ( ) => void { localvar n : integer ; ?<< current: ; expected: localVar >>
+function printarray ( ) => void { localvar n : integer ; localvar ?<< current: localvar expected: <identifier> >>
+function printarray ( ) => void { localvar n : integer ; localvar i ?<< current: i expected: : >>
+function printarray ( ) => void { localvar n : integer ; localvar i : ?<< current: : expected: float >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ?<< current: float expected: ; >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ; ?<< current: ; expected: <identifier> >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ; n ?<< current: n expected: = >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ; n = ?<< current: = expected: <identifier> >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ; n = i ?<< current: i expected: ; >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ; n = i ; ?<< current: ; expected: localVar >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ; n = i ; localvar ?<< current: localvar expected: <identifier> >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ; n = i ; localvar k ?<< current: k expected: : >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ; n = i ; localvar k : ?<< current: : expected: integer >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ; n = i ; localvar k : integer ?<< current: integer expected: ; >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ; n = i ; localvar k : integer ; ?<< current: ; expected: localVar >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ; n = i ; localvar k : integer ; localvar ?<< current: localvar expected: <identifier> >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ; n = i ; localvar k : integer ; localvar q ?<< current: q expected: : >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ; n = i ; localvar k : integer ; localvar q : ?<< current: : expected: <identifier> >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ; n = i ; localvar k : integer ; localvar q : string ?<< current: string expected: ; >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ; n = i ; localvar k : integer ; localvar q : string ; ?<< current: ; expected: <identifier> >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ; n = i ; localvar k : integer ; localvar q : string ; k ?<< current: k expected: = >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ; n = i ; localvar k : integer ; localvar q : string ; k = ?<< current: = expected: <identifier> >>
+function printarray ( ) => void { localvar n : integer ; localvar i : float ; n = i ; localvar k : integer ; localvar q : string ; k = q ?<< current: q expected: } >>
+
+
+Sytax Tokens:
+Lexeme: function	Code: function	Line: 0	Column: 9
+Lexeme: printarray	Code: Id	Line: 0	Column: 20
+Lexeme: (	Code: LeftParenthesis	Line: 0	Column: 20
+Lexeme: )	Code: RightParenthesis	Line: 0	Column: 21
+Lexeme: =>	Code: arrow	Line: 0	Column: 24
+Lexeme: void	Code: Void	Line: 0	Column: 30
+Lexeme: {	Code: LeftBracket	Line: 1	Column: 1
+Lexeme: localvar	Code: localVar	Line: 2	Column: 11
+Lexeme: n	Code: Id	Line: 2	Column: 13
+Lexeme: :	Code: Colon	Line: 2	Column: 14
+Lexeme: integer	Code: Integer	Line: 2	Column: 22
+Lexeme: ;	Code: Semicolon	Line: 2	Column: 22
+Lexeme: localvar	Code: localVar	Line: 3	Column: 11
+Lexeme: i	Code: Id	Line: 3	Column: 13
+Lexeme: :	Code: Colon	Line: 3	Column: 14
+Lexeme: float	Code: Float	Line: 3	Column: 20
+Lexeme: ;	Code: Semicolon	Line: 3	Column: 20
+Lexeme: n	Code: Id	Line: 4	Column: 4
+Lexeme: =	Code: Equal	Line: 4	Column: 6
+Lexeme: i	Code: Id	Line: 4	Column: 8
+Lexeme: ;	Code: Semicolon	Line: 4	Column: 8
+Lexeme: localvar	Code: localVar	Line: 5	Column: 11
+Lexeme: k	Code: Id	Line: 5	Column: 13
+Lexeme: :	Code: Colon	Line: 5	Column: 14
+Lexeme: integer	Code: Integer	Line: 5	Column: 22
+Lexeme: ;	Code: Semicolon	Line: 5	Column: 22
+Lexeme: localvar	Code: localVar	Line: 6	Column: 11
+Lexeme: q	Code: Id	Line: 6	Column: 13
+Lexeme: :	Code: Colon	Line: 6	Column: 14
+Lexeme: string	Code: Id	Line: 6	Column: 21
+Lexeme: ;	Code: Semicolon	Line: 6	Column: 21
+Lexeme: k	Code: Id	Line: 7	Column: 4
+Lexeme: =	Code: Equal	Line: 7	Column: 5
+Lexeme: q	Code: Id	Line: 7	Column: 6
+
+
+Complete Dervation tree, Code structure:
+Start => 
+function <identifier> ( ) arrow void { 
+localVar <identifier> : integer ; 
+localVar <identifier> : float ; 
+<identifier> = <identifier> ; 
+localVar <identifier> : integer ; 
+localVar <identifier> : <identifier> ; 
+<identifier> = <identifier> 

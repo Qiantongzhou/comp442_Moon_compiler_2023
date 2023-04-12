@@ -1,0 +1,106 @@
+Top-down syntax generation:
+<Start> =>
+function ?<< current: function expected: <identifier> >>
+function bubbleSort ?<< current: bubbleSort expected: ( >>
+function bubbleSort ( ?<< current: ( expected: <identifier> >>
+function bubbleSort ( arr ?<< current: arr expected: : >>
+function bubbleSort ( arr : ?<< current: : expected: integer >>
+function bubbleSort ( arr : integer ?<< current: integer expected: [ >>
+function bubbleSort ( arr : integer [ ?<< current: [ expected: ] >>
+function bubbleSort ( arr : integer [ ] ?<< current: ] expected: , >>
+function bubbleSort ( arr : integer [ ] , ?<< current: , expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size ?<< current: size expected: : >>
+function bubbleSort ( arr : integer [ ] , size : ?<< current: : expected: integer >>
+function bubbleSort ( arr : integer [ ] , size : integer ?<< current: integer expected: ) >>
+function bubbleSort ( arr : integer [ ] , size : integer ) ?<< current: ) expected: arrow >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => ?<< current: => expected: void >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void ?<< current: void expected: { >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { ?<< current: { expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 ?<< current: f1 expected: . >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . ?<< current: . expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ?<< current: evaluate expected: ( >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( ?<< current: ( expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ?<< current: counter expected: ) >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ?<< current: ) expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; ?<< current: ; expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 ?<< current: f2 expected: [ >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ ?<< current: [ expected: intLit >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ?<< current: 2 expected: ] >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] ?<< current: ] expected: . >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . ?<< current: . expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ?<< current: evaluate expected: ( >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ( ?<< current: ( expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ( f2 ?<< current: f2 expected: [ >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ( f2 [ ?<< current: [ expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ( f2 [ f1 ?<< current: f1 expected: . >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ( f2 [ f1 . ?<< current: . expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ( f2 [ f1 . f3 ?<< current: f3 expected: ( >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ( f2 [ f1 . f3 ( ?<< current: ( expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ( f2 [ f1 . f3 ( size ?<< current: size expected: ) >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ( f2 [ f1 . f3 ( size ) ?<< current: ) expected: + >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ( f2 [ f1 . f3 ( size ) + ?<< current: + expected: intLit >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ( f2 [ f1 . f3 ( size ) + 1 ?<< current: 1 expected: ] >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ( f2 [ f1 . f3 ( size ) + 1 ] ?<< current: ] expected: ) >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ( f2 [ f1 . f3 ( size ) + 1 ] ) ?<< current: ) expected: . >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ( f2 [ f1 . f3 ( size ) + 1 ] ) . ?<< current: . expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ( f2 [ f1 . f3 ( size ) + 1 ] ) . access ?<< current: access expected: ( >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ( f2 [ f1 . f3 ( size ) + 1 ] ) . access ( ?<< current: ( expected: ) >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ( f2 [ f1 . f3 ( size ) + 1 ] ) . access ( ) ?<< current: ) expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { f1 . evaluate ( counter ) ; f2 [ 2 ] . evaluate ( f2 [ f1 . f3 ( size ) + 1 ] ) . access ( ) ; ?<< current: ; expected: } >>
+
+
+Sytax Tokens:
+Lexeme: function	Code: function	Line: 0	Column: 9
+Lexeme: bubbleSort	Code: Id	Line: 0	Column: 20
+Lexeme: (	Code: LeftParenthesis	Line: 0	Column: 20
+Lexeme: arr	Code: Id	Line: 0	Column: 24
+Lexeme: :	Code: Colon	Line: 0	Column: 25
+Lexeme: integer	Code: Integer	Line: 0	Column: 33
+Lexeme: [	Code: zhongkuoL	Line: 0	Column: 33
+Lexeme: ]	Code: zhongkuoR	Line: 0	Column: 34
+Lexeme: ,	Code: Comma	Line: 0	Column: 35
+Lexeme: size	Code: Id	Line: 0	Column: 41
+Lexeme: :	Code: Colon	Line: 0	Column: 42
+Lexeme: integer	Code: Integer	Line: 0	Column: 50
+Lexeme: )	Code: RightParenthesis	Line: 0	Column: 50
+Lexeme: =>	Code: arrow	Line: 0	Column: 53
+Lexeme: void	Code: Void	Line: 0	Column: 59
+Lexeme: {	Code: LeftBracket	Line: 1	Column: 1
+Lexeme: f1	Code: Id	Line: 2	Column: 5
+Lexeme: .	Code: dot	Line: 2	Column: 5
+Lexeme: evaluate	Code: Id	Line: 2	Column: 14
+Lexeme: (	Code: LeftParenthesis	Line: 2	Column: 14
+Lexeme: counter	Code: Id	Line: 2	Column: 22
+Lexeme: )	Code: RightParenthesis	Line: 2	Column: 22
+Lexeme: ;	Code: Semicolon	Line: 2	Column: 23
+Lexeme: f2	Code: Id	Line: 3	Column: 5
+Lexeme: [	Code: zhongkuoL	Line: 3	Column: 5
+Lexeme: 2	Code: intLit	Line: 3	Column: 7
+Lexeme: ]	Code: zhongkuoR	Line: 3	Column: 7
+Lexeme: .	Code: dot	Line: 3	Column: 8
+Lexeme: evaluate	Code: Id	Line: 3	Column: 17
+Lexeme: (	Code: LeftParenthesis	Line: 3	Column: 17
+Lexeme: f2	Code: Id	Line: 3	Column: 20
+Lexeme: [	Code: zhongkuoL	Line: 3	Column: 20
+Lexeme: f1	Code: Id	Line: 3	Column: 23
+Lexeme: .	Code: dot	Line: 3	Column: 23
+Lexeme: f3	Code: Id	Line: 3	Column: 26
+Lexeme: (	Code: LeftParenthesis	Line: 3	Column: 26
+Lexeme: size	Code: Id	Line: 3	Column: 31
+Lexeme: )	Code: RightParenthesis	Line: 3	Column: 31
+Lexeme: +	Code: Plus	Line: 3	Column: 32
+Lexeme: 1	Code: intLit	Line: 3	Column: 34
+Lexeme: ]	Code: zhongkuoR	Line: 3	Column: 34
+Lexeme: )	Code: RightParenthesis	Line: 3	Column: 35
+Lexeme: .	Code: dot	Line: 3	Column: 36
+Lexeme: access	Code: Id	Line: 3	Column: 43
+Lexeme: (	Code: LeftParenthesis	Line: 3	Column: 43
+Lexeme: )	Code: RightParenthesis	Line: 3	Column: 44
+Lexeme: ;	Code: Semicolon	Line: 3	Column: 45
+
+
+Complete Dervation tree, Code structure:
+Start => 
+function <identifier> ( <identifier> : integer [ ] , <identifier> : integer ) arrow void { 
+<identifier> . <identifier> ( <identifier> ) ; 
+<identifier> [ intLit ] . <identifier> ( <identifier> [ <identifier> . <identifier> ( <identifier> ) + intLit ] ) . <identifier> ( ) ; 

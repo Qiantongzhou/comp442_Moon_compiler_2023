@@ -1,0 +1,35 @@
+
+class LINEAR {
+  private attribute a: float;
+  private attribute b: float;
+  public  constructor: (A: float, B: float);
+};
+
+class QUADRATIC{
+  private attribute a: float;
+  private attribute b: float;
+  private attribute c: float;
+  public  constructor: (A: float, B: float, C: float);
+};
+
+
+function QUADRATIC::constructor(A: float, B: float, C: float)
+{
+  self.k = A;
+  self.t = B;
+  self.k = C;
+}
+
+function LINEAR::constructor(A: float, B: float) 
+{
+  self.a = A;
+  self.b = B;
+}
+
+function main()=>void
+{
+   localvar f1: string;
+   localvar k: string;
+   f1.a = k;
+}
+

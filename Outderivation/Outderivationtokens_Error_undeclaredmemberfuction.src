@@ -1,0 +1,172 @@
+Top-down syntax generation:
+<Start> =>
+function ?<< current: function expected: <identifier> >>
+function QUADRATIC ?<< current: QUADRATIC expected: sr >>
+function QUADRATIC :: ?<< current: :: expected: <identifier> >>
+function QUADRATIC :: evaluate ?<< current: evaluate expected: ( >>
+function QUADRATIC :: evaluate ( ?<< current: ( expected: <identifier> >>
+function QUADRATIC :: evaluate ( x ?<< current: x expected: : >>
+function QUADRATIC :: evaluate ( x : ?<< current: : expected: float >>
+function QUADRATIC :: evaluate ( x : float ?<< current: float expected: ) >>
+function QUADRATIC :: evaluate ( x : float ) ?<< current: ) expected: arrow >>
+function QUADRATIC :: evaluate ( x : float ) => ?<< current: => expected: float >>
+function QUADRATIC :: evaluate ( x : float ) => float ?<< current: float expected: { >>
+function QUADRATIC :: evaluate ( x : float ) => float { ?<< current: { expected: localVar >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar ?<< current: localvar expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result ?<< current: result expected: : >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : ?<< current: : expected: float >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ?<< current: float expected: ; >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; ?<< current: ; expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result ?<< current: result expected: = >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = ?<< current: = expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ?<< current: a expected: ; >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; ?<< current: ; expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result ?<< current: result expected: = >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = ?<< current: = expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result ?<< current: result expected: * >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * ?<< current: * expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x ?<< current: x expected: + >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + ?<< current: + expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ?<< current: b expected: ; >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; ?<< current: ; expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result ?<< current: result expected: = >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = ?<< current: = expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result ?<< current: result expected: * >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * ?<< current: * expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x ?<< current: x expected: + >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + ?<< current: + expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ?<< current: c expected: ; >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; ?<< current: ; expected: return >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ?<< current: return expected: ( >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( ?<< current: ( expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ?<< current: result expected: ) >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ?<< current: ) expected: ; >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; ?<< current: ; expected: } >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } ?<< current: } expected: function >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function ?<< current: function expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC ?<< current: QUADRATIC expected: sr >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: ?<< current: :: expected: constructor >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ?<< current: constructor expected: ( >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( ?<< current: ( expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A ?<< current: A expected: : >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : ?<< current: : expected: float >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float ?<< current: float expected: , >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , ?<< current: , expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B ?<< current: B expected: : >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : ?<< current: : expected: float >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float ?<< current: float expected: , >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , ?<< current: , expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C ?<< current: C expected: : >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : ?<< current: : expected: float >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : float ?<< current: float expected: ) >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : float ) ?<< current: ) expected: { >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : float ) { ?<< current: { expected: . >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : float ) { . ?<< current: . expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : float ) { . a ?<< current: a expected: = >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : float ) { . a = ?<< current: = expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : float ) { . a = A ?<< current: A expected: ; >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : float ) { . a = A ; ?<< current: ; expected: . >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : float ) { . a = A ; . ?<< current: . expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : float ) { . a = A ; . b ?<< current: b expected: = >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : float ) { . a = A ; . b = ?<< current: = expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : float ) { . a = A ; . b = B ?<< current: B expected: ; >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : float ) { . a = A ; . b = B ; ?<< current: ; expected: . >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : float ) { . a = A ; . b = B ; . ?<< current: . expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : float ) { . a = A ; . b = B ; . c ?<< current: c expected: = >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : float ) { . a = A ; . b = B ; . c = ?<< current: = expected: <identifier> >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : float ) { . a = A ; . b = B ; . c = C ?<< current: C expected: ; >>
+function QUADRATIC :: evaluate ( x : float ) => float { localvar result : float ; result = a ; result = result * x + b ; result = result * x + c ; return ( result ) ; } function QUADRATIC :: constructor ( A : float , B : float , C : float ) { . a = A ; . b = B ; . c = C ; ?<< current: ; expected: } >>
+
+
+Sytax Tokens:
+Lexeme: function	Code: function	Line: 0	Column: 9
+Lexeme: QUADRATIC	Code: Id	Line: 0	Column: 19
+Lexeme: ::	Code: sr	Line: 0	Column: 20
+Lexeme: evaluate	Code: Id	Line: 0	Column: 29
+Lexeme: (	Code: LeftParenthesis	Line: 0	Column: 29
+Lexeme: x	Code: Id	Line: 0	Column: 31
+Lexeme: :	Code: Colon	Line: 0	Column: 32
+Lexeme: float	Code: Float	Line: 0	Column: 38
+Lexeme: )	Code: RightParenthesis	Line: 0	Column: 38
+Lexeme: =>	Code: arrow	Line: 0	Column: 41
+Lexeme: float	Code: Float	Line: 0	Column: 48
+Lexeme: {	Code: LeftBracket	Line: 1	Column: 1
+Lexeme: localvar	Code: localVar	Line: 2	Column: 11
+Lexeme: result	Code: Id	Line: 2	Column: 18
+Lexeme: :	Code: Colon	Line: 2	Column: 19
+Lexeme: float	Code: Float	Line: 2	Column: 25
+Lexeme: ;	Code: Semicolon	Line: 2	Column: 25
+Lexeme: result	Code: Id	Line: 3	Column: 12
+Lexeme: =	Code: Equal	Line: 3	Column: 14
+Lexeme: a	Code: Id	Line: 3	Column: 16
+Lexeme: ;	Code: Semicolon	Line: 3	Column: 16
+Lexeme: result	Code: Id	Line: 4	Column: 9
+Lexeme: =	Code: Equal	Line: 4	Column: 11
+Lexeme: result	Code: Id	Line: 4	Column: 18
+Lexeme: *	Code: Multiplication	Line: 4	Column: 19
+Lexeme: x	Code: Id	Line: 4	Column: 22
+Lexeme: +	Code: Plus	Line: 4	Column: 23
+Lexeme: b	Code: Id	Line: 4	Column: 26
+Lexeme: ;	Code: Semicolon	Line: 4	Column: 26
+Lexeme: result	Code: Id	Line: 5	Column: 9
+Lexeme: =	Code: Equal	Line: 5	Column: 11
+Lexeme: result	Code: Id	Line: 5	Column: 18
+Lexeme: *	Code: Multiplication	Line: 5	Column: 19
+Lexeme: x	Code: Id	Line: 5	Column: 22
+Lexeme: +	Code: Plus	Line: 5	Column: 23
+Lexeme: c	Code: Id	Line: 5	Column: 26
+Lexeme: ;	Code: Semicolon	Line: 5	Column: 26
+Lexeme: return	Code: Return	Line: 6	Column: 9
+Lexeme: (	Code: LeftParenthesis	Line: 6	Column: 10
+Lexeme: result	Code: Id	Line: 6	Column: 17
+Lexeme: )	Code: RightParenthesis	Line: 6	Column: 17
+Lexeme: ;	Code: Semicolon	Line: 6	Column: 18
+Lexeme: }	Code: RightBracket	Line: 7	Column: 1
+Lexeme: function	Code: function	Line: 9	Column: 9
+Lexeme: QUADRATIC	Code: Id	Line: 9	Column: 19
+Lexeme: ::	Code: sr	Line: 9	Column: 20
+Lexeme: constructor	Code: constructor	Line: 9	Column: 32
+Lexeme: (	Code: LeftParenthesis	Line: 9	Column: 32
+Lexeme: A	Code: Id	Line: 9	Column: 34
+Lexeme: :	Code: Colon	Line: 9	Column: 35
+Lexeme: float	Code: Float	Line: 9	Column: 41
+Lexeme: ,	Code: Comma	Line: 9	Column: 41
+Lexeme: B	Code: Id	Line: 9	Column: 44
+Lexeme: :	Code: Colon	Line: 9	Column: 45
+Lexeme: float	Code: Float	Line: 9	Column: 51
+Lexeme: ,	Code: Comma	Line: 9	Column: 51
+Lexeme: C	Code: Id	Line: 9	Column: 54
+Lexeme: :	Code: Colon	Line: 9	Column: 55
+Lexeme: float	Code: Float	Line: 9	Column: 61
+Lexeme: )	Code: RightParenthesis	Line: 9	Column: 61
+Lexeme: {	Code: LeftBracket	Line: 10	Column: 1
+Lexeme: .	Code: dot	Line: 11	Column: 7
+Lexeme: a	Code: Id	Line: 11	Column: 9
+Lexeme: =	Code: Equal	Line: 11	Column: 11
+Lexeme: A	Code: Id	Line: 11	Column: 13
+Lexeme: ;	Code: Semicolon	Line: 11	Column: 13
+Lexeme: .	Code: dot	Line: 12	Column: 7
+Lexeme: b	Code: Id	Line: 12	Column: 9
+Lexeme: =	Code: Equal	Line: 12	Column: 11
+Lexeme: B	Code: Id	Line: 12	Column: 13
+Lexeme: ;	Code: Semicolon	Line: 12	Column: 13
+Lexeme: .	Code: dot	Line: 13	Column: 7
+Lexeme: c	Code: Id	Line: 13	Column: 9
+Lexeme: =	Code: Equal	Line: 13	Column: 11
+Lexeme: C	Code: Id	Line: 13	Column: 13
+Lexeme: ;	Code: Semicolon	Line: 13	Column: 13
+
+
+Complete Dervation tree, Code structure:
+Start => 
+function <identifier> sr <identifier> ( <identifier> : float ) arrow float { 
+localVar <identifier> : float ; 
+<identifier> = <identifier> ; 
+<identifier> = <identifier> * <identifier> + <identifier> ; 
+<identifier> = <identifier> * <identifier> + <identifier> ; 
+return ( <identifier> ) ; 
+} 
+function <identifier> sr constructor ( <identifier> : float , <identifier> : float , <identifier> : float ) { 
+. <identifier> = <identifier> ; 
+. <identifier> = <identifier> ; 
+. <identifier> = <identifier> ; 

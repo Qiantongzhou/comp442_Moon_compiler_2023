@@ -1,0 +1,1432 @@
+{
+  "classtables": [],
+  "functiontables": [
+    {
+      "functionparams": [
+        {
+          "name": "<identifier>",
+          "type": "integer",
+          "isarray": true,
+          "isfunction": false,
+          "isclass": false,
+          "symbol": "arr",
+          "tag": "",
+          "scope": 0,
+          "size": 0,
+          "stack": 0,
+          "modifier": 1
+        },
+        {
+          "name": "<identifier>",
+          "type": "integer",
+          "isarray": false,
+          "isfunction": false,
+          "isclass": false,
+          "symbol": "size",
+          "tag": "",
+          "scope": 0,
+          "size": 0,
+          "stack": 0,
+          "modifier": 1
+        }
+      ],
+      "returntype": {
+        "name": "returntype",
+        "type": "void",
+        "isarray": false,
+        "isfunction": false,
+        "isclass": false,
+        "symbol": "void",
+        "tag": "",
+        "scope": 0,
+        "size": 0,
+        "stack": 0,
+        "modifier": 1
+      },
+      "statements": [
+        {
+          "name": "statement",
+          "value": "",
+          "localregister": null,
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "write",
+              "value": "",
+              "localregister": null,
+              "left": null,
+              "right": null,
+              "children": [
+                {
+                  "name": "write",
+                  "value": "write",
+                  "localregister": null,
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "(",
+                  "value": "(",
+                  "localregister": null,
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "Expr",
+                  "value": "",
+                  "localregister": null,
+                  "left": null,
+                  "right": null,
+                  "children": [
+                    {
+                      "name": "term",
+                      "value": "",
+                      "localregister": null,
+                      "left": null,
+                      "right": null,
+                      "children": [
+                        {
+                          "name": "factor",
+                          "value": "",
+                          "localregister": null,
+                          "left": null,
+                          "right": null,
+                          "children": [
+                            {
+                              "name": "idnest",
+                              "value": "",
+                              "localregister": null,
+                              "left": null,
+                              "right": null,
+                              "children": [
+                                {
+                                  "name": "array",
+                                  "value": "",
+                                  "localregister": null,
+                                  "left": null,
+                                  "right": null,
+                                  "children": [
+                                    {
+                                      "name": "<identifier>",
+                                      "value": "arr",
+                                      "localregister": null,
+                                      "left": null,
+                                      "right": null,
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "[",
+                                      "value": "[",
+                                      "localregister": null,
+                                      "left": null,
+                                      "right": null,
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "Expr",
+                                      "value": "",
+                                      "localregister": null,
+                                      "left": null,
+                                      "right": null,
+                                      "children": [
+                                        {
+                                          "name": "term",
+                                          "value": "",
+                                          "localregister": null,
+                                          "left": null,
+                                          "right": null,
+                                          "children": [
+                                            {
+                                              "name": "factor",
+                                              "value": "",
+                                              "localregister": null,
+                                              "left": null,
+                                              "right": null,
+                                              "children": [
+                                                {
+                                                  "name": "integer",
+                                                  "value": "",
+                                                  "localregister": null,
+                                                  "left": null,
+                                                  "right": null,
+                                                  "children": [
+                                                    {
+                                                      "name": "intLit",
+                                                      "value": "1",
+                                                      "localregister": null,
+                                                      "left": null,
+                                                      "right": null,
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "]",
+                                      "value": "]",
+                                      "localregister": null,
+                                      "left": null,
+                                      "right": null,
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": ")",
+                  "value": ")",
+                  "localregister": null,
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ";",
+                  "value": ";",
+                  "localregister": null,
+                  "left": null,
+                  "right": null,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "symboltable": {
+        "symbols": []
+      },
+      "currentScope": 0,
+      "name": "printarray"
+    },
+    {
+      "functionparams": [],
+      "returntype": {
+        "name": "returntype",
+        "type": "void",
+        "isarray": false,
+        "isfunction": false,
+        "isclass": false,
+        "symbol": "void",
+        "tag": "",
+        "scope": 0,
+        "size": 0,
+        "stack": 0,
+        "modifier": 1
+      },
+      "statements": [
+        {
+          "name": "statement",
+          "value": "",
+          "localregister": null,
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "AssignOp",
+              "value": "=",
+              "localregister": null,
+              "left": {
+                "name": "idnest",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "array",
+                    "value": "",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "<identifier>",
+                        "value": "arr",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      },
+                      {
+                        "name": "[",
+                        "value": "[",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      },
+                      {
+                        "name": "Expr",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "term",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "factor",
+                                "value": "",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": [
+                                  {
+                                    "name": "integer",
+                                    "value": "",
+                                    "localregister": null,
+                                    "left": null,
+                                    "right": null,
+                                    "children": [
+                                      {
+                                        "name": "intLit",
+                                        "value": "0",
+                                        "localregister": null,
+                                        "left": null,
+                                        "right": null,
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "]",
+                        "value": "]",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "right": {
+                "name": "Expr",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "term",
+                    "value": "",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "factor",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "integer",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "intLit",
+                                "value": "64",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "statement",
+          "value": "",
+          "localregister": null,
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "AssignOp",
+              "value": "=",
+              "localregister": null,
+              "left": {
+                "name": "idnest",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "array",
+                    "value": "",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "<identifier>",
+                        "value": "arr",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      },
+                      {
+                        "name": "[",
+                        "value": "[",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      },
+                      {
+                        "name": "Expr",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "term",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "factor",
+                                "value": "",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": [
+                                  {
+                                    "name": "integer",
+                                    "value": "",
+                                    "localregister": null,
+                                    "left": null,
+                                    "right": null,
+                                    "children": [
+                                      {
+                                        "name": "intLit",
+                                        "value": "1",
+                                        "localregister": null,
+                                        "left": null,
+                                        "right": null,
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "]",
+                        "value": "]",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "right": {
+                "name": "Expr",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "term",
+                    "value": "",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "factor",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "integer",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "intLit",
+                                "value": "34",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "statement",
+          "value": "",
+          "localregister": null,
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "AssignOp",
+              "value": "=",
+              "localregister": null,
+              "left": {
+                "name": "idnest",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "array",
+                    "value": "",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "<identifier>",
+                        "value": "arr",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      },
+                      {
+                        "name": "[",
+                        "value": "[",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      },
+                      {
+                        "name": "Expr",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "term",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "factor",
+                                "value": "",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": [
+                                  {
+                                    "name": "integer",
+                                    "value": "",
+                                    "localregister": null,
+                                    "left": null,
+                                    "right": null,
+                                    "children": [
+                                      {
+                                        "name": "intLit",
+                                        "value": "2",
+                                        "localregister": null,
+                                        "left": null,
+                                        "right": null,
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "]",
+                        "value": "]",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "right": {
+                "name": "Expr",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "term",
+                    "value": "",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "factor",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "integer",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "intLit",
+                                "value": "25",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "statement",
+          "value": "",
+          "localregister": null,
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "AssignOp",
+              "value": "=",
+              "localregister": null,
+              "left": {
+                "name": "idnest",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "array",
+                    "value": "",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "<identifier>",
+                        "value": "arr",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      },
+                      {
+                        "name": "[",
+                        "value": "[",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      },
+                      {
+                        "name": "Expr",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "term",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "factor",
+                                "value": "",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": [
+                                  {
+                                    "name": "integer",
+                                    "value": "",
+                                    "localregister": null,
+                                    "left": null,
+                                    "right": null,
+                                    "children": [
+                                      {
+                                        "name": "intLit",
+                                        "value": "3",
+                                        "localregister": null,
+                                        "left": null,
+                                        "right": null,
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "]",
+                        "value": "]",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "right": {
+                "name": "Expr",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "term",
+                    "value": "",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "factor",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "integer",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "intLit",
+                                "value": "12",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "statement",
+          "value": "",
+          "localregister": null,
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "AssignOp",
+              "value": "=",
+              "localregister": null,
+              "left": {
+                "name": "idnest",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "array",
+                    "value": "",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "<identifier>",
+                        "value": "arr",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      },
+                      {
+                        "name": "[",
+                        "value": "[",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      },
+                      {
+                        "name": "Expr",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "term",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "factor",
+                                "value": "",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": [
+                                  {
+                                    "name": "integer",
+                                    "value": "",
+                                    "localregister": null,
+                                    "left": null,
+                                    "right": null,
+                                    "children": [
+                                      {
+                                        "name": "intLit",
+                                        "value": "4",
+                                        "localregister": null,
+                                        "left": null,
+                                        "right": null,
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "]",
+                        "value": "]",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "right": {
+                "name": "Expr",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "term",
+                    "value": "",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "factor",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "integer",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "intLit",
+                                "value": "22",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "statement",
+          "value": "",
+          "localregister": null,
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "AssignOp",
+              "value": "=",
+              "localregister": null,
+              "left": {
+                "name": "idnest",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "array",
+                    "value": "",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "<identifier>",
+                        "value": "arr",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      },
+                      {
+                        "name": "[",
+                        "value": "[",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      },
+                      {
+                        "name": "Expr",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "term",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "factor",
+                                "value": "",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": [
+                                  {
+                                    "name": "integer",
+                                    "value": "",
+                                    "localregister": null,
+                                    "left": null,
+                                    "right": null,
+                                    "children": [
+                                      {
+                                        "name": "intLit",
+                                        "value": "5",
+                                        "localregister": null,
+                                        "left": null,
+                                        "right": null,
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "]",
+                        "value": "]",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "right": {
+                "name": "Expr",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "term",
+                    "value": "",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "factor",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "integer",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "intLit",
+                                "value": "11",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "statement",
+          "value": "",
+          "localregister": null,
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "AssignOp",
+              "value": "=",
+              "localregister": null,
+              "left": {
+                "name": "idnest",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "array",
+                    "value": "",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "<identifier>",
+                        "value": "arr",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      },
+                      {
+                        "name": "[",
+                        "value": "[",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      },
+                      {
+                        "name": "Expr",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "term",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "factor",
+                                "value": "",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": [
+                                  {
+                                    "name": "integer",
+                                    "value": "",
+                                    "localregister": null,
+                                    "left": null,
+                                    "right": null,
+                                    "children": [
+                                      {
+                                        "name": "intLit",
+                                        "value": "6",
+                                        "localregister": null,
+                                        "left": null,
+                                        "right": null,
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "]",
+                        "value": "]",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "right": {
+                "name": "Expr",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "term",
+                    "value": "",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "factor",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "integer",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "intLit",
+                                "value": "90",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "statement",
+          "value": "",
+          "localregister": null,
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "idnest",
+              "value": "",
+              "localregister": null,
+              "left": null,
+              "right": null,
+              "children": [
+                {
+                  "name": "functioncall",
+                  "value": "",
+                  "localregister": null,
+                  "left": null,
+                  "right": null,
+                  "children": [
+                    {
+                      "name": "<identifier>",
+                      "value": "printarray",
+                      "localregister": null,
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    },
+                    {
+                      "name": "(",
+                      "value": "(",
+                      "localregister": null,
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    },
+                    {
+                      "name": "Expr",
+                      "value": "",
+                      "localregister": null,
+                      "left": null,
+                      "right": null,
+                      "children": [
+                        {
+                          "name": "term",
+                          "value": "",
+                          "localregister": null,
+                          "left": null,
+                          "right": null,
+                          "children": [
+                            {
+                              "name": "factor",
+                              "value": "",
+                              "localregister": null,
+                              "left": null,
+                              "right": null,
+                              "children": [
+                                {
+                                  "name": "idnest",
+                                  "value": "",
+                                  "localregister": null,
+                                  "left": null,
+                                  "right": null,
+                                  "children": [
+                                    {
+                                      "name": "<identifier>",
+                                      "value": "arr",
+                                      "localregister": null,
+                                      "left": null,
+                                      "right": null,
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": ",",
+                      "value": ",",
+                      "localregister": null,
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    },
+                    {
+                      "name": "Expr",
+                      "value": "",
+                      "localregister": null,
+                      "left": null,
+                      "right": null,
+                      "children": [
+                        {
+                          "name": "term",
+                          "value": "",
+                          "localregister": null,
+                          "left": null,
+                          "right": null,
+                          "children": [
+                            {
+                              "name": "factor",
+                              "value": "",
+                              "localregister": null,
+                              "left": null,
+                              "right": null,
+                              "children": [
+                                {
+                                  "name": "integer",
+                                  "value": "",
+                                  "localregister": null,
+                                  "left": null,
+                                  "right": null,
+                                  "children": [
+                                    {
+                                      "name": "intLit",
+                                      "value": "7",
+                                      "localregister": null,
+                                      "left": null,
+                                      "right": null,
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": ")",
+                      "value": ")",
+                      "localregister": null,
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": ";",
+              "value": ";",
+              "localregister": null,
+              "left": null,
+              "right": null,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "symboltable": {
+        "symbols": [
+          {
+            "name": "localvar",
+            "type": "integer",
+            "isarray": true,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "arr",
+            "tag": "",
+            "scope": 1,
+            "size": 0,
+            "stack": 0,
+            "dimensions": 1,
+            "sizes": [
+              7
+            ],
+            "modifier": 1
+          }
+        ]
+      },
+      "currentScope": 0,
+      "name": "main"
+    }
+  ],
+  "symboltable": null,
+  "currentScope": 0,
+  "name": "global"
+}

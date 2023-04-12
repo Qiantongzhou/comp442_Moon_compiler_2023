@@ -1,0 +1,146 @@
+This is all the Lexical Tokens
+
+
+id:
+
+test       location: 0 14
+arr       location: 0 18
+size       location: 0 35
+n       location: 2 13
+i       location: 3 13
+j       location: 4 13
+temp       location: 5 16
+n       location: 6 4
+size       location: 6 11
+i       location: 7 4
+j       location: 8 4
+temp       location: 9 7
+i       location: 10 11
+n       location: 10 15
+j       location: 11 13
+n       location: 11 17
+i       location: 11 19
+arr       location: 12 14
+j       location: 12 16
+arr       location: 12 23
+j       location: 12 25
+temp       location: 14 26
+arr       location: 14 32
+j       location: 14 34
+arr       location: 15 14
+j       location: 15 16
+arr       location: 15 23
+j       location: 15 25
+arr       location: 16 14
+j       location: 16 16
+temp       location: 16 26
+j       location: 18 10
+j       location: 18 14
+i       location: 20 6
+i       location: 20 10
+i       location: 23 11
+n       location: 23 13
+arr       location: 24 14
+i       location: 24 16
+i       location: 25 8
+i       location: 25 12
+
+
+integers:
+
+0       location: 7 8
+0       location: 8 8
+0       location: 9 11
+1       location: 10 17
+1       location: 11 21
+1       location: 12 27
+1       location: 15 27
+1       location: 16 18
+1       location: 18 16
+1       location: 20 12
+1       location: 25 14
+
+
+floats:
+
+
+
+Operators:
+
+=>       location: 0 47
+=       location: 6 6
+=       location: 7 6
+=       location: 8 6
+=       location: 9 9
+<       location: 10 13
+-       location: 10 15
+<       location: 11 15
+-       location: 11 17
+-       location: 11 19
+>       location: 12 19
++       location: 12 25
+=       location: 14 28
+=       location: 15 19
++       location: 15 25
++       location: 16 16
+=       location: 16 21
+=       location: 18 12
++       location: 18 14
+=       location: 20 8
++       location: 20 10
+<       location: 23 12
+=       location: 25 10
++       location: 25 12
+
+
+Punctuation:
+
+:       location: 0 19
+,       location: 0 29
+:       location: 0 36
+:       location: 2 18
+;       location: 2 26
+:       location: 3 18
+;       location: 3 26
+:       location: 4 18
+;       location: 4 26
+:       location: 5 18
+;       location: 5 26
+;       location: 6 11
+;       location: 7 8
+;       location: 8 8
+;       location: 9 11
+;       location: 14 35
+;       location: 15 28
+;       location: 16 26
+;       location: 17 16
+;       location: 18 16
+;       location: 19 8
+;       location: 20 12
+;       location: 21 4
+;       location: 24 18
+;       location: 25 14
+;       location: 26 4
+
+
+ReservedWords:
+
+function       location: 0 9
+integer       location: 0 27
+integer       location: 0 44
+void       location: 0 53
+localvar       location: 2 11
+integer       location: 2 26
+localvar       location: 3 11
+integer       location: 3 26
+localvar       location: 4 11
+integer       location: 4 26
+localvar       location: 5 11
+integer       location: 5 26
+while       location: 10 8
+while       location: 11 10
+if       location: 12 9
+then       location: 13 13
+else       location: 17 15
+while       location: 23 8
+write       location: 24 10

@@ -1,0 +1,73 @@
+This is all the Lexical Tokens
+
+
+id:
+
+QUADRATIC       location: 2 16
+POLYNOMIAL       location: 2 31
+a       location: 3 22
+b       location: 4 22
+c       location: 5 22
+A       location: 6 25
+B       location: 6 35
+C       location: 6 45
+evaluate       location: 7 27
+x       location: 7 31
+
+
+integers:
+
+
+
+floats:
+
+
+
+Operators:
+
+=>       location: 7 41
+
+
+Punctuation:
+
+:       location: 3 23
+;       location: 3 29
+:       location: 4 23
+;       location: 4 29
+:       location: 5 23
+;       location: 5 29
+:       location: 6 22
+:       location: 6 26
+,       location: 6 32
+:       location: 6 36
+,       location: 6 42
+:       location: 6 46
+;       location: 6 53
+:       location: 7 28
+:       location: 7 32
+;       location: 7 48
+;       location: 8 2
+
+
+ReservedWords:
+
+class       location: 2 6
+isa       location: 2 20
+private       location: 3 10
+attribute       location: 3 20
+float       location: 3 29
+private       location: 4 10
+attribute       location: 4 20
+float       location: 4 29
+private       location: 5 10
+attribute       location: 5 20
+float       location: 5 29
+public       location: 6 9
+constructor       location: 6 21
+float       location: 6 32
+float       location: 6 42
+float       location: 6 52
+public       location: 7 9
+function       location: 7 18
+float       location: 7 38
+float       location: 7 48

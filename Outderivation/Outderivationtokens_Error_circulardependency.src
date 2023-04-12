@@ -1,0 +1,105 @@
+Top-down syntax generation:
+<Start> =>
+class ?<< current: class expected: <identifier> >>
+class LINEAR ?<< current: LINEAR expected: isa >>
+class LINEAR isa ?<< current: isa expected: <identifier> >>
+class LINEAR isa QUADRATIC ?<< current: QUADRATIC expected: { >>
+class LINEAR isa QUADRATIC { ?<< current: { expected: private >>
+class LINEAR isa QUADRATIC { private ?<< current: private expected: attribute >>
+class LINEAR isa QUADRATIC { private attribute ?<< current: attribute expected: <identifier> >>
+class LINEAR isa QUADRATIC { private attribute a ?<< current: a expected: : >>
+class LINEAR isa QUADRATIC { private attribute a : ?<< current: : expected: float >>
+class LINEAR isa QUADRATIC { private attribute a : float ?<< current: float expected: ; >>
+class LINEAR isa QUADRATIC { private attribute a : float ; ?<< current: ; expected: private >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private ?<< current: private expected: attribute >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute ?<< current: attribute expected: <identifier> >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b ?<< current: b expected: : >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : ?<< current: : expected: float >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ?<< current: float expected: ; >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; ?<< current: ; expected: } >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ?<< current: } expected: ; >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; ?<< current: ; expected: class >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class ?<< current: class expected: <identifier> >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC ?<< current: QUADRATIC expected: isa >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa ?<< current: isa expected: <identifier> >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR ?<< current: LINEAR expected: { >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { ?<< current: { expected: private >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private ?<< current: private expected: attribute >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private attribute ?<< current: attribute expected: <identifier> >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private attribute a ?<< current: a expected: : >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private attribute a : ?<< current: : expected: float >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private attribute a : float ?<< current: float expected: ; >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private attribute a : float ; ?<< current: ; expected: private >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private attribute a : float ; private ?<< current: private expected: attribute >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private attribute a : float ; private attribute ?<< current: attribute expected: <identifier> >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private attribute a : float ; private attribute b ?<< current: b expected: : >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private attribute a : float ; private attribute b : ?<< current: : expected: float >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private attribute a : float ; private attribute b : float ?<< current: float expected: ; >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private attribute a : float ; private attribute b : float ; ?<< current: ; expected: private >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private attribute a : float ; private attribute b : float ; private ?<< current: private expected: attribute >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private attribute a : float ; private attribute b : float ; private attribute ?<< current: attribute expected: <identifier> >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private attribute a : float ; private attribute b : float ; private attribute c ?<< current: c expected: : >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private attribute a : float ; private attribute b : float ; private attribute c : ?<< current: : expected: float >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private attribute a : float ; private attribute b : float ; private attribute c : float ?<< current: float expected: ; >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private attribute a : float ; private attribute b : float ; private attribute c : float ; ?<< current: ; expected: } >>
+class LINEAR isa QUADRATIC { private attribute a : float ; private attribute b : float ; } ; class QUADRATIC isa LINEAR { private attribute a : float ; private attribute b : float ; private attribute c : float ; } ?<< current: } expected: ; >>
+
+
+Sytax Tokens:
+Lexeme: class	Code: Class	Line: 0	Column: 6
+Lexeme: LINEAR	Code: Id	Line: 0	Column: 13
+Lexeme: isa	Code: isa	Line: 0	Column: 17
+Lexeme: QUADRATIC	Code: Id	Line: 0	Column: 27
+Lexeme: {	Code: LeftBracket	Line: 0	Column: 28
+Lexeme: private	Code: Private	Line: 1	Column: 10
+Lexeme: attribute	Code: attribute	Line: 1	Column: 20
+Lexeme: a	Code: Id	Line: 1	Column: 22
+Lexeme: :	Code: Colon	Line: 1	Column: 23
+Lexeme: float	Code: Float	Line: 1	Column: 29
+Lexeme: ;	Code: Semicolon	Line: 1	Column: 29
+Lexeme: private	Code: Private	Line: 2	Column: 10
+Lexeme: attribute	Code: attribute	Line: 2	Column: 20
+Lexeme: b	Code: Id	Line: 2	Column: 22
+Lexeme: :	Code: Colon	Line: 2	Column: 23
+Lexeme: float	Code: Float	Line: 2	Column: 29
+Lexeme: ;	Code: Semicolon	Line: 2	Column: 29
+Lexeme: }	Code: RightBracket	Line: 4	Column: 1
+Lexeme: ;	Code: Semicolon	Line: 4	Column: 2
+Lexeme: class	Code: Class	Line: 6	Column: 6
+Lexeme: QUADRATIC	Code: Id	Line: 6	Column: 16
+Lexeme: isa	Code: isa	Line: 6	Column: 20
+Lexeme: LINEAR	Code: Id	Line: 6	Column: 27
+Lexeme: {	Code: LeftBracket	Line: 6	Column: 28
+Lexeme: private	Code: Private	Line: 7	Column: 10
+Lexeme: attribute	Code: attribute	Line: 7	Column: 20
+Lexeme: a	Code: Id	Line: 7	Column: 22
+Lexeme: :	Code: Colon	Line: 7	Column: 23
+Lexeme: float	Code: Float	Line: 7	Column: 29
+Lexeme: ;	Code: Semicolon	Line: 7	Column: 29
+Lexeme: private	Code: Private	Line: 8	Column: 10
+Lexeme: attribute	Code: attribute	Line: 8	Column: 20
+Lexeme: b	Code: Id	Line: 8	Column: 22
+Lexeme: :	Code: Colon	Line: 8	Column: 23
+Lexeme: float	Code: Float	Line: 8	Column: 29
+Lexeme: ;	Code: Semicolon	Line: 8	Column: 29
+Lexeme: private	Code: Private	Line: 9	Column: 10
+Lexeme: attribute	Code: attribute	Line: 9	Column: 20
+Lexeme: c	Code: Id	Line: 9	Column: 22
+Lexeme: :	Code: Colon	Line: 9	Column: 23
+Lexeme: float	Code: Float	Line: 9	Column: 29
+Lexeme: ;	Code: Semicolon	Line: 9	Column: 29
+Lexeme: }	Code: RightBracket	Line: 11	Column: 1
+
+
+Complete Dervation tree, Code structure:
+Start => 
+class <identifier> isa <identifier> { 
+private attribute <identifier> : float ; 
+private attribute <identifier> : float ; 
+} 
+; 
+class <identifier> isa <identifier> { 
+private attribute <identifier> : float ; 
+private attribute <identifier> : float ; 
+private attribute <identifier> : float ; 
+} 

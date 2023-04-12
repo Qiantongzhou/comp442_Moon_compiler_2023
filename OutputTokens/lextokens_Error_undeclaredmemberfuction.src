@@ -1,0 +1,95 @@
+This is all the Lexical Tokens
+
+
+id:
+
+QUADRATIC       location: 0 19
+evaluate       location: 0 29
+x       location: 0 31
+result       location: 2 18
+result       location: 3 12
+a       location: 3 16
+result       location: 4 9
+result       location: 4 18
+x       location: 4 22
+b       location: 4 26
+result       location: 5 9
+result       location: 5 18
+x       location: 5 22
+c       location: 5 26
+result       location: 6 17
+QUADRATIC       location: 9 19
+A       location: 9 34
+B       location: 9 44
+C       location: 9 54
+a       location: 11 9
+A       location: 11 13
+b       location: 12 9
+B       location: 12 13
+c       location: 13 9
+C       location: 13 13
+
+
+integers:
+
+
+
+floats:
+
+
+
+Operators:
+
+=>       location: 0 41
+=       location: 3 14
+=       location: 4 11
+*       location: 4 19
++       location: 4 23
+=       location: 5 11
+*       location: 5 19
++       location: 5 23
+=       location: 11 11
+=       location: 12 11
+=       location: 13 11
+
+
+Punctuation:
+
+::       location: 0 20
+:       location: 0 32
+:       location: 2 19
+;       location: 2 25
+;       location: 3 16
+;       location: 4 26
+;       location: 5 26
+;       location: 6 18
+::       location: 9 20
+:       location: 9 35
+,       location: 9 41
+:       location: 9 45
+,       location: 9 51
+:       location: 9 55
+.       location: 11 7
+;       location: 11 13
+.       location: 12 7
+;       location: 12 13
+.       location: 13 7
+;       location: 13 13
+
+
+ReservedWords:
+
+function       location: 0 9
+float       location: 0 38
+float       location: 0 48
+localvar       location: 2 11
+float       location: 2 25
+return       location: 6 9
+function       location: 9 9
+constructor       location: 9 32
+float       location: 9 41
+float       location: 9 51
+float       location: 9 61
+self       location: 11 7
+self       location: 12 7
+self       location: 13 7

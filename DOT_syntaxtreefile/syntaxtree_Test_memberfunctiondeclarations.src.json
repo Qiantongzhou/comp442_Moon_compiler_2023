@@ -1,0 +1,332 @@
+{
+  "name": "start",
+  "value": "",
+  "left": null,
+  "right": null,
+  "children": [
+    {
+      "name": "classdecl",
+      "value": "",
+      "left": null,
+      "right": null,
+      "children": [
+        {
+          "name": "class",
+          "value": "class",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "<identifier>",
+          "value": "QUADRATIC",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "classDecls",
+          "value": "",
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "isa",
+              "value": "isa",
+              "left": null,
+              "right": null,
+              "children": []
+            },
+            {
+              "name": "<identifier>",
+              "value": "POLYNOMIAL",
+              "left": null,
+              "right": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "{",
+          "value": "{",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "memberdeclear",
+          "value": "",
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "public",
+              "value": "public",
+              "left": null,
+              "right": null,
+              "children": []
+            },
+            {
+              "name": "isMemberFuncDecl",
+              "value": "",
+              "left": null,
+              "right": null,
+              "children": [
+                {
+                  "name": "constructor",
+                  "value": "constructor",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ":",
+                  "value": ":",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "(",
+                  "value": "(",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "<identifier>",
+                  "value": "A",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ":",
+                  "value": ":",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "float",
+                  "value": "float",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "FParamstail",
+                  "value": "",
+                  "left": null,
+                  "right": null,
+                  "children": [
+                    {
+                      "name": ",",
+                      "value": ",",
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    },
+                    {
+                      "name": "<identifier>",
+                      "value": "B",
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    },
+                    {
+                      "name": ":",
+                      "value": ":",
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    },
+                    {
+                      "name": "float",
+                      "value": "float",
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "FParamstail",
+                  "value": "",
+                  "left": null,
+                  "right": null,
+                  "children": [
+                    {
+                      "name": ",",
+                      "value": ",",
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    },
+                    {
+                      "name": "<identifier>",
+                      "value": "C",
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    },
+                    {
+                      "name": ":",
+                      "value": ":",
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    },
+                    {
+                      "name": "float",
+                      "value": "float",
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": ")",
+                  "value": ")",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ";",
+                  "value": ";",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "memberdeclear",
+          "value": "",
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "public",
+              "value": "public",
+              "left": null,
+              "right": null,
+              "children": []
+            },
+            {
+              "name": "isMemberFuncDecl",
+              "value": "",
+              "left": null,
+              "right": null,
+              "children": [
+                {
+                  "name": "function",
+                  "value": "function",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "<identifier>",
+                  "value": "evaluate",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ":",
+                  "value": ":",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "(",
+                  "value": "(",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "FParams",
+                  "value": "",
+                  "left": null,
+                  "right": null,
+                  "children": [
+                    {
+                      "name": "<identifier>",
+                      "value": "x",
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    },
+                    {
+                      "name": ":",
+                      "value": ":",
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    },
+                    {
+                      "name": "float",
+                      "value": "float",
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": ")",
+                  "value": ")",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "arrow",
+                  "value": "=>",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "float",
+                  "value": "float",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": ";",
+                  "value": ";",
+                  "left": null,
+                  "right": null,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "}",
+          "value": "}",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": ";",
+          "value": ";",
+          "left": null,
+          "right": null,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

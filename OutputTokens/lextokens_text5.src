@@ -1,0 +1,89 @@
+This is all the Lexical Tokens
+
+
+id:
+
+bubbleSort       location: 0 20
+arr       location: 0 24
+size       location: 0 41
+id       location: 2 14
+QUADRATIC       location: 7 16
+POLYNOMIAL       location: 7 31
+a       location: 8 22
+b       location: 9 22
+c       location: 10 22
+A       location: 11 25
+B       location: 11 35
+C       location: 11 45
+evaluate       location: 12 27
+x       location: 12 31
+
+
+integers:
+
+
+
+floats:
+
+
+
+Operators:
+
+=>       location: 0 53
+=>       location: 12 41
+
+
+Punctuation:
+
+:       location: 0 25
+,       location: 0 35
+:       location: 0 42
+.       location: 2 5
+.       location: 2 8
+.       location: 2 11
+;       location: 2 14
+:       location: 8 23
+;       location: 8 29
+:       location: 9 23
+;       location: 9 29
+:       location: 10 23
+;       location: 10 29
+:       location: 11 22
+:       location: 11 26
+,       location: 11 32
+:       location: 11 36
+,       location: 11 42
+:       location: 11 46
+;       location: 11 53
+:       location: 12 28
+:       location: 12 32
+;       location: 12 48
+;       location: 13 2
+
+
+ReservedWords:
+
+function       location: 0 9
+integer       location: 0 33
+integer       location: 0 50
+void       location: 0 59
+class       location: 7 6
+isa       location: 7 20
+private       location: 8 10
+attribute       location: 8 20
+float       location: 8 29
+private       location: 9 10
+attribute       location: 9 20
+float       location: 9 29
+private       location: 10 10
+attribute       location: 10 20
+float       location: 10 29
+public       location: 11 9
+constructor       location: 11 21
+float       location: 11 32
+float       location: 11 42
+float       location: 11 52
+public       location: 12 9
+function       location: 12 18
+float       location: 12 38
+float       location: 12 48

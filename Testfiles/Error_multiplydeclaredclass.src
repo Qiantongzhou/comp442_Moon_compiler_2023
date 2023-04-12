@@ -1,0 +1,12 @@
+class LINEAR {
+  private attribute a: float;
+  private attribute b: float;
+  
+};
+
+class LINEAR {
+  private attribute a: float;
+  private attribute b: float;
+  private attribute c: float;
+
+};

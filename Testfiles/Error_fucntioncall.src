@@ -1,0 +1,17 @@
+function printarray(arr: integer[], size: integer) => void 
+{
+  localvar n: integer;
+  localvar i: integer; 
+  n = size;
+  i = 0; 
+  while (i<n) { 
+    write(arr[i]);
+      i = i+1;
+  };
+}
+
+function main() => void
+{
+  localvar arr: integer[7]; 
+  printarray(arr);
+}

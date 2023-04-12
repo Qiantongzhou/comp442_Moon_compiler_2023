@@ -1,0 +1,237 @@
+Top-down syntax generation:
+<Start> =>
+function ?<< current: function expected: <identifier> >>
+function main ?<< current: main expected: ( >>
+function main ( ?<< current: ( expected: ) >>
+function main ( ) ?<< current: ) expected: arrow >>
+function main ( ) => ?<< current: => expected: void >>
+function main ( ) => void ?<< current: void expected: { >>
+function main ( ) => void { ?<< current: { expected: localVar >>
+function main ( ) => void { localvar ?<< current: localvar expected: <identifier> >>
+function main ( ) => void { localvar arr ?<< current: arr expected: : >>
+function main ( ) => void { localvar arr : ?<< current: : expected: integer >>
+function main ( ) => void { localvar arr : integer ?<< current: integer expected: [ >>
+function main ( ) => void { localvar arr : integer [ ?<< current: [ expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ?<< current: 7 expected: ] >>
+function main ( ) => void { localvar arr : integer [ 7 ] ?<< current: ] expected: ; >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; ?<< current: ; expected: localVar >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar ?<< current: localvar expected: <identifier> >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i ?<< current: i expected: : >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : ?<< current: : expected: integer >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ?<< current: integer expected: ; >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; ?<< current: ; expected: localVar >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar ?<< current: localvar expected: <identifier> >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n ?<< current: n expected: : >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : ?<< current: : expected: integer >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ?<< current: integer expected: ; >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; ?<< current: ; expected: <identifier> >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i ?<< current: i expected: = >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = ?<< current: = expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ?<< current: 0 expected: ; >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; ?<< current: ; expected: <identifier> >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n ?<< current: n expected: = >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = ?<< current: = expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ?<< current: 7 expected: ; >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; ?<< current: ; expected: <identifier> >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr ?<< current: arr expected: [ >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ ?<< current: [ expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ?<< current: 0 expected: ] >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] ?<< current: ] expected: = >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = ?<< current: = expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ?<< current: 64 expected: ; >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; ?<< current: ; expected: <identifier> >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr ?<< current: arr expected: [ >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ ?<< current: [ expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ?<< current: 1 expected: ] >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] ?<< current: ] expected: = >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = ?<< current: = expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ?<< current: 34 expected: ; >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; ?<< current: ; expected: <identifier> >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr ?<< current: arr expected: [ >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ ?<< current: [ expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ?<< current: 2 expected: ] >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] ?<< current: ] expected: = >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = ?<< current: = expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ?<< current: 25 expected: ; >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; ?<< current: ; expected: <identifier> >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr ?<< current: arr expected: [ >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ ?<< current: [ expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ?<< current: 3 expected: ] >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] ?<< current: ] expected: = >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = ?<< current: = expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ?<< current: 12 expected: ; >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; ?<< current: ; expected: <identifier> >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr ?<< current: arr expected: [ >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ ?<< current: [ expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ?<< current: 4 expected: ] >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] ?<< current: ] expected: = >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = ?<< current: = expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ?<< current: 22 expected: ; >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; ?<< current: ; expected: <identifier> >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr ?<< current: arr expected: [ >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ ?<< current: [ expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ?<< current: 5 expected: ] >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] ?<< current: ] expected: = >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = ?<< current: = expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ?<< current: 11 expected: ; >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; ?<< current: ; expected: <identifier> >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr ?<< current: arr expected: [ >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ ?<< current: [ expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ?<< current: 6 expected: ] >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] ?<< current: ] expected: = >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = ?<< current: = expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ?<< current: 90 expected: ; >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; ?<< current: ; expected: while >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ?<< current: while expected: ( >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( ?<< current: ( expected: <identifier> >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i ?<< current: i expected: It >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < ?<< current: < expected: <identifier> >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ?<< current: n expected: ) >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ) ?<< current: ) expected: { >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ) { ?<< current: { expected: write >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ) { write ?<< current: write expected: ( >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ) { write ( ?<< current: ( expected: <identifier> >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ) { write ( arr ?<< current: arr expected: [ >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ) { write ( arr [ ?<< current: [ expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ) { write ( arr [ 1 ?<< current: 1 expected: ] >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ) { write ( arr [ 1 ] ?<< current: ] expected: ) >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ) { write ( arr [ 1 ] ) ?<< current: ) expected: ; >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ) { write ( arr [ 1 ] ) ; ?<< current: ; expected: <identifier> >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ) { write ( arr [ 1 ] ) ; i ?<< current: i expected: = >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ) { write ( arr [ 1 ] ) ; i = ?<< current: = expected: <identifier> >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ) { write ( arr [ 1 ] ) ; i = i ?<< current: i expected: + >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ) { write ( arr [ 1 ] ) ; i = i + ?<< current: + expected: intLit >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ) { write ( arr [ 1 ] ) ; i = i + 1 ?<< current: 1 expected: ; >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ) { write ( arr [ 1 ] ) ; i = i + 1 ; ?<< current: ; expected: } >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ) { write ( arr [ 1 ] ) ; i = i + 1 ; } ?<< current: } expected: ; >>
+function main ( ) => void { localvar arr : integer [ 7 ] ; localvar i : integer ; localvar n : integer ; i = 0 ; n = 7 ; arr [ 0 ] = 64 ; arr [ 1 ] = 34 ; arr [ 2 ] = 25 ; arr [ 3 ] = 12 ; arr [ 4 ] = 22 ; arr [ 5 ] = 11 ; arr [ 6 ] = 90 ; while ( i < n ) { write ( arr [ 1 ] ) ; i = i + 1 ; } ; ?<< current: ; expected: } >>
+
+
+Sytax Tokens:
+Lexeme: function	Code: function	Line: 2	Column: 10
+Lexeme: main	Code: Id	Line: 2	Column: 15
+Lexeme: (	Code: LeftParenthesis	Line: 2	Column: 15
+Lexeme: )	Code: RightParenthesis	Line: 2	Column: 16
+Lexeme: =>	Code: arrow	Line: 2	Column: 19
+Lexeme: void	Code: Void	Line: 2	Column: 25
+Lexeme: {	Code: LeftBracket	Line: 3	Column: 1
+Lexeme: localvar	Code: localVar	Line: 4	Column: 11
+Lexeme: arr	Code: Id	Line: 4	Column: 15
+Lexeme: :	Code: Colon	Line: 4	Column: 16
+Lexeme: integer	Code: Integer	Line: 4	Column: 24
+Lexeme: [	Code: zhongkuoL	Line: 4	Column: 24
+Lexeme: 7	Code: intLit	Line: 4	Column: 26
+Lexeme: ]	Code: zhongkuoR	Line: 4	Column: 26
+Lexeme: ;	Code: Semicolon	Line: 4	Column: 27
+Lexeme: localvar	Code: localVar	Line: 5	Column: 11
+Lexeme: i	Code: Id	Line: 5	Column: 13
+Lexeme: :	Code: Colon	Line: 5	Column: 14
+Lexeme: integer	Code: Integer	Line: 5	Column: 22
+Lexeme: ;	Code: Semicolon	Line: 5	Column: 22
+Lexeme: localvar	Code: localVar	Line: 6	Column: 11
+Lexeme: n	Code: Id	Line: 6	Column: 13
+Lexeme: :	Code: Colon	Line: 6	Column: 14
+Lexeme: integer	Code: Integer	Line: 6	Column: 22
+Lexeme: ;	Code: Semicolon	Line: 6	Column: 22
+Lexeme: i	Code: Id	Line: 7	Column: 4
+Lexeme: =	Code: Equal	Line: 7	Column: 5
+Lexeme: 0	Code: intLit	Line: 7	Column: 6
+Lexeme: ;	Code: Semicolon	Line: 7	Column: 6
+Lexeme: n	Code: Id	Line: 8	Column: 4
+Lexeme: =	Code: Equal	Line: 8	Column: 5
+Lexeme: 7	Code: intLit	Line: 8	Column: 6
+Lexeme: ;	Code: Semicolon	Line: 8	Column: 6
+Lexeme: arr	Code: Id	Line: 10	Column: 6
+Lexeme: [	Code: zhongkuoL	Line: 10	Column: 6
+Lexeme: 0	Code: intLit	Line: 10	Column: 8
+Lexeme: ]	Code: zhongkuoR	Line: 10	Column: 8
+Lexeme: =	Code: Equal	Line: 10	Column: 11
+Lexeme: 64	Code: intLit	Line: 10	Column: 14
+Lexeme: ;	Code: Semicolon	Line: 10	Column: 14
+Lexeme: arr	Code: Id	Line: 11	Column: 6
+Lexeme: [	Code: zhongkuoL	Line: 11	Column: 6
+Lexeme: 1	Code: intLit	Line: 11	Column: 8
+Lexeme: ]	Code: zhongkuoR	Line: 11	Column: 8
+Lexeme: =	Code: Equal	Line: 11	Column: 11
+Lexeme: 34	Code: intLit	Line: 11	Column: 14
+Lexeme: ;	Code: Semicolon	Line: 11	Column: 14
+Lexeme: arr	Code: Id	Line: 12	Column: 6
+Lexeme: [	Code: zhongkuoL	Line: 12	Column: 6
+Lexeme: 2	Code: intLit	Line: 12	Column: 8
+Lexeme: ]	Code: zhongkuoR	Line: 12	Column: 8
+Lexeme: =	Code: Equal	Line: 12	Column: 11
+Lexeme: 25	Code: intLit	Line: 12	Column: 14
+Lexeme: ;	Code: Semicolon	Line: 12	Column: 14
+Lexeme: arr	Code: Id	Line: 13	Column: 6
+Lexeme: [	Code: zhongkuoL	Line: 13	Column: 6
+Lexeme: 3	Code: intLit	Line: 13	Column: 8
+Lexeme: ]	Code: zhongkuoR	Line: 13	Column: 8
+Lexeme: =	Code: Equal	Line: 13	Column: 11
+Lexeme: 12	Code: intLit	Line: 13	Column: 14
+Lexeme: ;	Code: Semicolon	Line: 13	Column: 14
+Lexeme: arr	Code: Id	Line: 14	Column: 6
+Lexeme: [	Code: zhongkuoL	Line: 14	Column: 6
+Lexeme: 4	Code: intLit	Line: 14	Column: 8
+Lexeme: ]	Code: zhongkuoR	Line: 14	Column: 8
+Lexeme: =	Code: Equal	Line: 14	Column: 11
+Lexeme: 22	Code: intLit	Line: 14	Column: 14
+Lexeme: ;	Code: Semicolon	Line: 14	Column: 14
+Lexeme: arr	Code: Id	Line: 15	Column: 6
+Lexeme: [	Code: zhongkuoL	Line: 15	Column: 6
+Lexeme: 5	Code: intLit	Line: 15	Column: 8
+Lexeme: ]	Code: zhongkuoR	Line: 15	Column: 8
+Lexeme: =	Code: Equal	Line: 15	Column: 11
+Lexeme: 11	Code: intLit	Line: 15	Column: 14
+Lexeme: ;	Code: Semicolon	Line: 15	Column: 14
+Lexeme: arr	Code: Id	Line: 16	Column: 6
+Lexeme: [	Code: zhongkuoL	Line: 16	Column: 6
+Lexeme: 6	Code: intLit	Line: 16	Column: 8
+Lexeme: ]	Code: zhongkuoR	Line: 16	Column: 8
+Lexeme: =	Code: Equal	Line: 16	Column: 11
+Lexeme: 90	Code: intLit	Line: 16	Column: 14
+Lexeme: ;	Code: Semicolon	Line: 16	Column: 14
+Lexeme: while	Code: While	Line: 17	Column: 8
+Lexeme: (	Code: LeftParenthesis	Line: 17	Column: 8
+Lexeme: i	Code: Id	Line: 17	Column: 10
+Lexeme: <	Code: It	Line: 17	Column: 11
+Lexeme: n	Code: Id	Line: 17	Column: 12
+Lexeme: )	Code: RightParenthesis	Line: 17	Column: 12
+Lexeme: {	Code: LeftBracket	Line: 17	Column: 13
+Lexeme: write	Code: Write	Line: 18	Column: 7
+Lexeme: (	Code: LeftParenthesis	Line: 18	Column: 7
+Lexeme: arr	Code: Id	Line: 18	Column: 11
+Lexeme: [	Code: zhongkuoL	Line: 18	Column: 11
+Lexeme: 1	Code: intLit	Line: 18	Column: 13
+Lexeme: ]	Code: zhongkuoR	Line: 18	Column: 13
+Lexeme: )	Code: RightParenthesis	Line: 18	Column: 14
+Lexeme: ;	Code: Semicolon	Line: 18	Column: 15
+Lexeme: i	Code: Id	Line: 19	Column: 3
+Lexeme: =	Code: Equal	Line: 19	Column: 4
+Lexeme: i	Code: Id	Line: 19	Column: 5
+Lexeme: +	Code: Plus	Line: 19	Column: 5
+Lexeme: 1	Code: intLit	Line: 19	Column: 7
+Lexeme: ;	Code: Semicolon	Line: 19	Column: 7
+Lexeme: }	Code: RightBracket	Line: 20	Column: 1
+Lexeme: ;	Code: Semicolon	Line: 20	Column: 2
+
+
+Complete Dervation tree, Code structure:
+Start => 
+function <identifier> ( ) arrow void { 
+localVar <identifier> : integer [ intLit ] ; 
+localVar <identifier> : integer ; 
+localVar <identifier> : integer ; 
+<identifier> = intLit ; 
+<identifier> = intLit ; 
+<identifier> [ intLit ] = intLit ; 
+<identifier> [ intLit ] = intLit ; 
+<identifier> [ intLit ] = intLit ; 
+<identifier> [ intLit ] = intLit ; 
+<identifier> [ intLit ] = intLit ; 
+<identifier> [ intLit ] = intLit ; 
+<identifier> [ intLit ] = intLit ; 
+while ( <identifier> It <identifier> ) { 
+write ( <identifier> [ intLit ] ) ; 
+<identifier> = <identifier> + intLit ; 
+} 
+; 

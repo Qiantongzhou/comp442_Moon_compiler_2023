@@ -1,0 +1,42 @@
+This is all the Lexical Tokens
+
+
+id:
+
+LINEAR       location: 0 13
+POLYNOMIAL       location: 0 28
+a       location: 1 22
+b       location: 2 22
+
+
+integers:
+
+
+
+floats:
+
+
+
+Operators:
+
+
+
+Punctuation:
+
+:       location: 1 23
+;       location: 1 29
+:       location: 2 23
+;       location: 2 29
+;       location: 3 2
+
+
+ReservedWords:
+
+class       location: 0 6
+isa       location: 0 17
+private       location: 1 10
+attribute       location: 1 20
+float       location: 1 29
+private       location: 2 10
+attribute       location: 2 20
+float       location: 2 29

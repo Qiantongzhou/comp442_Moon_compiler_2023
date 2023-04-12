@@ -1,0 +1,161 @@
+Top-down syntax generation:
+<Start> =>
+function ?<< current: function expected: <identifier> >>
+function bubbleSort ?<< current: bubbleSort expected: ( >>
+function bubbleSort ( ?<< current: ( expected: <identifier> >>
+function bubbleSort ( arr ?<< current: arr expected: : >>
+function bubbleSort ( arr : ?<< current: : expected: integer >>
+function bubbleSort ( arr : integer ?<< current: integer expected: [ >>
+function bubbleSort ( arr : integer [ ?<< current: [ expected: ] >>
+function bubbleSort ( arr : integer [ ] ?<< current: ] expected: , >>
+function bubbleSort ( arr : integer [ ] , ?<< current: , expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size ?<< current: size expected: : >>
+function bubbleSort ( arr : integer [ ] , size : ?<< current: : expected: integer >>
+function bubbleSort ( arr : integer [ ] , size : integer ?<< current: integer expected: ) >>
+function bubbleSort ( arr : integer [ ] , size : integer ) ?<< current: ) expected: arrow >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => ?<< current: => expected: void >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void ?<< current: void expected: { >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { ?<< current: { expected: if >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ?<< current: if expected: ( >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( ?<< current: ( expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr ?<< current: arr expected: [ >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ ?<< current: [ expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ?<< current: j expected: ] >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] ?<< current: ] expected: gt >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > ?<< current: > expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr ?<< current: arr expected: [ >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ ?<< current: [ expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j ?<< current: j expected: + >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + ?<< current: + expected: intLit >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ?<< current: 1 expected: ] >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ?<< current: ] expected: ) >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) ?<< current: ) expected: then >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then ?<< current: then expected: { >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { ?<< current: { expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp ?<< current: temp expected: = >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = ?<< current: = expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr ?<< current: arr expected: [ >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ ?<< current: [ expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ?<< current: j expected: ] >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ?<< current: ] expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; ?<< current: ; expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr ?<< current: arr expected: [ >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ ?<< current: [ expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ?<< current: j expected: ] >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] ?<< current: ] expected: = >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = ?<< current: = expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr ?<< current: arr expected: [ >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ ?<< current: [ expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j ?<< current: j expected: + >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + ?<< current: + expected: intLit >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ?<< current: 1 expected: ] >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ?<< current: ] expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; ?<< current: ; expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr ?<< current: arr expected: [ >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ ?<< current: [ expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ j ?<< current: j expected: + >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ j + ?<< current: + expected: intLit >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ j + 1 ?<< current: 1 expected: ] >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ j + 1 ] ?<< current: ] expected: = >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ j + 1 ] = ?<< current: = expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ j + 1 ] = temp ?<< current: temp expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ j + 1 ] = temp ; ?<< current: ; expected: } >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ j + 1 ] = temp ; } ?<< current: } expected: else >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ j + 1 ] = temp ; } else ?<< current: else expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ j + 1 ] = temp ; } else ; ?<< current: ; expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ j + 1 ] = temp ; } else ; j ?<< current: j expected: = >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ j + 1 ] = temp ; } else ; j = ?<< current: = expected: <identifier> >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ j + 1 ] = temp ; } else ; j = j ?<< current: j expected: + >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ j + 1 ] = temp ; } else ; j = j + ?<< current: + expected: intLit >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ j + 1 ] = temp ; } else ; j = j + 1 ?<< current: 1 expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ j + 1 ] = temp ; } else ; j = j + 1 ; ?<< current: ; expected: } >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ j + 1 ] = temp ; } else ; j = j + 1 ; } ?<< current: } expected: ; >>
+function bubbleSort ( arr : integer [ ] , size : integer ) => void { if ( arr [ j ] > arr [ j + 1 ] ) then { temp = arr [ j ] ; arr [ j ] = arr [ j + 1 ] ; arr [ j + 1 ] = temp ; } else ; j = j + 1 ; } ; ?<< current: ; expected: } >>
+
+
+Sytax Tokens:
+Lexeme: function	Code: function	Line: 0	Column: 9
+Lexeme: bubbleSort	Code: Id	Line: 0	Column: 20
+Lexeme: (	Code: LeftParenthesis	Line: 0	Column: 20
+Lexeme: arr	Code: Id	Line: 0	Column: 24
+Lexeme: :	Code: Colon	Line: 0	Column: 25
+Lexeme: integer	Code: Integer	Line: 0	Column: 33
+Lexeme: [	Code: zhongkuoL	Line: 0	Column: 33
+Lexeme: ]	Code: zhongkuoR	Line: 0	Column: 34
+Lexeme: ,	Code: Comma	Line: 0	Column: 35
+Lexeme: size	Code: Id	Line: 0	Column: 41
+Lexeme: :	Code: Colon	Line: 0	Column: 42
+Lexeme: integer	Code: Integer	Line: 0	Column: 50
+Lexeme: )	Code: RightParenthesis	Line: 0	Column: 50
+Lexeme: =>	Code: arrow	Line: 0	Column: 53
+Lexeme: void	Code: Void	Line: 0	Column: 59
+Lexeme: {	Code: LeftBracket	Line: 1	Column: 1
+Lexeme: if	Code: If	Line: 2	Column: 4
+Lexeme: (	Code: LeftParenthesis	Line: 2	Column: 5
+Lexeme: arr	Code: Id	Line: 2	Column: 9
+Lexeme: [	Code: zhongkuoL	Line: 2	Column: 9
+Lexeme: j	Code: Id	Line: 2	Column: 11
+Lexeme: ]	Code: zhongkuoR	Line: 2	Column: 11
+Lexeme: >	Code: gt	Line: 2	Column: 14
+Lexeme: arr	Code: Id	Line: 2	Column: 18
+Lexeme: [	Code: zhongkuoL	Line: 2	Column: 18
+Lexeme: j	Code: Id	Line: 2	Column: 20
+Lexeme: +	Code: Plus	Line: 2	Column: 20
+Lexeme: 1	Code: intLit	Line: 2	Column: 22
+Lexeme: ]	Code: zhongkuoR	Line: 2	Column: 22
+Lexeme: )	Code: RightParenthesis	Line: 2	Column: 23
+Lexeme: then	Code: then	Line: 3	Column: 13
+Lexeme: {	Code: LeftBracket	Line: 3	Column: 14
+Lexeme: temp	Code: Id	Line: 4	Column: 26
+Lexeme: =	Code: Equal	Line: 4	Column: 28
+Lexeme: arr	Code: Id	Line: 4	Column: 32
+Lexeme: [	Code: zhongkuoL	Line: 4	Column: 32
+Lexeme: j	Code: Id	Line: 4	Column: 34
+Lexeme: ]	Code: zhongkuoR	Line: 4	Column: 34
+Lexeme: ;	Code: Semicolon	Line: 4	Column: 35
+Lexeme: arr	Code: Id	Line: 5	Column: 14
+Lexeme: [	Code: zhongkuoL	Line: 5	Column: 14
+Lexeme: j	Code: Id	Line: 5	Column: 16
+Lexeme: ]	Code: zhongkuoR	Line: 5	Column: 16
+Lexeme: =	Code: Equal	Line: 5	Column: 19
+Lexeme: arr	Code: Id	Line: 5	Column: 23
+Lexeme: [	Code: zhongkuoL	Line: 5	Column: 23
+Lexeme: j	Code: Id	Line: 5	Column: 25
+Lexeme: +	Code: Plus	Line: 5	Column: 25
+Lexeme: 1	Code: intLit	Line: 5	Column: 27
+Lexeme: ]	Code: zhongkuoR	Line: 5	Column: 27
+Lexeme: ;	Code: Semicolon	Line: 5	Column: 28
+Lexeme: arr	Code: Id	Line: 6	Column: 14
+Lexeme: [	Code: zhongkuoL	Line: 6	Column: 14
+Lexeme: j	Code: Id	Line: 6	Column: 16
+Lexeme: +	Code: Plus	Line: 6	Column: 16
+Lexeme: 1	Code: intLit	Line: 6	Column: 18
+Lexeme: ]	Code: zhongkuoR	Line: 6	Column: 18
+Lexeme: =	Code: Equal	Line: 6	Column: 21
+Lexeme: temp	Code: Id	Line: 6	Column: 26
+Lexeme: ;	Code: Semicolon	Line: 6	Column: 26
+Lexeme: }	Code: RightBracket	Line: 7	Column: 9
+Lexeme: else	Code: Else	Line: 7	Column: 15
+Lexeme: ;	Code: Semicolon	Line: 7	Column: 16
+Lexeme: j	Code: Id	Line: 8	Column: 10
+Lexeme: =	Code: Equal	Line: 8	Column: 12
+Lexeme: j	Code: Id	Line: 8	Column: 14
+Lexeme: +	Code: Plus	Line: 8	Column: 14
+Lexeme: 1	Code: intLit	Line: 8	Column: 16
+Lexeme: ;	Code: Semicolon	Line: 8	Column: 16
+Lexeme: }	Code: RightBracket	Line: 9	Column: 7
+Lexeme: ;	Code: Semicolon	Line: 9	Column: 8
+
+
+Complete Dervation tree, Code structure:
+Start => 
+function <identifier> ( <identifier> : integer [ ] , <identifier> : integer ) arrow void { 
+if ( <identifier> [ <identifier> ] gt <identifier> [ <identifier> + intLit ] ) then { 
+<identifier> = <identifier> [ <identifier> ] ; 
+<identifier> [ <identifier> ] = <identifier> [ <identifier> + intLit ] ; 
+<identifier> [ <identifier> + intLit ] = <identifier> ; 
+} 
+else ; 
+<identifier> = <identifier> + intLit ; 
+} 
+; 

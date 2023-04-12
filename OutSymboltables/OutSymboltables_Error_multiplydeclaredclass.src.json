@@ -1,0 +1,38 @@
+{
+  "classtables": [
+    {
+      "parent": null,
+      "functiontables": [],
+      "symboltable": {
+        "symbols": [
+          {
+            "name": "attribute",
+            "type": "float",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "a",
+            "scope": 0,
+            "modifier": 1
+          },
+          {
+            "name": "attribute",
+            "type": "float",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "b",
+            "scope": 0,
+            "modifier": 1
+          }
+        ]
+      },
+      "currentScope": 0,
+      "name": "LINEAR"
+    }
+  ],
+  "functiontables": [],
+  "symboltable": null,
+  "currentScope": 0,
+  "name": "global"
+}

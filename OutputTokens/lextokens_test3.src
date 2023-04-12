@@ -1,0 +1,103 @@
+This is all the Lexical Tokens
+
+
+id:
+
+main       location: 2 15
+arr       location: 4 15
+i       location: 5 13
+n       location: 6 13
+i       location: 7 4
+n       location: 8 4
+arr       location: 10 6
+arr       location: 11 6
+arr       location: 12 6
+arr       location: 13 6
+arr       location: 14 6
+arr       location: 15 6
+arr       location: 16 6
+i       location: 17 10
+n       location: 17 12
+arr       location: 18 11
+i       location: 19 3
+i       location: 19 5
+
+
+integers:
+
+7       location: 4 26
+0       location: 7 6
+7       location: 8 6
+0       location: 10 8
+64       location: 10 14
+1       location: 11 8
+34       location: 11 14
+2       location: 12 8
+25       location: 12 14
+3       location: 13 8
+12       location: 13 14
+4       location: 14 8
+22       location: 14 14
+5       location: 15 8
+11       location: 15 14
+6       location: 16 8
+90       location: 16 14
+1       location: 18 13
+1       location: 19 7
+
+
+floats:
+
+
+
+Operators:
+
+=>       location: 2 19
+=       location: 7 5
+=       location: 8 5
+=       location: 10 11
+=       location: 11 11
+=       location: 12 11
+=       location: 13 11
+=       location: 14 11
+=       location: 15 11
+=       location: 16 11
+<       location: 17 11
+=       location: 19 4
++       location: 19 5
+
+
+Punctuation:
+
+:       location: 4 16
+;       location: 4 27
+:       location: 5 14
+;       location: 5 22
+:       location: 6 14
+;       location: 6 22
+;       location: 7 6
+;       location: 8 6
+;       location: 10 14
+;       location: 11 14
+;       location: 12 14
+;       location: 13 14
+;       location: 14 14
+;       location: 15 14
+;       location: 16 14
+;       location: 18 15
+;       location: 19 7
+;       location: 20 2
+
+
+ReservedWords:
+
+function       location: 2 10
+void       location: 2 25
+localvar       location: 4 11
+integer       location: 4 24
+localvar       location: 5 11
+integer       location: 5 22
+localvar       location: 6 11
+integer       location: 6 22
+while       location: 17 8
+write       location: 18 7

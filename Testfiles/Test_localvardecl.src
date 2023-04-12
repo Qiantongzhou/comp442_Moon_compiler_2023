@@ -1,0 +1,7 @@
+
+
+class QUADRATIC isa POLYNOMIAL {
+  localvar f1: LINEAR(2, 3.5);
+  localvar f2: QUADRATIC(-2.0, 1.0, 0.0);
+  localvar counter: integer;
+};

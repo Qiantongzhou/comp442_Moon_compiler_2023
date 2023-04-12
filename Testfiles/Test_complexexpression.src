@@ -1,0 +1,6 @@
+function bubbleSort(arr: integer[], size: integer) => void 
+{
+  f1.evaluate(counter);
+  f2[2].evaluate(f2[f1.f3(size)+1]).access();
+  
+}

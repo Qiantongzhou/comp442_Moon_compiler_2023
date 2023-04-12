@@ -1,0 +1,912 @@
+{
+  "classtables": [],
+  "functiontables": [
+    {
+      "functionparams": [],
+      "returntype": {
+        "name": "returntype",
+        "type": "void",
+        "isarray": false,
+        "isfunction": false,
+        "isclass": false,
+        "symbol": "void",
+        "scope": 0,
+        "size": 0,
+        "stack": 0,
+        "modifier": 1
+      },
+      "statements": [
+        {
+          "name": "statement",
+          "value": "",
+          "localregister": null,
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "AssignOp",
+              "value": "=",
+              "localregister": null,
+              "left": {
+                "name": "idnest",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "<identifier>",
+                    "value": "k",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": []
+                  }
+                ]
+              },
+              "right": {
+                "name": "Expr",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "term",
+                    "value": "",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "factor",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "integer",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "intLit",
+                                "value": "10",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "statement",
+          "value": "",
+          "localregister": null,
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "AssignOp",
+              "value": "=",
+              "localregister": null,
+              "left": {
+                "name": "idnest",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "<identifier>",
+                    "value": "x",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": []
+                  }
+                ]
+              },
+              "right": {
+                "name": "Expr",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "term",
+                    "value": "",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "factor",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "integer",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "intLit",
+                                "value": "2",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "statement",
+          "value": "",
+          "localregister": null,
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "AssignOp",
+              "value": "=",
+              "localregister": null,
+              "left": {
+                "name": "idnest",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "<identifier>",
+                    "value": "y",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": []
+                  }
+                ]
+              },
+              "right": {
+                "name": "Expr",
+                "value": "",
+                "localregister": null,
+                "left": null,
+                "right": null,
+                "children": [
+                  {
+                    "name": "term",
+                    "value": "",
+                    "localregister": null,
+                    "left": null,
+                    "right": null,
+                    "children": [
+                      {
+                        "name": "factor",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "integer",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "intLit",
+                                "value": "3",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "statement",
+          "value": "",
+          "localregister": null,
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "If",
+              "value": "",
+              "localregister": null,
+              "left": null,
+              "right": null,
+              "children": [
+                {
+                  "name": "if",
+                  "value": "if",
+                  "localregister": null,
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "(",
+                  "value": "(",
+                  "localregister": null,
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "Expr",
+                  "value": "",
+                  "localregister": null,
+                  "left": null,
+                  "right": null,
+                  "children": [
+                    {
+                      "name": "RelOp",
+                      "value": "<",
+                      "localregister": null,
+                      "left": {
+                        "name": "term",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "factor",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "idnest",
+                                "value": "",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": [
+                                  {
+                                    "name": "<identifier>",
+                                    "value": "x",
+                                    "localregister": null,
+                                    "left": null,
+                                    "right": null,
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "right": {
+                        "name": "term",
+                        "value": "",
+                        "localregister": null,
+                        "left": null,
+                        "right": null,
+                        "children": [
+                          {
+                            "name": "factor",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "idnest",
+                                "value": "",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": [
+                                  {
+                                    "name": "<identifier>",
+                                    "value": "y",
+                                    "localregister": null,
+                                    "left": null,
+                                    "right": null,
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": ")",
+                  "value": ")",
+                  "localregister": null,
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "then",
+                  "value": "then",
+                  "localregister": null,
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "stateBlock",
+                  "value": "",
+                  "localregister": null,
+                  "left": null,
+                  "right": null,
+                  "children": [
+                    {
+                      "name": "{",
+                      "value": "{",
+                      "localregister": null,
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    },
+                    {
+                      "name": "statement",
+                      "value": "",
+                      "localregister": null,
+                      "left": null,
+                      "right": null,
+                      "children": [
+                        {
+                          "name": "AssignOp",
+                          "value": "=",
+                          "localregister": null,
+                          "left": {
+                            "name": "idnest",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "<identifier>",
+                                "value": "x",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          "right": {
+                            "name": "Expr",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "term",
+                                "value": "",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": [
+                                  {
+                                    "name": "MultOp",
+                                    "value": "*",
+                                    "localregister": null,
+                                    "left": {
+                                      "name": "factor",
+                                      "value": "",
+                                      "localregister": null,
+                                      "left": null,
+                                      "right": null,
+                                      "children": [
+                                        {
+                                          "name": "idnest",
+                                          "value": "",
+                                          "localregister": null,
+                                          "left": null,
+                                          "right": null,
+                                          "children": [
+                                            {
+                                              "name": "<identifier>",
+                                              "value": "y",
+                                              "localregister": null,
+                                              "left": null,
+                                              "right": null,
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    "right": {
+                                      "name": "factor",
+                                      "value": "",
+                                      "localregister": null,
+                                      "left": null,
+                                      "right": null,
+                                      "children": [
+                                        {
+                                          "name": "idnest",
+                                          "value": "",
+                                          "localregister": null,
+                                          "left": null,
+                                          "right": null,
+                                          "children": [
+                                            {
+                                              "name": "<identifier>",
+                                              "value": "k",
+                                              "localregister": null,
+                                              "left": null,
+                                              "right": null,
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "statement",
+                      "value": "",
+                      "localregister": null,
+                      "left": null,
+                      "right": null,
+                      "children": [
+                        {
+                          "name": "write",
+                          "value": "",
+                          "localregister": null,
+                          "left": null,
+                          "right": null,
+                          "children": [
+                            {
+                              "name": "write",
+                              "value": "write",
+                              "localregister": null,
+                              "left": null,
+                              "right": null,
+                              "children": []
+                            },
+                            {
+                              "name": "(",
+                              "value": "(",
+                              "localregister": null,
+                              "left": null,
+                              "right": null,
+                              "children": []
+                            },
+                            {
+                              "name": "Expr",
+                              "value": "",
+                              "localregister": null,
+                              "left": null,
+                              "right": null,
+                              "children": [
+                                {
+                                  "name": "term",
+                                  "value": "",
+                                  "localregister": null,
+                                  "left": null,
+                                  "right": null,
+                                  "children": [
+                                    {
+                                      "name": "factor",
+                                      "value": "",
+                                      "localregister": null,
+                                      "left": null,
+                                      "right": null,
+                                      "children": [
+                                        {
+                                          "name": "idnest",
+                                          "value": "",
+                                          "localregister": null,
+                                          "left": null,
+                                          "right": null,
+                                          "children": [
+                                            {
+                                              "name": "<identifier>",
+                                              "value": "x",
+                                              "localregister": null,
+                                              "left": null,
+                                              "right": null,
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": ")",
+                              "value": ")",
+                              "localregister": null,
+                              "left": null,
+                              "right": null,
+                              "children": []
+                            },
+                            {
+                              "name": ";",
+                              "value": ";",
+                              "localregister": null,
+                              "left": null,
+                              "right": null,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "}",
+                      "value": "}",
+                      "localregister": null,
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "else",
+                  "value": "else",
+                  "localregister": null,
+                  "left": null,
+                  "right": null,
+                  "children": []
+                },
+                {
+                  "name": "stateBlock",
+                  "value": "",
+                  "localregister": null,
+                  "left": null,
+                  "right": null,
+                  "children": [
+                    {
+                      "name": "{",
+                      "value": "{",
+                      "localregister": null,
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    },
+                    {
+                      "name": "statement",
+                      "value": "",
+                      "localregister": null,
+                      "left": null,
+                      "right": null,
+                      "children": [
+                        {
+                          "name": "AssignOp",
+                          "value": "=",
+                          "localregister": null,
+                          "left": {
+                            "name": "idnest",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "<identifier>",
+                                "value": "k",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": []
+                              }
+                            ]
+                          },
+                          "right": {
+                            "name": "Expr",
+                            "value": "",
+                            "localregister": null,
+                            "left": null,
+                            "right": null,
+                            "children": [
+                              {
+                                "name": "term",
+                                "value": "",
+                                "localregister": null,
+                                "left": null,
+                                "right": null,
+                                "children": [
+                                  {
+                                    "name": "MultOp",
+                                    "value": "*",
+                                    "localregister": null,
+                                    "left": {
+                                      "name": "factor",
+                                      "value": "",
+                                      "localregister": null,
+                                      "left": null,
+                                      "right": null,
+                                      "children": [
+                                        {
+                                          "name": "idnest",
+                                          "value": "",
+                                          "localregister": null,
+                                          "left": null,
+                                          "right": null,
+                                          "children": [
+                                            {
+                                              "name": "<identifier>",
+                                              "value": "x",
+                                              "localregister": null,
+                                              "left": null,
+                                              "right": null,
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    "right": {
+                                      "name": "factor",
+                                      "value": "",
+                                      "localregister": null,
+                                      "left": null,
+                                      "right": null,
+                                      "children": [
+                                        {
+                                          "name": "idnest",
+                                          "value": "",
+                                          "localregister": null,
+                                          "left": null,
+                                          "right": null,
+                                          "children": [
+                                            {
+                                              "name": "<identifier>",
+                                              "value": "y",
+                                              "localregister": null,
+                                              "left": null,
+                                              "right": null,
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "statement",
+                      "value": "",
+                      "localregister": null,
+                      "left": null,
+                      "right": null,
+                      "children": [
+                        {
+                          "name": "write",
+                          "value": "",
+                          "localregister": null,
+                          "left": null,
+                          "right": null,
+                          "children": [
+                            {
+                              "name": "write",
+                              "value": "write",
+                              "localregister": null,
+                              "left": null,
+                              "right": null,
+                              "children": []
+                            },
+                            {
+                              "name": "(",
+                              "value": "(",
+                              "localregister": null,
+                              "left": null,
+                              "right": null,
+                              "children": []
+                            },
+                            {
+                              "name": "Expr",
+                              "value": "",
+                              "localregister": null,
+                              "left": null,
+                              "right": null,
+                              "children": [
+                                {
+                                  "name": "term",
+                                  "value": "",
+                                  "localregister": null,
+                                  "left": null,
+                                  "right": null,
+                                  "children": [
+                                    {
+                                      "name": "factor",
+                                      "value": "",
+                                      "localregister": null,
+                                      "left": null,
+                                      "right": null,
+                                      "children": [
+                                        {
+                                          "name": "idnest",
+                                          "value": "",
+                                          "localregister": null,
+                                          "left": null,
+                                          "right": null,
+                                          "children": [
+                                            {
+                                              "name": "<identifier>",
+                                              "value": "k",
+                                              "localregister": null,
+                                              "left": null,
+                                              "right": null,
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": ")",
+                              "value": ")",
+                              "localregister": null,
+                              "left": null,
+                              "right": null,
+                              "children": []
+                            },
+                            {
+                              "name": ";",
+                              "value": ";",
+                              "localregister": null,
+                              "left": null,
+                              "right": null,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "}",
+                      "value": "}",
+                      "localregister": null,
+                      "left": null,
+                      "right": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": ";",
+                  "value": ";",
+                  "localregister": null,
+                  "left": null,
+                  "right": null,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "symboltable": {
+        "symbols": [
+          {
+            "name": "localvar",
+            "type": "integer",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "x",
+            "scope": 1,
+            "size": 0,
+            "stack": 0,
+            "modifier": 1
+          },
+          {
+            "name": "localvar",
+            "type": "integer",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "y",
+            "scope": 1,
+            "size": 0,
+            "stack": 0,
+            "modifier": 1
+          },
+          {
+            "name": "localvar",
+            "type": "integer",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "z",
+            "scope": 1,
+            "size": 0,
+            "stack": 0,
+            "modifier": 1
+          },
+          {
+            "name": "localvar",
+            "type": "integer",
+            "isarray": false,
+            "isfunction": false,
+            "isclass": false,
+            "symbol": "k",
+            "scope": 1,
+            "size": 0,
+            "stack": 0,
+            "modifier": 1
+          }
+        ]
+      },
+      "currentScope": 0,
+      "name": "main"
+    }
+  ],
+  "symboltable": null,
+  "currentScope": 0,
+  "name": "global"
+}

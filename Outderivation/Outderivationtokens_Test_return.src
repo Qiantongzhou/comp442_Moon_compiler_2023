@@ -1,0 +1,82 @@
+Top-down syntax generation:
+<Start> =>
+function ?<< current: function expected: <identifier> >>
+function LINEAR ?<< current: LINEAR expected: sr >>
+function LINEAR :: ?<< current: :: expected: <identifier> >>
+function LINEAR :: evaluate ?<< current: evaluate expected: ( >>
+function LINEAR :: evaluate ( ?<< current: ( expected: <identifier> >>
+function LINEAR :: evaluate ( x ?<< current: x expected: : >>
+function LINEAR :: evaluate ( x : ?<< current: : expected: float >>
+function LINEAR :: evaluate ( x : float ?<< current: float expected: ) >>
+function LINEAR :: evaluate ( x : float ) ?<< current: ) expected: arrow >>
+function LINEAR :: evaluate ( x : float ) => ?<< current: => expected: float >>
+function LINEAR :: evaluate ( x : float ) => float ?<< current: float expected: { >>
+function LINEAR :: evaluate ( x : float ) => float { ?<< current: { expected: localVar >>
+function LINEAR :: evaluate ( x : float ) => float { localvar ?<< current: localvar expected: <identifier> >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result ?<< current: result expected: : >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : ?<< current: : expected: float >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ?<< current: float expected: ; >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ; ?<< current: ; expected: <identifier> >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ; result ?<< current: result expected: = >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ; result = ?<< current: = expected: floatLit >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ; result = 0.0 ?<< current: 0.0 expected: ; >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ; result = 0.0 ; ?<< current: ; expected: <identifier> >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ; result = 0.0 ; result ?<< current: result expected: = >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ; result = 0.0 ; result = ?<< current: = expected: <identifier> >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ; result = 0.0 ; result = a ?<< current: a expected: * >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ; result = 0.0 ; result = a * ?<< current: * expected: <identifier> >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ; result = 0.0 ; result = a * x ?<< current: x expected: + >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ; result = 0.0 ; result = a * x + ?<< current: + expected: <identifier> >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ; result = 0.0 ; result = a * x + b ?<< current: b expected: ; >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ; result = 0.0 ; result = a * x + b ; ?<< current: ; expected: return >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ; result = 0.0 ; result = a * x + b ; return ?<< current: return expected: ( >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ; result = 0.0 ; result = a * x + b ; return ( ?<< current: ( expected: <identifier> >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ; result = 0.0 ; result = a * x + b ; return ( result ?<< current: result expected: ) >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ; result = 0.0 ; result = a * x + b ; return ( result ) ?<< current: ) expected: ; >>
+function LINEAR :: evaluate ( x : float ) => float { localvar result : float ; result = 0.0 ; result = a * x + b ; return ( result ) ; ?<< current: ; expected: } >>
+
+
+Sytax Tokens:
+Lexeme: function	Code: function	Line: 0	Column: 9
+Lexeme: LINEAR	Code: Id	Line: 0	Column: 16
+Lexeme: ::	Code: sr	Line: 0	Column: 17
+Lexeme: evaluate	Code: Id	Line: 0	Column: 26
+Lexeme: (	Code: LeftParenthesis	Line: 0	Column: 26
+Lexeme: x	Code: Id	Line: 0	Column: 28
+Lexeme: :	Code: Colon	Line: 0	Column: 29
+Lexeme: float	Code: Float	Line: 0	Column: 35
+Lexeme: )	Code: RightParenthesis	Line: 0	Column: 35
+Lexeme: =>	Code: arrow	Line: 0	Column: 38
+Lexeme: float	Code: Float	Line: 0	Column: 45
+Lexeme: {	Code: LeftBracket	Line: 1	Column: 1
+Lexeme: localvar	Code: localVar	Line: 2	Column: 11
+Lexeme: result	Code: Id	Line: 2	Column: 18
+Lexeme: :	Code: Colon	Line: 2	Column: 19
+Lexeme: float	Code: Float	Line: 2	Column: 25
+Lexeme: ;	Code: Semicolon	Line: 2	Column: 25
+Lexeme: result	Code: Id	Line: 3	Column: 9
+Lexeme: =	Code: Equal	Line: 3	Column: 11
+Lexeme: 0.0	Code: floatLit	Line: 3	Column: 15
+Lexeme: ;	Code: Semicolon	Line: 3	Column: 15
+Lexeme: result	Code: Id	Line: 4	Column: 9
+Lexeme: =	Code: Equal	Line: 4	Column: 11
+Lexeme: a	Code: Id	Line: 4	Column: 13
+Lexeme: *	Code: Multiplication	Line: 4	Column: 14
+Lexeme: x	Code: Id	Line: 4	Column: 17
+Lexeme: +	Code: Plus	Line: 4	Column: 18
+Lexeme: b	Code: Id	Line: 4	Column: 21
+Lexeme: ;	Code: Semicolon	Line: 4	Column: 21
+Lexeme: return	Code: Return	Line: 5	Column: 9
+Lexeme: (	Code: LeftParenthesis	Line: 5	Column: 10
+Lexeme: result	Code: Id	Line: 5	Column: 17
+Lexeme: )	Code: RightParenthesis	Line: 5	Column: 17
+Lexeme: ;	Code: Semicolon	Line: 5	Column: 18
+
+
+Complete Dervation tree, Code structure:
+Start => 
+function <identifier> sr <identifier> ( <identifier> : float ) arrow float { 
+localVar <identifier> : float ; 
+<identifier> = floatLit ; 
+<identifier> = <identifier> * <identifier> + <identifier> ; 
+return ( <identifier> ) ; 

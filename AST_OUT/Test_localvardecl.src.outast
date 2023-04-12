@@ -1,0 +1,79 @@
+digraph AST {
+node22081476 [label=""]
+node22081476 -> node64515557
+node64515557 [label=""]
+node64515557 -> node43769104
+node43769104 [label="class"]
+node64515557 -> node58377623
+node58377623 [label="QUADRATIC"]
+node64515557 -> node55636561
+node55636561 [label=""]
+node55636561 -> node30967009
+node30967009 [label="isa"]
+node55636561 -> node10267631
+node10267631 [label="POLYNOMIAL"]
+node64515557 -> node25299820
+node25299820 [label="{"]
+node64515557 -> node26371793
+node26371793 [label="localvar"]
+node64515557 -> node36019552
+node36019552 [label="f1"]
+node64515557 -> node55740512
+node55740512 [label=":"]
+node64515557 -> node31902563
+node31902563 [label="LINEAR"]
+node64515557 -> node18687619
+node18687619 [label="("]
+node64515557 -> node33970848
+node33970848 [label="2"]
+node64515557 -> node37302179
+node37302179 [label=","]
+node64515557 -> node175293
+node175293 [label="3.5"]
+node64515557 -> node1577639
+node1577639 [label=")"]
+node64515557 -> node14198754
+node14198754 [label=";"]
+node64515557 -> node60679928
+node60679928 [label="localvar"]
+node64515557 -> node9248440
+node9248440 [label="f2"]
+node64515557 -> node16127101
+node16127101 [label=":"]
+node64515557 -> node10926182
+node10926182 [label="QUADRATIC"]
+node64515557 -> node31226782
+node31226782 [label="("]
+node64515557 -> node12605589
+node12605589 [label="-"]
+node64515557 -> node46341445
+node46341445 [label="2.0"]
+node64515557 -> node14419821
+node14419821 [label=","]
+node64515557 -> node62669527
+node62669527 [label="1.0"]
+node64515557 -> node27154837
+node27154837 [label=","]
+node64515557 -> node43066942
+node43066942 [label="0.0"]
+node64515557 -> node52058165
+node52058165 [label=")"]
+node64515557 -> node65870306
+node65870306 [label=";"]
+node64515557 -> node55961846
+node55961846 [label="localvar"]
+node64515557 -> node33894570
+node33894570 [label="counter"]
+node64515557 -> node36615679
+node36615679 [label=":"]
+node64515557 -> node61105663
+node61105663 [label="integer"]
+node64515557 -> node13080057
+node13080057 [label=";"]
+node64515557 -> node50611656
+node50611656 [label="}"]
+node22081476 -> node52851724
+node52851724 [label=";"]
+node22081476 -> node5903470
+node5903470 [label=";"]
+}

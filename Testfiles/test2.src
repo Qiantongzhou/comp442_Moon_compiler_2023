@@ -1,0 +1,20 @@
+
+
+function main() => void
+{
+  localvar x: integer;
+  localvar y: integer;
+  localvar z: integer;
+  localvar k: integer;
+  k=10;
+  x=2;
+  y=3;
+  if(x<y)then{
+    x=y*k;
+   write(x);
+	}else{
+   k=x*y;
+  write(k);
+  };
+  
+}

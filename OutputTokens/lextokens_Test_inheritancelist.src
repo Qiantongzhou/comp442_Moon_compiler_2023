@@ -1,0 +1,124 @@
+This is all the Lexical Tokens
+
+
+id:
+
+POLYNOMIAL       location: 0 17
+evaluate       location: 1 27
+x       location: 1 31
+LINEAR       location: 4 13
+POLYNOMIAL       location: 4 28
+a       location: 5 22
+b       location: 6 22
+A       location: 7 26
+B       location: 7 36
+evaluate       location: 8 28
+x       location: 8 32
+QUADRATIC       location: 11 16
+POLYNOMIAL       location: 11 31
+a       location: 12 22
+b       location: 13 22
+c       location: 14 22
+A       location: 15 26
+B       location: 15 36
+C       location: 15 46
+evaluate       location: 16 28
+x       location: 16 32
+
+
+integers:
+
+
+
+floats:
+
+
+
+Operators:
+
+=>       location: 1 41
+=>       location: 8 42
+=>       location: 16 42
+
+
+Punctuation:
+
+:       location: 1 28
+:       location: 1 32
+;       location: 1 48
+;       location: 2 2
+:       location: 5 23
+;       location: 5 29
+:       location: 6 23
+;       location: 6 29
+:       location: 7 23
+:       location: 7 27
+,       location: 7 33
+:       location: 7 37
+;       location: 7 44
+:       location: 8 29
+:       location: 8 33
+;       location: 8 49
+;       location: 9 2
+:       location: 12 23
+;       location: 12 29
+:       location: 13 23
+;       location: 13 29
+:       location: 14 23
+;       location: 14 29
+:       location: 15 23
+:       location: 15 27
+,       location: 15 33
+:       location: 15 37
+,       location: 15 43
+:       location: 15 47
+;       location: 15 54
+:       location: 16 29
+:       location: 16 33
+;       location: 16 49
+;       location: 17 2
+
+
+ReservedWords:
+
+class       location: 0 6
+public       location: 1 9
+function       location: 1 18
+float       location: 1 38
+float       location: 1 48
+class       location: 4 6
+isa       location: 4 17
+private       location: 5 10
+attribute       location: 5 20
+float       location: 5 29
+private       location: 6 10
+attribute       location: 6 20
+float       location: 6 29
+public       location: 7 9
+constructor       location: 7 22
+float       location: 7 33
+float       location: 7 43
+public       location: 8 9
+function       location: 8 19
+float       location: 8 39
+float       location: 8 49
+class       location: 11 6
+isa       location: 11 20
+private       location: 12 10
+attribute       location: 12 20
+float       location: 12 29
+private       location: 13 10
+attribute       location: 13 20
+float       location: 13 29
+private       location: 14 10
+attribute       location: 14 20
+float       location: 14 29
+public       location: 15 9
+constructor       location: 15 22
+float       location: 15 33
+float       location: 15 43
+float       location: 15 53
+public       location: 16 9
+function       location: 16 19
+float       location: 16 39
+float       location: 16 49

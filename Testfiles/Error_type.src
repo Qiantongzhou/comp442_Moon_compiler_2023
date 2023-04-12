@@ -1,0 +1,9 @@
+function printarray() => void 
+{
+  localvar n: integer;
+  localvar i: float;
+  n = i;
+  localvar k: integer;
+  localvar q: string;
+  k=q
+}

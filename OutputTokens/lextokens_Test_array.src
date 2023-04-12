@@ -1,0 +1,82 @@
+This is all the Lexical Tokens
+
+
+id:
+
+array       location: 0 15
+arr       location: 0 19
+size       location: 0 36
+arr       location: 2 15
+arr       location: 3 6
+arr       location: 4 6
+arr       location: 5 6
+temp       location: 6 7
+arr       location: 6 13
+j       location: 6 15
+arr       location: 7 6
+j       location: 7 8
+arr       location: 7 15
+j       location: 7 17
+arr       location: 8 6
+j       location: 8 8
+temp       location: 8 18
+printarray       location: 9 13
+arr       location: 9 17
+
+
+integers:
+
+7       location: 2 26
+0       location: 3 8
+64       location: 3 14
+1       location: 4 8
+34       location: 4 14
+2       location: 5 8
+25       location: 5 14
+1       location: 7 19
+1       location: 8 10
+7       location: 9 20
+
+
+floats:
+
+
+
+Operators:
+
+=>       location: 0 48
+=       location: 3 11
+=       location: 4 11
+=       location: 5 11
+=       location: 6 9
+=       location: 7 11
++       location: 7 17
++       location: 8 8
+=       location: 8 13
+
+
+Punctuation:
+
+:       location: 0 20
+,       location: 0 30
+:       location: 0 37
+:       location: 2 16
+;       location: 2 27
+;       location: 3 14
+;       location: 4 14
+;       location: 5 14
+;       location: 6 16
+;       location: 7 20
+;       location: 8 18
+,       location: 9 17
+;       location: 9 21
+
+
+ReservedWords:
+
+function       location: 0 9
+integer       location: 0 28
+integer       location: 0 45
+void       location: 0 54
+localvar       location: 2 11
+integer       location: 2 24

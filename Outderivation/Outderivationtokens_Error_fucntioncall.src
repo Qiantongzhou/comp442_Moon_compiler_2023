@@ -1,0 +1,183 @@
+Top-down syntax generation:
+<Start> =>
+function ?<< current: function expected: <identifier> >>
+function printarray ?<< current: printarray expected: ( >>
+function printarray ( ?<< current: ( expected: <identifier> >>
+function printarray ( arr ?<< current: arr expected: : >>
+function printarray ( arr : ?<< current: : expected: integer >>
+function printarray ( arr : integer ?<< current: integer expected: [ >>
+function printarray ( arr : integer [ ?<< current: [ expected: ] >>
+function printarray ( arr : integer [ ] ?<< current: ] expected: , >>
+function printarray ( arr : integer [ ] , ?<< current: , expected: <identifier> >>
+function printarray ( arr : integer [ ] , size ?<< current: size expected: : >>
+function printarray ( arr : integer [ ] , size : ?<< current: : expected: integer >>
+function printarray ( arr : integer [ ] , size : integer ?<< current: integer expected: ) >>
+function printarray ( arr : integer [ ] , size : integer ) ?<< current: ) expected: arrow >>
+function printarray ( arr : integer [ ] , size : integer ) => ?<< current: => expected: void >>
+function printarray ( arr : integer [ ] , size : integer ) => void ?<< current: void expected: { >>
+function printarray ( arr : integer [ ] , size : integer ) => void { ?<< current: { expected: localVar >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar ?<< current: localvar expected: <identifier> >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n ?<< current: n expected: : >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : ?<< current: : expected: integer >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ?<< current: integer expected: ; >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; ?<< current: ; expected: localVar >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar ?<< current: localvar expected: <identifier> >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i ?<< current: i expected: : >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : ?<< current: : expected: integer >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ?<< current: integer expected: ; >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; ?<< current: ; expected: <identifier> >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n ?<< current: n expected: = >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = ?<< current: = expected: <identifier> >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ?<< current: size expected: ; >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; ?<< current: ; expected: <identifier> >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i ?<< current: i expected: = >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = ?<< current: = expected: intLit >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ?<< current: 0 expected: ; >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; ?<< current: ; expected: while >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ?<< current: while expected: ( >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( ?<< current: ( expected: <identifier> >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i ?<< current: i expected: It >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < ?<< current: < expected: <identifier> >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ?<< current: n expected: ) >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) ?<< current: ) expected: { >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { ?<< current: { expected: write >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ?<< current: write expected: ( >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( ?<< current: ( expected: <identifier> >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr ?<< current: arr expected: [ >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ ?<< current: [ expected: <identifier> >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ?<< current: i expected: ] >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ?<< current: ] expected: ) >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ?<< current: ) expected: ; >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; ?<< current: ; expected: <identifier> >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i ?<< current: i expected: = >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = ?<< current: = expected: <identifier> >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i ?<< current: i expected: + >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + ?<< current: + expected: intLit >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ?<< current: 1 expected: ; >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; ?<< current: ; expected: } >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ?<< current: } expected: ; >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; ?<< current: ; expected: } >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } ?<< current: } expected: function >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function ?<< current: function expected: <identifier> >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ?<< current: main expected: ( >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ?<< current: ( expected: ) >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) ?<< current: ) expected: arrow >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) => ?<< current: => expected: void >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) => void ?<< current: void expected: { >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) => void { ?<< current: { expected: localVar >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) => void { localvar ?<< current: localvar expected: <identifier> >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) => void { localvar arr ?<< current: arr expected: : >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) => void { localvar arr : ?<< current: : expected: integer >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) => void { localvar arr : integer ?<< current: integer expected: [ >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) => void { localvar arr : integer [ ?<< current: [ expected: intLit >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) => void { localvar arr : integer [ 7 ?<< current: 7 expected: ] >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) => void { localvar arr : integer [ 7 ] ?<< current: ] expected: ; >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) => void { localvar arr : integer [ 7 ] ; ?<< current: ; expected: <identifier> >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) => void { localvar arr : integer [ 7 ] ; printarray ?<< current: printarray expected: ( >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) => void { localvar arr : integer [ 7 ] ; printarray ( ?<< current: ( expected: intLit >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) => void { localvar arr : integer [ 7 ] ; printarray ( 7 ?<< current: 7 expected: , >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) => void { localvar arr : integer [ 7 ] ; printarray ( 7 , ?<< current: , expected: <identifier> >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) => void { localvar arr : integer [ 7 ] ; printarray ( 7 , arr ?<< current: arr expected: ) >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) => void { localvar arr : integer [ 7 ] ; printarray ( 7 , arr ) ?<< current: ) expected: ; >>
+function printarray ( arr : integer [ ] , size : integer ) => void { localvar n : integer ; localvar i : integer ; n = size ; i = 0 ; while ( i < n ) { write ( arr [ i ] ) ; i = i + 1 ; } ; } function main ( ) => void { localvar arr : integer [ 7 ] ; printarray ( 7 , arr ) ; ?<< current: ; expected: } >>
+
+
+Sytax Tokens:
+Lexeme: function	Code: function	Line: 0	Column: 9
+Lexeme: printarray	Code: Id	Line: 0	Column: 20
+Lexeme: (	Code: LeftParenthesis	Line: 0	Column: 20
+Lexeme: arr	Code: Id	Line: 0	Column: 24
+Lexeme: :	Code: Colon	Line: 0	Column: 25
+Lexeme: integer	Code: Integer	Line: 0	Column: 33
+Lexeme: [	Code: zhongkuoL	Line: 0	Column: 33
+Lexeme: ]	Code: zhongkuoR	Line: 0	Column: 34
+Lexeme: ,	Code: Comma	Line: 0	Column: 35
+Lexeme: size	Code: Id	Line: 0	Column: 41
+Lexeme: :	Code: Colon	Line: 0	Column: 42
+Lexeme: integer	Code: Integer	Line: 0	Column: 50
+Lexeme: )	Code: RightParenthesis	Line: 0	Column: 50
+Lexeme: =>	Code: arrow	Line: 0	Column: 53
+Lexeme: void	Code: Void	Line: 0	Column: 59
+Lexeme: {	Code: LeftBracket	Line: 1	Column: 1
+Lexeme: localvar	Code: localVar	Line: 2	Column: 11
+Lexeme: n	Code: Id	Line: 2	Column: 13
+Lexeme: :	Code: Colon	Line: 2	Column: 14
+Lexeme: integer	Code: Integer	Line: 2	Column: 22
+Lexeme: ;	Code: Semicolon	Line: 2	Column: 22
+Lexeme: localvar	Code: localVar	Line: 3	Column: 11
+Lexeme: i	Code: Id	Line: 3	Column: 13
+Lexeme: :	Code: Colon	Line: 3	Column: 14
+Lexeme: integer	Code: Integer	Line: 3	Column: 22
+Lexeme: ;	Code: Semicolon	Line: 3	Column: 22
+Lexeme: n	Code: Id	Line: 4	Column: 4
+Lexeme: =	Code: Equal	Line: 4	Column: 6
+Lexeme: size	Code: Id	Line: 4	Column: 11
+Lexeme: ;	Code: Semicolon	Line: 4	Column: 11
+Lexeme: i	Code: Id	Line: 5	Column: 4
+Lexeme: =	Code: Equal	Line: 5	Column: 6
+Lexeme: 0	Code: intLit	Line: 5	Column: 8
+Lexeme: ;	Code: Semicolon	Line: 5	Column: 8
+Lexeme: while	Code: While	Line: 6	Column: 8
+Lexeme: (	Code: LeftParenthesis	Line: 6	Column: 9
+Lexeme: i	Code: Id	Line: 6	Column: 11
+Lexeme: <	Code: It	Line: 6	Column: 12
+Lexeme: n	Code: Id	Line: 6	Column: 13
+Lexeme: )	Code: RightParenthesis	Line: 6	Column: 13
+Lexeme: {	Code: LeftBracket	Line: 6	Column: 15
+Lexeme: write	Code: Write	Line: 7	Column: 10
+Lexeme: (	Code: LeftParenthesis	Line: 7	Column: 10
+Lexeme: arr	Code: Id	Line: 7	Column: 14
+Lexeme: [	Code: zhongkuoL	Line: 7	Column: 14
+Lexeme: i	Code: Id	Line: 7	Column: 16
+Lexeme: ]	Code: zhongkuoR	Line: 7	Column: 16
+Lexeme: )	Code: RightParenthesis	Line: 7	Column: 17
+Lexeme: ;	Code: Semicolon	Line: 7	Column: 18
+Lexeme: i	Code: Id	Line: 8	Column: 8
+Lexeme: =	Code: Equal	Line: 8	Column: 10
+Lexeme: i	Code: Id	Line: 8	Column: 12
+Lexeme: +	Code: Plus	Line: 8	Column: 12
+Lexeme: 1	Code: intLit	Line: 8	Column: 14
+Lexeme: ;	Code: Semicolon	Line: 8	Column: 14
+Lexeme: }	Code: RightBracket	Line: 9	Column: 3
+Lexeme: ;	Code: Semicolon	Line: 9	Column: 4
+Lexeme: }	Code: RightBracket	Line: 10	Column: 1
+Lexeme: function	Code: function	Line: 12	Column: 9
+Lexeme: main	Code: Id	Line: 12	Column: 14
+Lexeme: (	Code: LeftParenthesis	Line: 12	Column: 14
+Lexeme: )	Code: RightParenthesis	Line: 12	Column: 15
+Lexeme: =>	Code: arrow	Line: 12	Column: 18
+Lexeme: void	Code: Void	Line: 12	Column: 24
+Lexeme: {	Code: LeftBracket	Line: 13	Column: 1
+Lexeme: localvar	Code: localVar	Line: 14	Column: 11
+Lexeme: arr	Code: Id	Line: 14	Column: 15
+Lexeme: :	Code: Colon	Line: 14	Column: 16
+Lexeme: integer	Code: Integer	Line: 14	Column: 24
+Lexeme: [	Code: zhongkuoL	Line: 14	Column: 24
+Lexeme: 7	Code: intLit	Line: 14	Column: 26
+Lexeme: ]	Code: zhongkuoR	Line: 14	Column: 26
+Lexeme: ;	Code: Semicolon	Line: 14	Column: 27
+Lexeme: printarray	Code: Id	Line: 15	Column: 13
+Lexeme: (	Code: LeftParenthesis	Line: 15	Column: 13
+Lexeme: 7	Code: intLit	Line: 15	Column: 15
+Lexeme: ,	Code: Comma	Line: 15	Column: 15
+Lexeme: arr	Code: Id	Line: 15	Column: 19
+Lexeme: )	Code: RightParenthesis	Line: 15	Column: 19
+Lexeme: ;	Code: Semicolon	Line: 15	Column: 20
+
+
+Complete Dervation tree, Code structure:
+Start => 
+function <identifier> ( <identifier> : integer [ ] , <identifier> : integer ) arrow void { 
+localVar <identifier> : integer ; 
+localVar <identifier> : integer ; 
+<identifier> = <identifier> ; 
+<identifier> = intLit ; 
+while ( <identifier> It <identifier> ) { 
+write ( <identifier> [ <identifier> ] ) ; 
+<identifier> = <identifier> + intLit ; 
+} 
+; 
+} 
+function <identifier> ( ) arrow void { 
+localVar <identifier> : integer [ intLit ] ; 
+<identifier> ( intLit , <identifier> ) ; 

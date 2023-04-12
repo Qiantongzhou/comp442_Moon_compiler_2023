@@ -1,0 +1,163 @@
+This is all the Lexical Tokens
+
+
+id:
+
+LINEAR       location: 1 13
+a       location: 2 22
+b       location: 3 22
+A       location: 4 26
+B       location: 4 36
+QUADRATIC       location: 7 16
+a       location: 8 22
+b       location: 9 22
+c       location: 10 22
+A       location: 11 26
+B       location: 11 36
+C       location: 11 46
+QUADRATIC       location: 15 19
+A       location: 15 34
+B       location: 15 44
+C       location: 15 54
+self       location: 17 7
+k       location: 17 9
+A       location: 17 13
+self       location: 18 7
+t       location: 18 9
+B       location: 18 13
+self       location: 19 7
+k       location: 19 9
+C       location: 19 13
+LINEAR       location: 22 16
+A       location: 22 31
+B       location: 22 41
+self       location: 24 7
+a       location: 24 9
+A       location: 24 13
+self       location: 25 7
+b       location: 25 9
+B       location: 25 13
+main       location: 28 14
+f1       location: 30 15
+QUADRATIC       location: 30 26
+k       location: 31 14
+string       location: 31 22
+f1       location: 32 6
+a       location: 32 8
+k       location: 32 12
+
+
+integers:
+
+
+
+floats:
+
+
+
+Operators:
+
+=       location: 17 11
+=       location: 18 11
+=       location: 19 11
+=       location: 24 11
+=       location: 25 11
+=>       location: 28 17
+=       location: 32 10
+
+
+Punctuation:
+
+:       location: 2 23
+;       location: 2 29
+:       location: 3 23
+;       location: 3 29
+:       location: 4 23
+:       location: 4 27
+,       location: 4 33
+:       location: 4 37
+;       location: 4 44
+;       location: 5 2
+:       location: 8 23
+;       location: 8 29
+:       location: 9 23
+;       location: 9 29
+:       location: 10 23
+;       location: 10 29
+:       location: 11 23
+:       location: 11 27
+,       location: 11 33
+:       location: 11 37
+,       location: 11 43
+:       location: 11 47
+;       location: 11 54
+;       location: 12 2
+::       location: 15 20
+:       location: 15 35
+,       location: 15 41
+:       location: 15 45
+,       location: 15 51
+:       location: 15 55
+.       location: 17 7
+;       location: 17 13
+.       location: 18 7
+;       location: 18 13
+.       location: 19 7
+;       location: 19 13
+::       location: 22 17
+:       location: 22 32
+,       location: 22 38
+:       location: 22 42
+.       location: 24 7
+;       location: 24 13
+.       location: 25 7
+;       location: 25 13
+:       location: 30 16
+;       location: 30 26
+:       location: 31 15
+;       location: 31 22
+.       location: 32 6
+;       location: 32 12
+
+
+ReservedWords:
+
+class       location: 1 6
+private       location: 2 10
+attribute       location: 2 20
+float       location: 2 29
+private       location: 3 10
+attribute       location: 3 20
+float       location: 3 29
+public       location: 4 9
+constructor       location: 4 22
+float       location: 4 33
+float       location: 4 43
+class       location: 7 6
+private       location: 8 10
+attribute       location: 8 20
+float       location: 8 29
+private       location: 9 10
+attribute       location: 9 20
+float       location: 9 29
+private       location: 10 10
+attribute       location: 10 20
+float       location: 10 29
+public       location: 11 9
+constructor       location: 11 22
+float       location: 11 33
+float       location: 11 43
+float       location: 11 53
+function       location: 15 9
+constructor       location: 15 32
+float       location: 15 41
+float       location: 15 51
+float       location: 15 61
+function       location: 22 9
+constructor       location: 22 29
+float       location: 22 38
+float       location: 22 48
+function       location: 28 9
+void       location: 28 22
+localvar       location: 30 12
+localvar       location: 31 12

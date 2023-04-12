@@ -1,0 +1,54 @@
+This is all the Lexical Tokens
+
+
+id:
+
+QUADRATIC       location: 2 16
+POLYNOMIAL       location: 2 31
+f1       location: 3 14
+LINEAR       location: 3 22
+f2       location: 4 14
+QUADRATIC       location: 4 25
+counter       location: 5 19
+
+
+integers:
+
+2       location: 3 24
+
+
+floats:
+
+3.5       location: 3 29
+2.0       location: 4 30
+1.0       location: 4 35
+0.0       location: 4 40
+
+
+Operators:
+
+-       location: 4 26
+
+
+Punctuation:
+
+:       location: 3 15
+,       location: 3 24
+;       location: 3 30
+:       location: 4 15
+,       location: 4 30
+,       location: 4 35
+;       location: 4 41
+:       location: 5 20
+;       location: 5 28
+;       location: 6 2
+
+
+ReservedWords:
+
+class       location: 2 6
+isa       location: 2 20
+localvar       location: 3 11
+localvar       location: 4 11
+localvar       location: 5 11
+integer       location: 5 28

@@ -1,0 +1,174 @@
+Top-down syntax generation:
+<Start> =>
+function ?<< current: function expected: <identifier> >>
+function main ?<< current: main expected: ( >>
+function main ( ?<< current: ( expected: ) >>
+function main ( ) ?<< current: ) expected: arrow >>
+function main ( ) => ?<< current: => expected: void >>
+function main ( ) => void ?<< current: void expected: { >>
+function main ( ) => void { ?<< current: { expected: localVar >>
+function main ( ) => void { localvar ?<< current: localvar expected: <identifier> >>
+function main ( ) => void { localvar x ?<< current: x expected: : >>
+function main ( ) => void { localvar x : ?<< current: : expected: integer >>
+function main ( ) => void { localvar x : integer ?<< current: integer expected: ; >>
+function main ( ) => void { localvar x : integer ; ?<< current: ; expected: localVar >>
+function main ( ) => void { localvar x : integer ; localvar ?<< current: localvar expected: <identifier> >>
+function main ( ) => void { localvar x : integer ; localvar y ?<< current: y expected: : >>
+function main ( ) => void { localvar x : integer ; localvar y : ?<< current: : expected: integer >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ?<< current: integer expected: ; >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; ?<< current: ; expected: localVar >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar ?<< current: localvar expected: <identifier> >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z ?<< current: z expected: : >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : ?<< current: : expected: integer >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ?<< current: integer expected: ; >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; ?<< current: ; expected: localVar >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar ?<< current: localvar expected: <identifier> >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k ?<< current: k expected: : >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : ?<< current: : expected: integer >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ?<< current: integer expected: ; >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; ?<< current: ; expected: <identifier> >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k ?<< current: k expected: = >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = ?<< current: = expected: intLit >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ?<< current: 10 expected: ; >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; ?<< current: ; expected: <identifier> >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x ?<< current: x expected: = >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = ?<< current: = expected: intLit >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ?<< current: 2 expected: ; >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; ?<< current: ; expected: <identifier> >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y ?<< current: y expected: = >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = ?<< current: = expected: intLit >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ?<< current: 3 expected: ; >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; ?<< current: ; expected: if >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ?<< current: if expected: ( >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( ?<< current: ( expected: <identifier> >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x ?<< current: x expected: It >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < ?<< current: < expected: <identifier> >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ?<< current: y expected: ) >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) ?<< current: ) expected: then >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then ?<< current: then expected: { >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { ?<< current: { expected: <identifier> >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x ?<< current: x expected: = >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = ?<< current: = expected: <identifier> >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y ?<< current: y expected: * >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * ?<< current: * expected: <identifier> >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ?<< current: k expected: ; >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; ?<< current: ; expected: write >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ?<< current: write expected: ( >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( ?<< current: ( expected: <identifier> >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ?<< current: x expected: ) >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ) ?<< current: ) expected: ; >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ) ; ?<< current: ; expected: } >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ) ; } ?<< current: } expected: else >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ) ; } else ?<< current: else expected: { >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ) ; } else { ?<< current: { expected: <identifier> >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ) ; } else { k ?<< current: k expected: = >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ) ; } else { k = ?<< current: = expected: <identifier> >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ) ; } else { k = x ?<< current: x expected: * >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ) ; } else { k = x * ?<< current: * expected: <identifier> >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ) ; } else { k = x * y ?<< current: y expected: ; >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ) ; } else { k = x * y ; ?<< current: ; expected: write >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ) ; } else { k = x * y ; write ?<< current: write expected: ( >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ) ; } else { k = x * y ; write ( ?<< current: ( expected: <identifier> >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ) ; } else { k = x * y ; write ( k ?<< current: k expected: ) >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ) ; } else { k = x * y ; write ( k ) ?<< current: ) expected: ; >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ) ; } else { k = x * y ; write ( k ) ; ?<< current: ; expected: } >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ) ; } else { k = x * y ; write ( k ) ; } ?<< current: } expected: ; >>
+function main ( ) => void { localvar x : integer ; localvar y : integer ; localvar z : integer ; localvar k : integer ; k = 10 ; x = 2 ; y = 3 ; if ( x < y ) then { x = y * k ; write ( x ) ; } else { k = x * y ; write ( k ) ; } ; ?<< current: ; expected: } >>
+
+
+Sytax Tokens:
+Lexeme: function	Code: function	Line: 2	Column: 9
+Lexeme: main	Code: Id	Line: 2	Column: 14
+Lexeme: (	Code: LeftParenthesis	Line: 2	Column: 14
+Lexeme: )	Code: RightParenthesis	Line: 2	Column: 15
+Lexeme: =>	Code: arrow	Line: 2	Column: 18
+Lexeme: void	Code: Void	Line: 2	Column: 24
+Lexeme: {	Code: LeftBracket	Line: 3	Column: 1
+Lexeme: localvar	Code: localVar	Line: 4	Column: 11
+Lexeme: x	Code: Id	Line: 4	Column: 13
+Lexeme: :	Code: Colon	Line: 4	Column: 14
+Lexeme: integer	Code: Integer	Line: 4	Column: 22
+Lexeme: ;	Code: Semicolon	Line: 4	Column: 22
+Lexeme: localvar	Code: localVar	Line: 5	Column: 11
+Lexeme: y	Code: Id	Line: 5	Column: 13
+Lexeme: :	Code: Colon	Line: 5	Column: 14
+Lexeme: integer	Code: Integer	Line: 5	Column: 22
+Lexeme: ;	Code: Semicolon	Line: 5	Column: 22
+Lexeme: localvar	Code: localVar	Line: 6	Column: 11
+Lexeme: z	Code: Id	Line: 6	Column: 13
+Lexeme: :	Code: Colon	Line: 6	Column: 14
+Lexeme: integer	Code: Integer	Line: 6	Column: 22
+Lexeme: ;	Code: Semicolon	Line: 6	Column: 22
+Lexeme: localvar	Code: localVar	Line: 7	Column: 11
+Lexeme: k	Code: Id	Line: 7	Column: 13
+Lexeme: :	Code: Colon	Line: 7	Column: 14
+Lexeme: integer	Code: Integer	Line: 7	Column: 22
+Lexeme: ;	Code: Semicolon	Line: 7	Column: 22
+Lexeme: k	Code: Id	Line: 8	Column: 4
+Lexeme: =	Code: Equal	Line: 8	Column: 5
+Lexeme: 10	Code: intLit	Line: 8	Column: 7
+Lexeme: ;	Code: Semicolon	Line: 8	Column: 7
+Lexeme: x	Code: Id	Line: 9	Column: 4
+Lexeme: =	Code: Equal	Line: 9	Column: 5
+Lexeme: 2	Code: intLit	Line: 9	Column: 6
+Lexeme: ;	Code: Semicolon	Line: 9	Column: 6
+Lexeme: y	Code: Id	Line: 10	Column: 4
+Lexeme: =	Code: Equal	Line: 10	Column: 5
+Lexeme: 3	Code: intLit	Line: 10	Column: 6
+Lexeme: ;	Code: Semicolon	Line: 10	Column: 6
+Lexeme: if	Code: If	Line: 11	Column: 5
+Lexeme: (	Code: LeftParenthesis	Line: 11	Column: 5
+Lexeme: x	Code: Id	Line: 11	Column: 7
+Lexeme: <	Code: It	Line: 11	Column: 8
+Lexeme: y	Code: Id	Line: 11	Column: 9
+Lexeme: )	Code: RightParenthesis	Line: 11	Column: 9
+Lexeme: then	Code: then	Line: 11	Column: 14
+Lexeme: {	Code: LeftBracket	Line: 11	Column: 14
+Lexeme: x	Code: Id	Line: 12	Column: 6
+Lexeme: =	Code: Equal	Line: 12	Column: 7
+Lexeme: y	Code: Id	Line: 12	Column: 8
+Lexeme: *	Code: Multiplication	Line: 12	Column: 8
+Lexeme: k	Code: Id	Line: 12	Column: 10
+Lexeme: ;	Code: Semicolon	Line: 12	Column: 10
+Lexeme: write	Code: Write	Line: 13	Column: 9
+Lexeme: (	Code: LeftParenthesis	Line: 13	Column: 9
+Lexeme: x	Code: Id	Line: 13	Column: 11
+Lexeme: )	Code: RightParenthesis	Line: 13	Column: 11
+Lexeme: ;	Code: Semicolon	Line: 13	Column: 12
+Lexeme: }	Code: RightBracket	Line: 14	Column: 2
+Lexeme: else	Code: Else	Line: 14	Column: 7
+Lexeme: {	Code: LeftBracket	Line: 14	Column: 7
+Lexeme: k	Code: Id	Line: 15	Column: 5
+Lexeme: =	Code: Equal	Line: 15	Column: 6
+Lexeme: x	Code: Id	Line: 15	Column: 7
+Lexeme: *	Code: Multiplication	Line: 15	Column: 7
+Lexeme: y	Code: Id	Line: 15	Column: 9
+Lexeme: ;	Code: Semicolon	Line: 15	Column: 9
+Lexeme: write	Code: Write	Line: 16	Column: 8
+Lexeme: (	Code: LeftParenthesis	Line: 16	Column: 8
+Lexeme: k	Code: Id	Line: 16	Column: 10
+Lexeme: )	Code: RightParenthesis	Line: 16	Column: 10
+Lexeme: ;	Code: Semicolon	Line: 16	Column: 11
+Lexeme: }	Code: RightBracket	Line: 17	Column: 3
+Lexeme: ;	Code: Semicolon	Line: 17	Column: 4
+
+
+Complete Dervation tree, Code structure:
+Start => 
+function <identifier> ( ) arrow void { 
+localVar <identifier> : integer ; 
+localVar <identifier> : integer ; 
+localVar <identifier> : integer ; 
+localVar <identifier> : integer ; 
+<identifier> = intLit ; 
+<identifier> = intLit ; 
+<identifier> = intLit ; 
+if ( <identifier> It <identifier> ) then { 
+<identifier> = <identifier> * <identifier> ; 
+write ( <identifier> ) ; 
+} 
+else { 
+<identifier> = <identifier> * <identifier> ; 
+write ( <identifier> ) ; 
+} 
+; 

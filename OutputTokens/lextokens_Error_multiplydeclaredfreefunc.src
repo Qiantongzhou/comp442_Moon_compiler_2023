@@ -1,0 +1,63 @@
+This is all the Lexical Tokens
+
+
+id:
+
+multiple       location: 1 18
+n       location: 3 13
+i       location: 4 13
+j       location: 5 13
+temp       location: 6 16
+multiple       location: 11 18
+n       location: 13 13
+i       location: 14 13
+
+
+integers:
+
+
+
+floats:
+
+
+
+Operators:
+
+=>       location: 1 22
+=>       location: 11 22
+
+
+Punctuation:
+
+:       location: 3 18
+;       location: 3 26
+:       location: 4 18
+;       location: 4 26
+:       location: 5 18
+;       location: 5 26
+:       location: 6 18
+;       location: 6 26
+:       location: 13 14
+;       location: 13 22
+:       location: 14 14
+;       location: 14 22
+
+
+ReservedWords:
+
+function       location: 1 9
+void       location: 1 28
+localvar       location: 3 11
+integer       location: 3 26
+localvar       location: 4 11
+integer       location: 4 26
+localvar       location: 5 11
+integer       location: 5 26
+localvar       location: 6 11
+integer       location: 6 26
+function       location: 11 9
+void       location: 11 28
+localvar       location: 13 11
+integer       location: 13 22
+localvar       location: 14 11
+integer       location: 14 22

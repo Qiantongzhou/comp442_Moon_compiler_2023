@@ -1,0 +1,49 @@
+Top-down syntax generation:
+<Start> =>
+class ?<< current: class expected: <identifier> >>
+class LINEAR ?<< current: LINEAR expected: isa >>
+class LINEAR isa ?<< current: isa expected: <identifier> >>
+class LINEAR isa POLYNOMIAL ?<< current: POLYNOMIAL expected: { >>
+class LINEAR isa POLYNOMIAL { ?<< current: { expected: private >>
+class LINEAR isa POLYNOMIAL { private ?<< current: private expected: attribute >>
+class LINEAR isa POLYNOMIAL { private attribute ?<< current: attribute expected: <identifier> >>
+class LINEAR isa POLYNOMIAL { private attribute a ?<< current: a expected: : >>
+class LINEAR isa POLYNOMIAL { private attribute a : ?<< current: : expected: float >>
+class LINEAR isa POLYNOMIAL { private attribute a : float ?<< current: float expected: ; >>
+class LINEAR isa POLYNOMIAL { private attribute a : float ; ?<< current: ; expected: private >>
+class LINEAR isa POLYNOMIAL { private attribute a : float ; private ?<< current: private expected: attribute >>
+class LINEAR isa POLYNOMIAL { private attribute a : float ; private attribute ?<< current: attribute expected: <identifier> >>
+class LINEAR isa POLYNOMIAL { private attribute a : float ; private attribute b ?<< current: b expected: : >>
+class LINEAR isa POLYNOMIAL { private attribute a : float ; private attribute b : ?<< current: : expected: float >>
+class LINEAR isa POLYNOMIAL { private attribute a : float ; private attribute b : float ?<< current: float expected: ; >>
+class LINEAR isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; ?<< current: ; expected: } >>
+class LINEAR isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; } ?<< current: } expected: ; >>
+
+
+Sytax Tokens:
+Lexeme: class	Code: Class	Line: 0	Column: 6
+Lexeme: LINEAR	Code: Id	Line: 0	Column: 13
+Lexeme: isa	Code: isa	Line: 0	Column: 17
+Lexeme: POLYNOMIAL	Code: Id	Line: 0	Column: 28
+Lexeme: {	Code: LeftBracket	Line: 0	Column: 29
+Lexeme: private	Code: Private	Line: 1	Column: 10
+Lexeme: attribute	Code: attribute	Line: 1	Column: 20
+Lexeme: a	Code: Id	Line: 1	Column: 22
+Lexeme: :	Code: Colon	Line: 1	Column: 23
+Lexeme: float	Code: Float	Line: 1	Column: 29
+Lexeme: ;	Code: Semicolon	Line: 1	Column: 29
+Lexeme: private	Code: Private	Line: 2	Column: 10
+Lexeme: attribute	Code: attribute	Line: 2	Column: 20
+Lexeme: b	Code: Id	Line: 2	Column: 22
+Lexeme: :	Code: Colon	Line: 2	Column: 23
+Lexeme: float	Code: Float	Line: 2	Column: 29
+Lexeme: ;	Code: Semicolon	Line: 2	Column: 29
+Lexeme: }	Code: RightBracket	Line: 3	Column: 1
+
+
+Complete Dervation tree, Code structure:
+Start => 
+class <identifier> isa <identifier> { 
+private attribute <identifier> : float ; 
+private attribute <identifier> : float ; 
+} 

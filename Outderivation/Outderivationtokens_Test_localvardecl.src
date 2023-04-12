@@ -1,0 +1,82 @@
+Top-down syntax generation:
+<Start> =>
+class ?<< current: class expected: <identifier> >>
+class QUADRATIC ?<< current: QUADRATIC expected: isa >>
+class QUADRATIC isa ?<< current: isa expected: <identifier> >>
+class QUADRATIC isa POLYNOMIAL ?<< current: POLYNOMIAL expected: { >>
+class QUADRATIC isa POLYNOMIAL { ?<< current: { expected: localVar >>
+class QUADRATIC isa POLYNOMIAL { localvar ?<< current: localvar expected: <identifier> >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 ?<< current: f1 expected: : >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : ?<< current: : expected: <identifier> >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ?<< current: LINEAR expected: ( >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( ?<< current: ( expected: intLit >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 ?<< current: 2 expected: , >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , ?<< current: , expected: floatLit >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ?<< current: 3.5 expected: ) >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ?<< current: ) expected: ; >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; ?<< current: ; expected: localVar >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar ?<< current: localvar expected: <identifier> >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 ?<< current: f2 expected: : >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : ?<< current: : expected: <identifier> >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ?<< current: QUADRATIC expected: ( >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( ?<< current: ( expected: - >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - ?<< current: - expected: floatLit >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 ?<< current: 2.0 expected: , >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , ?<< current: , expected: floatLit >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 ?<< current: 1.0 expected: , >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , ?<< current: , expected: floatLit >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ?<< current: 0.0 expected: ) >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ?<< current: ) expected: ; >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; ?<< current: ; expected: localVar >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar ?<< current: localvar expected: <identifier> >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter ?<< current: counter expected: : >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : ?<< current: : expected: integer >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ?<< current: integer expected: ; >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; ?<< current: ; expected: } >>
+class QUADRATIC isa POLYNOMIAL { localvar f1 : LINEAR ( 2 , 3.5 ) ; localvar f2 : QUADRATIC ( - 2.0 , 1.0 , 0.0 ) ; localvar counter : integer ; } ?<< current: } expected: ; >>
+
+
+Sytax Tokens:
+Lexeme: class	Code: Class	Line: 2	Column: 6
+Lexeme: QUADRATIC	Code: Id	Line: 2	Column: 16
+Lexeme: isa	Code: isa	Line: 2	Column: 20
+Lexeme: POLYNOMIAL	Code: Id	Line: 2	Column: 31
+Lexeme: {	Code: LeftBracket	Line: 2	Column: 32
+Lexeme: localvar	Code: localVar	Line: 3	Column: 11
+Lexeme: f1	Code: Id	Line: 3	Column: 14
+Lexeme: :	Code: Colon	Line: 3	Column: 15
+Lexeme: LINEAR	Code: Id	Line: 3	Column: 22
+Lexeme: (	Code: LeftParenthesis	Line: 3	Column: 22
+Lexeme: 2	Code: intLit	Line: 3	Column: 24
+Lexeme: ,	Code: Comma	Line: 3	Column: 24
+Lexeme: 3.5	Code: floatLit	Line: 3	Column: 29
+Lexeme: )	Code: RightParenthesis	Line: 3	Column: 29
+Lexeme: ;	Code: Semicolon	Line: 3	Column: 30
+Lexeme: localvar	Code: localVar	Line: 4	Column: 11
+Lexeme: f2	Code: Id	Line: 4	Column: 14
+Lexeme: :	Code: Colon	Line: 4	Column: 15
+Lexeme: QUADRATIC	Code: Id	Line: 4	Column: 25
+Lexeme: (	Code: LeftParenthesis	Line: 4	Column: 25
+Lexeme: -	Code: Minus	Line: 4	Column: 26
+Lexeme: 2.0	Code: floatLit	Line: 4	Column: 30
+Lexeme: ,	Code: Comma	Line: 4	Column: 30
+Lexeme: 1.0	Code: floatLit	Line: 4	Column: 35
+Lexeme: ,	Code: Comma	Line: 4	Column: 35
+Lexeme: 0.0	Code: floatLit	Line: 4	Column: 40
+Lexeme: )	Code: RightParenthesis	Line: 4	Column: 40
+Lexeme: ;	Code: Semicolon	Line: 4	Column: 41
+Lexeme: localvar	Code: localVar	Line: 5	Column: 11
+Lexeme: counter	Code: Id	Line: 5	Column: 19
+Lexeme: :	Code: Colon	Line: 5	Column: 20
+Lexeme: integer	Code: Integer	Line: 5	Column: 28
+Lexeme: ;	Code: Semicolon	Line: 5	Column: 28
+Lexeme: }	Code: RightBracket	Line: 6	Column: 1
+
+
+Complete Dervation tree, Code structure:
+Start => 
+class <identifier> isa <identifier> { 
+localVar <identifier> : <identifier> ( intLit , floatLit ) ; 
+localVar <identifier> : <identifier> ( - floatLit , floatLit , floatLit ) ; 
+localVar <identifier> : integer ; 
+} 

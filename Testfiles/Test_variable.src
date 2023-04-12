@@ -1,0 +1,4 @@
+class LINEAR isa POLYNOMIAL {
+  private attribute a: float;
+  private attribute b: float;
+};

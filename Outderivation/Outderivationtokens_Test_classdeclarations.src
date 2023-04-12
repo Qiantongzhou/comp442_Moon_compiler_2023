@@ -1,0 +1,122 @@
+Top-down syntax generation:
+<Start> =>
+class ?<< current: class expected: <identifier> >>
+class QUADRATIC ?<< current: QUADRATIC expected: isa >>
+class QUADRATIC isa ?<< current: isa expected: <identifier> >>
+class QUADRATIC isa POLYNOMIAL ?<< current: POLYNOMIAL expected: { >>
+class QUADRATIC isa POLYNOMIAL { ?<< current: { expected: private >>
+class QUADRATIC isa POLYNOMIAL { private ?<< current: private expected: attribute >>
+class QUADRATIC isa POLYNOMIAL { private attribute ?<< current: attribute expected: <identifier> >>
+class QUADRATIC isa POLYNOMIAL { private attribute a ?<< current: a expected: : >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : ?<< current: : expected: float >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ?<< current: float expected: ; >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; ?<< current: ; expected: private >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private ?<< current: private expected: attribute >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute ?<< current: attribute expected: <identifier> >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b ?<< current: b expected: : >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : ?<< current: : expected: float >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ?<< current: float expected: ; >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; ?<< current: ; expected: private >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private ?<< current: private expected: attribute >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute ?<< current: attribute expected: <identifier> >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c ?<< current: c expected: : >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : ?<< current: : expected: float >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ?<< current: float expected: ; >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; ?<< current: ; expected: public >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public ?<< current: public expected: constructor >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor ?<< current: constructor expected: : >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ?<< current: : expected: ( >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( ?<< current: ( expected: <identifier> >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A ?<< current: A expected: : >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : ?<< current: : expected: float >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float ?<< current: float expected: , >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , ?<< current: , expected: <identifier> >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B ?<< current: B expected: : >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : ?<< current: : expected: float >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float ?<< current: float expected: , >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , ?<< current: , expected: <identifier> >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C ?<< current: C expected: : >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : ?<< current: : expected: float >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ?<< current: float expected: ) >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ?<< current: ) expected: ; >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; ?<< current: ; expected: public >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public ?<< current: public expected: function >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function ?<< current: function expected: <identifier> >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate ?<< current: evaluate expected: : >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ?<< current: : expected: ( >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ( ?<< current: ( expected: <identifier> >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ( x ?<< current: x expected: : >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ( x : ?<< current: : expected: float >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ( x : float ?<< current: float expected: ) >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ( x : float ) ?<< current: ) expected: arrow >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ( x : float ) => ?<< current: => expected: float >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ( x : float ) => float ?<< current: float expected: ; >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ( x : float ) => float ; ?<< current: ; expected: } >>
+class QUADRATIC isa POLYNOMIAL { private attribute a : float ; private attribute b : float ; private attribute c : float ; public constructor : ( A : float , B : float , C : float ) ; public function evaluate : ( x : float ) => float ; } ?<< current: } expected: ; >>
+
+
+Sytax Tokens:
+Lexeme: class	Code: Class	Line: 0	Column: 6
+Lexeme: QUADRATIC	Code: Id	Line: 0	Column: 16
+Lexeme: isa	Code: isa	Line: 0	Column: 20
+Lexeme: POLYNOMIAL	Code: Id	Line: 0	Column: 31
+Lexeme: {	Code: LeftBracket	Line: 0	Column: 32
+Lexeme: private	Code: Private	Line: 1	Column: 10
+Lexeme: attribute	Code: attribute	Line: 1	Column: 20
+Lexeme: a	Code: Id	Line: 1	Column: 22
+Lexeme: :	Code: Colon	Line: 1	Column: 23
+Lexeme: float	Code: Float	Line: 1	Column: 29
+Lexeme: ;	Code: Semicolon	Line: 1	Column: 29
+Lexeme: private	Code: Private	Line: 2	Column: 10
+Lexeme: attribute	Code: attribute	Line: 2	Column: 20
+Lexeme: b	Code: Id	Line: 2	Column: 22
+Lexeme: :	Code: Colon	Line: 2	Column: 23
+Lexeme: float	Code: Float	Line: 2	Column: 29
+Lexeme: ;	Code: Semicolon	Line: 2	Column: 29
+Lexeme: private	Code: Private	Line: 3	Column: 10
+Lexeme: attribute	Code: attribute	Line: 3	Column: 20
+Lexeme: c	Code: Id	Line: 3	Column: 22
+Lexeme: :	Code: Colon	Line: 3	Column: 23
+Lexeme: float	Code: Float	Line: 3	Column: 29
+Lexeme: ;	Code: Semicolon	Line: 3	Column: 29
+Lexeme: public	Code: Public	Line: 4	Column: 9
+Lexeme: constructor	Code: constructor	Line: 4	Column: 21
+Lexeme: :	Code: Colon	Line: 4	Column: 22
+Lexeme: (	Code: LeftParenthesis	Line: 4	Column: 23
+Lexeme: A	Code: Id	Line: 4	Column: 25
+Lexeme: :	Code: Colon	Line: 4	Column: 26
+Lexeme: float	Code: Float	Line: 4	Column: 32
+Lexeme: ,	Code: Comma	Line: 4	Column: 32
+Lexeme: B	Code: Id	Line: 4	Column: 35
+Lexeme: :	Code: Colon	Line: 4	Column: 36
+Lexeme: float	Code: Float	Line: 4	Column: 42
+Lexeme: ,	Code: Comma	Line: 4	Column: 42
+Lexeme: C	Code: Id	Line: 4	Column: 45
+Lexeme: :	Code: Colon	Line: 4	Column: 46
+Lexeme: float	Code: Float	Line: 4	Column: 52
+Lexeme: )	Code: RightParenthesis	Line: 4	Column: 52
+Lexeme: ;	Code: Semicolon	Line: 4	Column: 53
+Lexeme: public	Code: Public	Line: 5	Column: 9
+Lexeme: function	Code: function	Line: 5	Column: 18
+Lexeme: evaluate	Code: Id	Line: 5	Column: 27
+Lexeme: :	Code: Colon	Line: 5	Column: 28
+Lexeme: (	Code: LeftParenthesis	Line: 5	Column: 29
+Lexeme: x	Code: Id	Line: 5	Column: 31
+Lexeme: :	Code: Colon	Line: 5	Column: 32
+Lexeme: float	Code: Float	Line: 5	Column: 38
+Lexeme: )	Code: RightParenthesis	Line: 5	Column: 38
+Lexeme: =>	Code: arrow	Line: 5	Column: 41
+Lexeme: float	Code: Float	Line: 5	Column: 48
+Lexeme: ;	Code: Semicolon	Line: 5	Column: 48
+Lexeme: }	Code: RightBracket	Line: 6	Column: 1
+
+
+Complete Dervation tree, Code structure:
+Start => 
+class <identifier> isa <identifier> { 
+private attribute <identifier> : float ; 
+private attribute <identifier> : float ; 
+private attribute <identifier> : float ; 
+public constructor : ( <identifier> : float , <identifier> : float , <identifier> : float ) ; 
+public function <identifier> : ( <identifier> : float ) arrow float ; 
+} 

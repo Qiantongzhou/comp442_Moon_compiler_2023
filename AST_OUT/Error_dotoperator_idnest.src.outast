@@ -1,0 +1,439 @@
+digraph AST {
+node55530882 [label=""]
+node55530882 -> node30015890
+node30015890 [label=""]
+node30015890 -> node1707556
+node1707556 [label="class"]
+node30015890 -> node15368010
+node15368010 [label="LINEAR"]
+node30015890 -> node4094363
+node4094363 [label="{"]
+node30015890 -> node36849274
+node36849274 [label=""]
+node36849274 -> node63208015
+node63208015 [label="private"]
+node36849274 -> node32001227
+node32001227 [label=""]
+node32001227 -> node19575591
+node19575591 [label="attribute"]
+node32001227 -> node41962596
+node41962596 [label="a"]
+node32001227 -> node42119052
+node42119052 [label=":"]
+node32001227 -> node43527150
+node43527150 [label="float"]
+node32001227 -> node56200037
+node56200037 [label=";"]
+node30015890 -> node36038289
+node36038289 [label=""]
+node36038289 -> node55909147
+node55909147 [label="private"]
+node36038289 -> node33420276
+node33420276 [label=""]
+node33420276 -> node32347029
+node32347029 [label="attribute"]
+node33420276 -> node22687807
+node22687807 [label="b"]
+node33420276 -> node2863675
+node2863675 [label=":"]
+node33420276 -> node25773083
+node25773083 [label="float"]
+node33420276 -> node30631159
+node30631159 [label=";"]
+node30015890 -> node7244975
+node7244975 [label=""]
+node7244975 -> node65204782
+node65204782 [label="public"]
+node7244975 -> node49972132
+node49972132 [label=""]
+node49972132 -> node47096010
+node47096010 [label="constructor"]
+node49972132 -> node21210914
+node21210914 [label=":"]
+node49972132 -> node56680499
+node56680499 [label="("]
+node49972132 -> node40362448
+node40362448 [label="A"]
+node49972132 -> node27717712
+node27717712 [label=":"]
+node49972132 -> node48132822
+node48132822 [label="float"]
+node49972132 -> node30542218
+node30542218 [label=""]
+node30542218 -> node6444509
+node6444509 [label=","]
+node30542218 -> node58000584
+node58000584 [label="B"]
+node30542218 -> node52243212
+node52243212 [label=":"]
+node30542218 -> node426867
+node426867 [label="float"]
+node49972132 -> node3841804
+node3841804 [label=")"]
+node7244975 -> node34576242
+node34576242 [label=";"]
+node30015890 -> node42750725
+node42750725 [label="}"]
+node30015890 -> node49212206
+node49212206 [label=";"]
+node55530882 -> node40256670
+node40256670 [label=""]
+node40256670 -> node26765710
+node26765710 [label="class"]
+node40256670 -> node39564799
+node39564799 [label="QUADRATIC"]
+node40256670 -> node20538874
+node20538874 [label="{"]
+node40256670 -> node50632145
+node50632145 [label=""]
+node50632145 -> node53036123
+node53036123 [label="private"]
+node50632145 -> node7563067
+node7563067 [label=""]
+node7563067 -> node958745
+node958745 [label="attribute"]
+node7563067 -> node8628710
+node8628710 [label="a"]
+node7563067 -> node10549531
+node10549531 [label=":"]
+node7563067 -> node27836922
+node27836922 [label="float"]
+node7563067 -> node49205706
+node49205706 [label=";"]
+node40256670 -> node40198173
+node40198173 [label=""]
+node40198173 -> node26239245
+node26239245 [label="private"]
+node40198173 -> node34826618
+node34826618 [label=""]
+node34826618 -> node45004109
+node45004109 [label="attribute"]
+node34826618 -> node2383799
+node2383799 [label="b"]
+node34826618 -> node21454193
+node21454193 [label=":"]
+node34826618 -> node58870012
+node58870012 [label="float"]
+node34826618 -> node60068066
+node60068066 [label=";"]
+node40256670 -> node3741682
+node3741682 [label=""]
+node3741682 -> node33675143
+node33675143 [label="private"]
+node3741682 -> node34640832
+node34640832 [label=""]
+node34640832 -> node43332040
+node43332040 [label="attribute"]
+node34640832 -> node54444047
+node54444047 [label="c"]
+node34640832 -> node20234383
+node20234383 [label=":"]
+node34640832 -> node47891719
+node47891719 [label="float"]
+node34640832 -> node28372289
+node28372289 [label=";"]
+node40256670 -> node54024015
+node54024015 [label=""]
+node54024015 -> node16454088
+node16454088 [label="public"]
+node54024015 -> node13869071
+node13869071 [label=""]
+node13869071 -> node57712780
+node57712780 [label="constructor"]
+node13869071 -> node49652976
+node49652976 [label=":"]
+node13869071 -> node44223604
+node44223604 [label="("]
+node13869071 -> node62468121
+node62468121 [label="A"]
+node13869071 -> node25342185
+node25342185 [label=":"]
+node13869071 -> node26753075
+node26753075 [label="float"]
+node13869071 -> node39451090
+node39451090 [label=""]
+node39451090 -> node19515494
+node19515494 [label=","]
+node39451090 -> node41421720
+node41421720 [label="B"]
+node39451090 -> node37251161
+node37251161 [label=":"]
+node39451090 -> node66824994
+node66824994 [label="float"]
+node13869071 -> node64554036
+node64554036 [label=""]
+node64554036 -> node44115416
+node44115416 [label=","]
+node64554036 -> node61494432
+node61494432 [label="C"]
+node64554036 -> node16578980
+node16578980 [label=":"]
+node64554036 -> node14993092
+node14993092 [label="float"]
+node13869071 -> node720107
+node720107 [label=")"]
+node54024015 -> node6480969
+node6480969 [label=";"]
+node40256670 -> node58328727
+node58328727 [label="}"]
+node40256670 -> node55196503
+node55196503 [label=";"]
+node55530882 -> node27006480
+node27006480 [label=""]
+node27006480 -> node41731733
+node41731733 [label="function"]
+node27006480 -> node40041277
+node40041277 [label=""]
+node40041277 -> node24827179
+node24827179 [label="QUADRATIC"]
+node40041277 -> node22118023
+node22118023 [label="::"]
+node40041277 -> node64844482
+node64844482 [label=""]
+node64844482 -> node46729429
+node46729429 [label="constructor"]
+node64844482 -> node17911681
+node17911681 [label="("]
+node64844482 -> node26987408
+node26987408 [label="A"]
+node64844482 -> node41560081
+node41560081 [label=":"]
+node64844482 -> node38496415
+node38496415 [label="float"]
+node64844482 -> node10923418
+node10923418 [label=""]
+node10923418 -> node31201899
+node31201899 [label=","]
+node10923418 -> node12381635
+node12381635 [label="B"]
+node10923418 -> node44325851
+node44325851 [label=":"]
+node10923418 -> node63388340
+node63388340 [label="float"]
+node64844482 -> node33624151
+node33624151 [label=""]
+node33624151 -> node34181910
+node34181910 [label=","]
+node33624151 -> node39201736
+node39201736 [label="C"]
+node33624151 -> node17271312
+node17271312 [label=":"]
+node33624151 -> node21224086
+node21224086 [label="float"]
+node64844482 -> node56799051
+node56799051 [label=")"]
+node27006480 -> node41429416
+node41429416 [label=""]
+node41429416 -> node37320431
+node37320431 [label="{"]
+node41429416 -> node339559
+node339559 [label=""]
+node339559 -> node3056034
+node3056034 [label="="]
+node3056034 -> node27504314 [label="left"]
+node27504314 [label=""]
+node27504314 -> node46212239
+node46212239 [label="self"]
+node27504314 -> node13256970
+node13256970 [label="."]
+node27504314 -> node52203868
+node52203868 [label="k"]
+node3056034 -> node72766 [label="right"]
+node72766 [label=""]
+node72766 -> node654897
+node654897 [label=""]
+node654897 -> node5894079
+node5894079 [label=""]
+node5894079 -> node53046711
+node53046711 [label="A"]
+node41429416 -> node7658356
+node7658356 [label=""]
+node7658356 -> node1816341
+node1816341 [label="="]
+node1816341 -> node16347077 [label="left"]
+node16347077 [label=""]
+node16347077 -> node12905972
+node12905972 [label="self"]
+node16347077 -> node49044892
+node49044892 [label="."]
+node16347077 -> node38750844
+node38750844 [label="t"]
+node1816341 -> node13213278 [label="right"]
+node13213278 [label=""]
+node13213278 -> node51810644
+node51810644 [label=""]
+node51810644 -> node63642613
+node63642613 [label=""]
+node63642613 -> node35912612
+node35912612 [label="B"]
+node41429416 -> node54778057
+node54778057 [label=""]
+node54778057 -> node23240469
+node23240469 [label="="]
+node23240469 -> node7837633 [label="left"]
+node7837633 [label=""]
+node7837633 -> node3429838
+node3429838 [label="self"]
+node7837633 -> node30868550
+node30868550 [label="."]
+node7837633 -> node9381496
+node9381496 [label="k"]
+node23240469 -> node17324607 [label="right"]
+node17324607 [label=""]
+node17324607 -> node21703739
+node21703739 [label=""]
+node21703739 -> node61115925
+node61115925 [label=""]
+node61115925 -> node13172414
+node13172414 [label="C"]
+node41429416 -> node51442863
+node51442863 [label="}"]
+node55530882 -> node60332585
+node60332585 [label=""]
+node60332585 -> node6122357
+node6122357 [label="function"]
+node60332585 -> node55101221
+node55101221 [label=""]
+node55101221 -> node26148945
+node26148945 [label="LINEAR"]
+node55101221 -> node34013913
+node34013913 [label="::"]
+node55101221 -> node37689768
+node37689768 [label=""]
+node37689768 -> node3663598
+node3663598 [label="constructor"]
+node37689768 -> node32972388
+node32972388 [label="("]
+node37689768 -> node28316044
+node28316044 [label="A"]
+node37689768 -> node53517805
+node53517805 [label=":"]
+node37689768 -> node11898202
+node11898202 [label="float"]
+node37689768 -> node39974954
+node39974954 [label=""]
+node39974954 -> node24230272
+node24230272 [label=","]
+node39974954 -> node16745860
+node16745860 [label="B"]
+node39974954 -> node16495015
+node16495015 [label=":"]
+node39974954 -> node14237410
+node14237410 [label="float"]
+node37689768 -> node61027830
+node61027830 [label=")"]
+node60332585 -> node12379565
+node12379565 [label=""]
+node12379565 -> node44307222
+node44307222 [label="{"]
+node12379565 -> node63220684
+node63220684 [label=""]
+node63220684 -> node32115247
+node32115247 [label="="]
+node32115247 -> node20601768 [label="left"]
+node20601768 [label=""]
+node20601768 -> node51198184
+node51198184 [label="self"]
+node20601768 -> node58130472
+node58130472 [label="."]
+node20601768 -> node53412201
+node53412201 [label="a"]
+node32115247 -> node10947764 [label="right"]
+node10947764 [label=""]
+node10947764 -> node31421019
+node31421019 [label=""]
+node31421019 -> node14353717
+node14353717 [label=""]
+node14353717 -> node62074597
+node62074597 [label="A"]
+node12379565 -> node21800467
+node21800467 [label=""]
+node21800467 -> node61986480
+node61986480 [label="="]
+node61986480 -> node21007413 [label="left"]
+node21007413 [label=""]
+node21007413 -> node54848996
+node54848996 [label="self"]
+node21007413 -> node23878916
+node23878916 [label="."]
+node21007413 -> node13583655
+node13583655 [label="b"]
+node61986480 -> node55144039 [label="right"]
+node55144039 [label=""]
+node55144039 -> node26534308
+node26534308 [label=""]
+node26534308 -> node37482183
+node37482183 [label=""]
+node37482183 -> node1795329
+node1795329 [label="B"]
+node12379565 -> node16157963
+node16157963 [label="}"]
+node55530882 -> node11203942
+node11203942 [label=""]
+node11203942 -> node33726620
+node33726620 [label="function"]
+node11203942 -> node35104124
+node35104124 [label=""]
+node35104124 -> node47501665
+node47501665 [label="main"]
+node35104124 -> node24861802
+node24861802 [label=""]
+node24861802 -> node22429634
+node22429634 [label="("]
+node24861802 -> node540121
+node540121 [label=")"]
+node24861802 -> node4861097
+node4861097 [label="=>"]
+node24861802 -> node43749873
+node43749873 [label="void"]
+node11203942 -> node58204539
+node58204539 [label=""]
+node58204539 -> node54078809
+node54078809 [label="{"]
+node58204539 -> node16947234
+node16947234 [label=""]
+node16947234 -> node18307385
+node18307385 [label="localvar"]
+node16947234 -> node30548742
+node30548742 [label="f1"]
+node16947234 -> node6503226
+node6503226 [label=":"]
+node16947234 -> node58529038
+node58529038 [label="QUADRATIC"]
+node16947234 -> node56999299
+node56999299 [label=";"]
+node58204539 -> node43231651
+node43231651 [label=""]
+node43231651 -> node53540541
+node53540541 [label="localvar"]
+node43231651 -> node12102828
+node12102828 [label="k"]
+node43231651 -> node41816592
+node41816592 [label=":"]
+node43231651 -> node40805010
+node40805010 [label="string"]
+node43231651 -> node31700771
+node31700771 [label=";"]
+node58204539 -> node16871484
+node16871484 [label=""]
+node16871484 -> node17625630
+node17625630 [label="="]
+node17625630 -> node24412946 [label="left"]
+node24412946 [label=""]
+node24412946 -> node18389930
+node18389930 [label="f1"]
+node24412946 -> node31291646
+node31291646 [label="."]
+node24412946 -> node13189358
+node13189358 [label="a"]
+node17625630 -> node51595365 [label="right"]
+node51595365 [label=""]
+node51595365 -> node61705107
+node61705107 [label=""]
+node61705107 -> node18475057
+node18475057 [label=""]
+node18475057 -> node32057793
+node32057793 [label="k"]
+node58204539 -> node20084682
+node20084682 [label="}"]
+}

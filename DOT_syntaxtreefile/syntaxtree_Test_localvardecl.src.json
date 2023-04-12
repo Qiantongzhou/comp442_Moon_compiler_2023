@@ -1,0 +1,276 @@
+{
+  "name": "start",
+  "value": "",
+  "left": null,
+  "right": null,
+  "children": [
+    {
+      "name": "classdecl",
+      "value": "",
+      "left": null,
+      "right": null,
+      "children": [
+        {
+          "name": "class",
+          "value": "class",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "<identifier>",
+          "value": "QUADRATIC",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "classdecls",
+          "value": "",
+          "left": null,
+          "right": null,
+          "children": [
+            {
+              "name": "isa",
+              "value": "isa",
+              "left": null,
+              "right": null,
+              "children": []
+            },
+            {
+              "name": "<identifier>",
+              "value": "POLYNOMIAL",
+              "left": null,
+              "right": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "{",
+          "value": "{",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "localVar",
+          "value": "localvar",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "<identifier>",
+          "value": "f1",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": ":",
+          "value": ":",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "<identifier>",
+          "value": "LINEAR",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "(",
+          "value": "(",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "intLit",
+          "value": "2",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": ",",
+          "value": ",",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "floatLit",
+          "value": "3.5",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": ")",
+          "value": ")",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": ";",
+          "value": ";",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "localVar",
+          "value": "localvar",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "<identifier>",
+          "value": "f2",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": ":",
+          "value": ":",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "<identifier>",
+          "value": "QUADRATIC",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "(",
+          "value": "(",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "-",
+          "value": "-",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "floatLit",
+          "value": "2.0",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": ",",
+          "value": ",",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "floatLit",
+          "value": "1.0",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": ",",
+          "value": ",",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "floatLit",
+          "value": "0.0",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": ")",
+          "value": ")",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": ";",
+          "value": ";",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "localVar",
+          "value": "localvar",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "<identifier>",
+          "value": "counter",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": ":",
+          "value": ":",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "integer",
+          "value": "integer",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": ";",
+          "value": ";",
+          "left": null,
+          "right": null,
+          "children": []
+        },
+        {
+          "name": "}",
+          "value": "}",
+          "left": null,
+          "right": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": ";",
+      "value": ";",
+      "left": null,
+      "right": null,
+      "children": []
+    },
+    {
+      "name": ";",
+      "value": ";",
+      "left": null,
+      "right": null,
+      "children": []
+    }
+  ]
+}
